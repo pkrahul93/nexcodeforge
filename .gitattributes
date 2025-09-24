@@ -1,0 +1,15 @@
+# Handle line endings (force LF)
+* text=auto eol=lf
+
+# Diff settings for better readability in PRs
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+*.js diff=javascript
+
+# Export ignores (don’t include these in distribution archives)
+.github export-ignore
+CHANGELOG.md export-ignore
+.styleci.yml export-ignore
