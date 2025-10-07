@@ -1,924 +1,486 @@
 @extends('layouts.guest')
 
 @section('content')
-  <p class="rs-p-wp-fix"></p>
-        <rs-module-wrap id="rev_slider_3_1_wrapper" data-source="gallery">
-            <rs-module id="rev_slider_3_1" style="" data-version="6.5.9">
-                <rs-slides>
-                    <rs-slide data-key="rs-3" data-title="Slide" data-thumb="guest/assets/images/slider-main-01.png" data-anim="ei:d;eo:d;s:d;r:0;t:fade;sl:d;">
-
-                        <img src="guest/assets/images/slider-main-01.png" title="image" width="1920" height="885" class="rev-slidebg tp-rs-img" data-no-retina><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-0" 
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:c;y:t,t,m,m;yo:147px,147px,-107px,-85px;"
-                            data-text="w:normal;s:154,154,55,45;l:163,163,70,60;fw:600;a:center;"
-                            data-frame_0="x:-100%;"
-                            data-frame_0_mask="u:t;"
-                            data-frame_1="st:100;sp:1000;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:8100;"
-                            style="z-index:16;font-family:'Space Grotesk';"
-                        >Build your  
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-1" 
-                            class="rs-layer"
-                            href="contact-us.html" target="_self"
-                            data-type="image"
-                            data-rsp_ch="on"
-                            data-xy="xo:600px,600px,243px,186px;yo:-3px,-3px,2px,26px;"
-                            data-text="w:normal;s:20,20,12,7;l:0,0,15,9;"
-                            data-dim="w:988px,988px,619px,381px;h:1098px,1098px,688px,424px;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:6960;"
-                            data-loop_0="x:-5px;"
-                            data-loop_999="x:5px;sp:3000;e:slow;yym:t;"
-                            style="z-index:5;"
-                        ><img src="guest/assets/images/bgimg01.png" width="988" height="1098" alt="image" data-lazyload="guest/assets/images/bgimg01.png" data-no-retina> 
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-2" 
-                            data-type="shape"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:-388px,-388px,0,340px;yo:460px,460px,276px,152px;"
-                            data-text="w:normal;s:20,20,12,7;l:0,0,15,9;"
-                            data-dim="w:60px,60px,37px,22px;h:2px,2px,1px,1px;"
-                            data-vbility="t,t,f,f"
-                            data-frame_0="x:-50,-50,-31,-19;"
-                            data-frame_1="st:740;sp:1000;"
-                            data-frame_999="o:0;st:w;sR:8060;"
-                            style="z-index:10;background-color:#464546;"
-                        > 
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-3" 
-                            data-type="text"
-                            data-color="#05c8f9"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:103px,103px,-60px,-50px;y:t,t,m,m;yo:309px,309px,-37px,-30px;"
-                            data-text="w:normal;s:154,154,55,45;l:163,163,70,60;fw:600;a:center;"
-                            data-frame_0="x:-100%;"
-                            data-frame_0_mask="u:t;"
-                            data-frame_1="st:100;sp:1000;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:8100;"
-                            style="z-index:15;font-family:'Space Grotesk';"
-                        >team 
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-4" 
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:432px,432px,60px,50px;y:t,t,m,m;yo:318px,318px,-37px,-30px;"
-                            data-text="w:normal;s:154,154,55,45;l:163,163,70,60;fw:600;a:center;"
-                            data-frame_0="x:100%;"
-                            data-frame_0_mask="u:t;"
-                            data-frame_1="st:100;sp:1000;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:8100;"
-                            style="z-index:14;font-family:'Space Grotesk';"
-                        >the 
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-5" 
-                            data-type="shape"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:-378px,-378px,0,340px;yo:481px,481px,276px,152px;"
-                            data-text="w:normal;s:20,20,12,7;l:0,0,15,9;"
-                            data-dim="w:182px,182px,113px,69px;h:2px,2px,1px,1px;"
-                            data-vbility="t,t,f,f"
-                            data-frame_0="x:-50,-50,-31,-19;"
-                            data-frame_1="st:740;sp:1000;"
-                            data-frame_999="o:0;st:w;sR:8060;"
-                            style="z-index:9;background-color:#464546;"
-                        > 
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-6" 
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:-17px,-17px,-10px,0;y:t,t,t,m;yo:479px,479px,219px,17px;"
-                            data-text="w:normal;s:154,154,55,45;l:163,163,70,50;fw:600;a:center;"
-                            data-frame_0="x:-100%;"
-                            data-frame_0_mask="u:t;"
-                            data-frame_1="st:100;sp:1000;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:8100;"
-                            style="z-index:13;font-family:'Space Grotesk';"
-                        >easy way 
-                        </rs-layer><!--
-
-                        --><a
-                            id="slider-3-slide-1-layer-7" 
-                            class="rs-layer tm-silderbutton prt-btn prt-btn-color-gradiant"
-                            href="contact-us.html" target="_self" rel="nofollow"
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:-125px,-125px,-7px,0;y:t,t,t,m;yo:712px,712px,318px,84px;"
-                            data-text="w:normal;s:16,16,12,13;l:27,27,20,20;a:center;"
-                            data-padding="t:13,13,8,7;r:65,65,41,20;b:13,13,8,7;l:65,65,41,20;"
-                            data-border="bor:10px,10px,10px,10px;"
-                            data-frame_0="x:100%;"
-                            data-frame_0_mask="u:t;"
-                            data-frame_1="st:600;sp:1000;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:7900;"
-                            data-frame_hover=""
-                            style="z-index:7;font-family:'DM Sans';"
-                        >Start Free Trail 
-                        </a><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-8" 
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:-295px,-295px,612px,405px;y:t,t,m,m;yo:373px,373px,119px,95px;"
-                            data-text="w:normal;s:18,18,12,7;l:27,27,20,12;fw:500;a:right,right,center,center;"
-                            data-vbility="t,t,f,f"
-                            data-frame_0="x:-100%;"
-                            data-frame_0_mask="u:t;"
-                            data-frame_1="st:570;sp:1000;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:8030;"
-                            style="z-index:12;font-family:'DM Sans';"
-                        >Our vast experience, thought leadership and <br>commitment to digitization invetion
-                        </rs-layer><!--
-
-                        --><rs-layer
-                            id="slider-3-slide-1-layer-9" 
-                            data-type="text"
-                            data-rsp_ch="on"
-                            data-xy="x:c;xo:207px,207px,567px,405px;yo:711px,711px,247px,95px;"
-                            data-text="w:normal;s:18,18,12,7;l:27,27,20,12;fw:500;a:left,left,center,center;"
-                            data-vbility="t,t,f,f"
-                            data-frame_0="x:100%;"
-                            data-frame_0_mask="u:t;"
-                            data-frame_1="st:570;sp:1000;"
-                            data-frame_1_mask="u:t;"
-                            data-frame_999="o:0;st:w;sR:8030;"
-                            style="z-index:11;font-family:'DM Sans';"
-                        >High degree of the sensitivity and specificity <br> to prescribe recommended actions
-                        </rs-layer>
-
-
-                    </rs-slide>
-                </rs-slides>
-            </rs-module>
-        </rs-module-wrap>
-        
-   <!-- site-main start -->
-   <div class="site-main">
-    <section class="prt-row service-section clearfix" data-aos="fade-up" data-aos-offset="600" data-aos-duration="1500" data-aos-once="true">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12">
-                    <div class="section-title res-991-mb-0">
-                        <div class="title-header">
-                            <h2 class="title">Giving your business some orignal ideas</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-6 col-lg-12 col-md-12 col-sm-12 "> 
-                    <div class="process-desc pl-90 res-1199-pl-0">
-                        <p class="desc-text">We strive to deliver best in-class software solutions that generate best trailing total return for business services across great mission goals generating billion net income</p>
-                    </div>
-                </div>
+    <!-- site-main start -->
+    <div class="site-main">
+        <section class="hero-section">
+            <!-- Main Background -->
+            <div class="hero-bg">
+                <img src="guest/assets/images/slider-main-01.png" alt="Background" />
             </div>
-            <div class="row row-equal-height prt-vertical_sep style1 mt-25 res-991-mt-0">
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="featured-icon-box style1 first-child">
-                        <div class="featured-icon-thumnail">
-                            <img src="guest/assets/images/icon-01.png" loading="lazy" alt="Icon" class="rotate-img img-fluid"></div>
-                        <div class="featured-content">
-                          <h3 class="featured-title-h3">
-                            <a href="services.html" class="featured-title-h3-link">UI/UX creative<br> design</a>
-                          </h3>
-                          <div class="featured-bottom-btn">
-                            <a href="services.html" class="btn btn-inline"></a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="featured-icon-box style1 border-none">
-                        <div class="featured-icon-thumnail">
-                            <img src="guest/assets/images/icon-02.png" loading="lazy" alt="Icon" class="rotate-img img-fluid"></div>
-                        <div class="featured-content">
-                          <h3 class="featured-title-h3">
-                            <a href="services.html" class="featured-title-h3-link">Visual &amp; graphic<br>design</a>
-                          </h3>
-                          <div class="featured-bottom-btn">
-                            <a href="services.html" class="btn btn-inline"></a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="featured-icon-box style1 res-991-pl-0">
-                        <div class="featured-icon-thumnail"><img src="guest/assets/images/icon-03.png" loading="lazy" alt="Icon" class="rotate-img img-fluid"></div>
-                        <div class="featured-content">
-                          <h3 class="featured-title-h3">
-                            <a href="services.html" class="featured-title-h3-link">Digital marketing<br>strategy</a>
-                          </h3>
-                          <div class="featured-bottom-btn">
-                            <a href="services.html" class="btn btn-inline"></a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-6 col-12">
-                    <div class="featured-icon-box style1 last-child">
-                        <div class="featured-icon-thumnail">
-                            <img src="guest/assets/images/icon-04.png" loading="lazy" alt="Icon" class="rotate-img img-fluid">
-                        </div>
-                        <div class="featured-content">
-                          <h3 class="featured-title-h3">
-                            <a href="services.html" class="featured-title-h3-link">Effective customer<br>support</a>
-                          </h3>
-                          <div class="featured-bottom-btn">
-                            <a href="services.html" class="btn btn-inline"></a>
-                          </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--service-section end-->
 
-    <!-- padding_zero-section -->
-    <section class="prt-row padding_zero-section prt-bg bg-base-grey z-index-0 clearfix">
-        <!-- <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-grey"></div> -->
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-6 col-lg-6">
-                    <!-- col-img-img-one -->
-                    <div class="prt-bg prt-col-bgimage-yes col-bg-img-one spacing-9">
-                        <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
-                        <div class="layer-content">
-                        </div>
-                    </div>
-                    <!-- col-img-bg-img-one end-->
-                    <img class="img-fluid prt-equal-height-image w-100 position-relative" src="images/bg-image/col-bgimage-1.jpg" alt="bg-image">
-                </div>
-                <div class="col-xl-6 col-lg-6">
-                    <div class="prt-bg bg-base-grey spacing-1">
-                        <div class="prt-col-wrapper-bg-layer prt-bg-layer">
-                            <div class="prt-col-wrapper-bg-layer-inner"></div>
-                        </div>
-                        <div class="layer-content">
-                            <div class="position-relative">
-                                <div class="section-title">
-                                    <div class="title-header">
-                                      <h2 class="section-title-h2">We deal with the aspects IT Services</h2>
-                                    </div>
-                                    <div class="title-desc">
-                                      <p>Well aware of the existing mobile app market trends to keep tabs on the evolving trend of the industry, to developing high-grade app and manage quality at the top positions standard.</p>
-                                    </div>
-                                </div>
-                                <div class="row row-equal-height mt-10">
-                                    <div class="col-lg-6">
-                                        <div class="featured-box-main">
-                                          <h3 class="featured-box-h3">Seize opportunities and spark</h3>
-                                          <div class="prt-horizontal_sep mt-30 mb-30 border-none res-991-mb-15 res-991-mt-15"></div>
-                                          <h3 class="featured-box-h3">Experience to share goals success</h3>
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="featured-box-main">
-                                            <h3 class="featured-box-h3">Comprehensive test approach</h3>
-                                            <div class="prt-horizontal_sep mt-30 mb-30 border-none res-991-mb-15 res-991-mt-15"></div>
-                                            <h3 class="featured-box-h3">Innovate create great solutions.</h3>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <!-- Abstract Top Overlay (bgimg01 + gradient blend) -->
+            <div class="hero-overlay">
+                <img src="guest/assets/images/bgimg01.png" alt="Overlay" class="overlay-img" />
+                <svg class="abstract-svg" viewBox="0 0 800 400" preserveAspectRatio="none">
+                    <defs>
+                        <linearGradient id="grad" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#05c8f9" stop-opacity="0.4" />
+                            <stop offset="100%" stop-color="#007bff" stop-opacity="0.2" />
+                        </linearGradient>
+                    </defs>
+                    <path d="M0,0 C200,120 600,50 800,180 L800,0 L0,0 Z" fill="url(#grad)" opacity="0.4" />
+                </svg>
             </div>
-        </div>
-    </section>
-    <!-- padding_zero-section end -->
 
-    <!-- padding_zero-section -->
-    <section class="prt-row padding_zero-section prt-bg bg-base-gradient clearfix">
-        <div class="container-fluid p-0">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="marquee-block overflow-hidden">
-                        <div class="marquee">
-                            <div class="marquee-content">
-                                <div class="marquee-text">Automation</div>
-                                <div class="marquee-text">Established</div>
-                                <div class="marquee-text">Intuitive</div>
-                                <div class="marquee-text">Digital Marketing</div>
-                                <div class="marquee-text">Intuitive</div>
-                                <div class="marquee-text">Established</div>
-                                <div class="marquee-text">Automation</div>
-                                <div class="marquee-text">Established</div>
-                                <div class="marquee-text">Intuitive</div>
-                                <div class="marquee-text">Digital Marketing</div>
-                                <div class="marquee-text">Intuitive</div>
-                                <div class="marquee-text">Established</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- padding_zero-section end -->
+            <!-- Dark Overlay -->
+            <div class="dark-overlay"></div>
 
-    <!-- project-section -->
-    <section class="prt-row bg-img1 prt-bgimage-yes prt-bg bg-base-dark project-section clearfix">
-        <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-2 col-md-12">
-                    <div class="position-relative">
-                        <h3 class="row-heading-h3 res-991-pt-0">One <br>Platform</h3>
-                    </div>
-                </div>
-                <div class="col-lg-10 col-md-12">
-                    <div class="position-relative section-sm res-991-mt-10">
-                        <h2 class="row-heading-h2">Endlesso</h2>
-                        <h2 class="row-heading-h2 pl-220 res-1199-pl-0 res-991-pl-10"><span class="text-base-skin">oportunities</span></h2>
-                    </div>
-                </div>
+            <!-- Hero Content -->
+            <div class="hero-content">
+                <h1 class="text-white">Build Your Business the <span class="highlight">Smart Way</span></h1>
+                <h2>IoT • SaaS • E-Commerce • MLM</h2>
+                <p>
+                    Transform your ideas into scalable digital platforms with our IoT, SaaS,
+                    and E-Commerce solutions built for the future.
+                </p>
+                <a href="/about" class="hero-btn">Start Your Digital Journey</a>
             </div>
-            <div class="row mt-50 res-991-mt-20" data-aos="fade-up" data-aos-offset="600" data-aos-duration="1500" data-aos-once="true">
-                <div class="col-lg-6 col-md-6">
-                    <div class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-01-654x490.png" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">IT consultancy</a>
-                          </h3>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-05-654x490.jpg" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">Product design</a>
-                          </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-02-654x490.jpg" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">Cloud computing</a>
-                          </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-06-654x490.jpg" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">Big data analytics</a>
-                          </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-03-654x490.jpg" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">IT management</a>
-                          </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-07-654x490.png" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">Cloud services</a>
-                          </h3>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-04-654x490.png" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">Main app data</a>
-                          </h3>
-                        </div>
-                      </div>
-                </div>
-                <div class="col-lg-6 col-md-6">
-                    <div  class="service-box style1">
-                        <div class="service-box-thumnail">
-                            <a href="project-details.html"><img width="654" height="490" class="img-fluid" src="guest/assets/images/service-08-654x490.png" loading="lazy" alt="image"></a>
-                        </div>
-                        <div class="service-box-content">
-                          <h3 class="service-box-h3">
-                            <a href="project-details.html" class="service-box-link">Digital services</a>
-                          </h3>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- project-section end -->
+        </section>
 
-    <!--step-section-->
-    <section class="prt-row step-section clearfix">
-        <div class="container">
-            <div class="row">
-                <div class="col-xl-7 col-lg-7 col-md-12 col-sm-12">
-                    <div class="section-title style2">
-                        <div class="title-header section-sm">
-                          <h2>Our work</h2>
-                          <h2 class="pl-150 res-1199-pl-0 res-991-pl-10">process</h2>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12 "> 
-                    <div class="process-desc">
-                        <p class="desc-text">Well aware of the existing mobile app market trends to keep tabs on the evolving trend of the industry, to developing high-grade app and manage quality at the top positions standard.</p>
-                        <div class="mt-35 res-991-mt-15">
-                            <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-fill prt-btn-color-gradiant" href="services.html">Learning Working Process</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="row" data-aos="fade-up" data-aos-offset="600" data-aos-duration="1500" data-aos-once="true">
-                <div class="col-lg-12">
-                    <div class="prt-horizontal_sep mt-85 mb-40 res-991-mt-40"></div>
-                    <div class="prt-processbox-wrapper">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="prt-box-content">
-                                    <div class="prt-hovertext1">
-                                        <div class="process-num">
-                                            <div class="numbers">Step 1</div>
-                                        </div>
-                                    </div>
-                                    <div class="prt-hovertext2">
-                                        <div class="process-num">
-                                            <div class="numbers">Step 1</div>
-                                        </div>
-                                    </div>
-                                    <div class="prt-box-content-title res-991-pt-0">
-                                        <h3 class="prt-box-title-h3">Create</h3>
-                                        <p>Web designing in a powerful way of just not a profession, hony. We have a tendency to beve.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="prt-box-image res-991-mt-15">
-                                    <img width="965" height="240" class="proces-img img-fluid" src="guest/assets/images/step01.png" loading="lazy" alt="images">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="prt-horizontal_sep mt-25 mb-40"></div>
-                    <div class="prt-processbox-wrapper">
-                        <div class="row">
-                            <div class="col-lg-9">
-                                <div class="prt-box-image">
-                                    <img width="965" height="240" class="proces-img img-fluid" src="guest/assets/images/step02.png" loading="lazy" alt="images">
-                                </div>
-                            </div>
-                            <div class="col-lg-3">
-                                <div class="prt-box-content res-991-mt-15">
-                                    <div class="prt-hovertext1">
-                                        <div class="process-num">
-                                            <div class="numbers">Step 2</div>
-                                        </div>
-                                    </div>
-                                    <div class="prt-hovertext2">
-                                        <div class="process-num">
-                                            <div class="numbers">Step 2</div>
-                                        </div>
-                                    </div>
-                                    <div class="prt-box-content-title res-991-pt-0">
-                                        <h3 class="prt-box-title-h3">Engage</h3>
-                                        <p>Web designing in a powerful way of just not a profession, hony. We have a tendency to beve.</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="prt-horizontal_sep mt-25 mb-40 res-991-mt-0 res-991-mb-35"></div>
-                    <div class="prt-processbox-wrapper">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <div class="prt-box-content">
-                                    <div class="prt-hovertext1">
-                                        <div class="process-num">
-                                            <div class="numbers">Step 3</div>
-                                        </div>
-                                    </div>
-                                    <div class="prt-hovertext2">
-                                        <div class="process-num">
-                                            <div class="numbers">Step 3</div>
-                                        </div>
-                                    </div>
-                                    <div class="prt-box-content-title res-991-pt-0">
-                                        <h3 class="prt-box-title-h3">Analyze</h3>
-                                        <p>Web designing in a powerful way of just not a profession, hony. We have a tendency to beve.</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-lg-9">
-                                <div class="prt-box-image res-991-mt-15">
-                                    <img width="965" height="240" class="proces-img img-fluid" src="guest/assets/images/single-img-13.png" loading="lazy" alt="images">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--step-section end-->
+        <style>
+            /* ---------- Base Layout ---------- */
+            .hero-section {
+                position: relative;
+                width: 100%;
+                height: 100vh;
+                overflow: hidden;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                font-family: 'DM Sans', sans-serif;
+            }
 
-    <!-- testimonials-section -->
-    <section class="prt-row bg-img2 prt-bgimage-yes prt-bg bg-base-dark testimonial-section clearfix">
-        <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
-        <div class="container-fluid">
-            <div class="row align-items-center spacing-2">
-                <div class="col-lg-3">
-                    <div class="pr-20 res-1199-pr-0">
-                        <div class="prt-custom-counter-content">
-                          <h3 class="prt-custom-heading counter is-visible">15000+</h3>
-                          <h3 class="custom-heading-h3">Happy freelancers &amp; agencies</h3>
-                        </div>
-                        <div class="prt-custom-counter-desc">
-                          <p class="counter-desc-p">Our satisfied customers have the best words for our templates</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-9 res-991-mt-20">
-                    <div class="row row-equal-height slick_slider" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1610,"settings":{"slidesToShow": 2,"arrows":false,"autoplay":true}}, {"breakpoint":700,"settings":{"slidesToShow": 2,"arrows":false}}, {"breakpoint":576,"settings":{"slidesToShow": 1}}]}'>
-                        <div class="col-lg-4 testimonials-main">
-                            <div class="testimonials-style1">
-                                <div class="testimonials-style1-content">
-                                  <div class="testimonial-prt-description">
-                                    <div class="prt-box-highlight">
-                                      <h3 class="prt-box-highlight-h3">Fast Support</h3>
-                                    </div>
-                                    <div class="prt-ratting-stars">
-                                      <ul class="ratting-stars">
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div class="testimonial-prt-box-desc">
-                                    <p class="testimonial-prt-box-desc-p">Our team discussed every single detail to make sure Creatives Planet is the most versatile and unique template created so far. No coding skills.</p>
-                                  </div>
-                                  <div class="prt-box-footer">
-                                    <h3 class="testimonial-caption-h3">Aenna Bell</h3>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 testimonials-main">
-                            <div class="testimonials-style1">
-                                <div class="testimonials-style1-content">
-                                  <div class="testimonial-prt-description">
-                                    <div class="prt-box-highlight">
-                                      <h3 class="prt-box-highlight-h3">Flexible template</h3>
-                                    </div>
-                                    <div class="prt-ratting-stars">
-                                      <ul class="ratting-stars">
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div class="testimonial-prt-box-desc">
-                                    <p class="testimonial-prt-box-desc-p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiumtam rem aperiam eaque ipsa quae inventore veritatis quasi architecto beatae vitae.</p>
-                                  </div>
-                                  <div class="prt-box-footer">
-                                    <h3 class="testimonial-caption-h3">John Marthin</h3>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 testimonials-main">
-                            <div class="testimonials-style1">
-                                <div class="testimonials-style1-content">
-                                  <div class="testimonial-prt-description">
-                                    <div class="prt-box-highlight">
-                                      <h3 class="prt-box-highlight-h3">Fast Support</h3>
-                                    </div>
-                                    <div class="prt-ratting-stars">
-                                      <ul class="ratting-stars">
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div class="testimonial-prt-box-desc">
-                                    <p class="testimonial-prt-box-desc-p">Our team discussed every single detail to make sure Creatives Planet is the most versatile and unique template created so far. No coding skills.</p>
-                                  </div>
-                                  <div class="prt-box-footer">
-                                    <h3 class="testimonial-caption-h3">Leon Mayer</h3>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 testimonials-main">
-                            <div class="testimonials-style1">
-                                <div class="testimonials-style1-content">
-                                  <div class="testimonial-prt-description">
-                                    <div class="prt-box-highlight">
-                                      <h3 class="prt-box-highlight-h3">Flexible template</h3>
-                                    </div>
-                                    <div class="prt-ratting-stars">
-                                      <ul class="ratting-stars">
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                        <li class="ratting-stars-items">
-                                          <a href="#" class="ratting-stars-link"><i class="fa fa-star" aria-hidden="true"></i></a>
-                                        </li>
-                                      </ul>
-                                    </div>
-                                  </div>
-                                  <div class="testimonial-prt-box-desc">
-                                    <p class="testimonial-prt-box-desc-p">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantiumtam rem aperiam eaque ipsa quae inventore veritatis quasi architecto beatae vitae.</p>
-                                  </div>
-                                  <div class="prt-box-footer">
-                                    <h3 class="testimonial-caption-h3">John Amanda</h3>
-                                  </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- testimonials-section end -->
+            /* ---------- Background ---------- */
+            .hero-bg img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                filter: brightness(0.6) saturate(1.2);
+                z-index: 1;
+            }
 
-    <!--blog-section-->
-    <section class="prt-row blog-section clearfix">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-xl-8 col-lg-6 col-md-12 col-sm-12">
-                    <div class="blog-title text-end">
-                        <div class="section-title style2">
+            /* ---------- Overlay (Top abstract & gradient) ---------- */
+            .hero-overlay {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                z-index: 2;
+                pointer-events: none;
+            }
+
+            .overlay-img {
+                width: 100%;
+                height: auto;
+                mix-blend-mode: screen;
+                opacity: 0.8;
+            }
+
+            .abstract-svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 300px;
+            }
+
+            /* ---------- Dark overlay for contrast ---------- */
+            .dark-overlay {
+                position: absolute;
+                inset: 0;
+                background: radial-gradient(circle at center, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.7) 100%);
+                z-index: 3;
+            }
+
+            /* ---------- Content ---------- */
+            .hero-content {
+                position: relative;
+                z-index: 4;
+                text-align: center;
+                max-width: 700px;
+                padding: 0 20px;
+                animation: fadeInUp 1.2s ease forwards;
+            }
+
+            .hero-content h1 {
+                font-size: 58px;
+                line-height: 1.2;
+                font-weight: 700;
+                font-family: 'Space Grotesk', sans-serif;
+                margin-bottom: 15px;
+                opacity: 0;
+                animation: fadeIn 1s ease 0.4s forwards;
+            }
+
+            .hero-content h1 .highlight {
+                background: linear-gradient(90deg, #05c8f9, #007bff);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+
+            .hero-content h2 {
+                font-size: 26px;
+                font-weight: 500;
+                color: #05c8f9;
+                margin-bottom: 20px;
+                opacity: 0;
+                animation: fadeIn 1s ease 0.7s forwards;
+            }
+
+            .hero-content p {
+                font-size: 18px;
+                line-height: 1.7;
+                color: #ddd;
+                margin-bottom: 35px;
+                opacity: 0;
+                animation: fadeIn 1s ease 1s forwards;
+            }
+
+            /* ---------- Button ---------- */
+            .hero-btn {
+                background: linear-gradient(90deg, #05c8f9, #007bff);
+                color: #fff;
+                padding: 14px 38px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                box-shadow: 0 8px 25px rgba(5, 200, 249, 0.4);
+                opacity: 0;
+                animation: fadeIn 1s ease 1.3s forwards;
+            }
+
+            .hero-btn:hover {
+                transform: scale(1.05);
+                background: linear-gradient(90deg, #007bff, #05c8f9);
+                box-shadow: 0 10px 35px rgba(5, 200, 249, 0.6);
+            }
+
+            /* ---------- Animations ---------- */
+            @keyframes fadeIn {
+                from {
+                    opacity: 0;
+                    transform: translateY(20px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            @keyframes fadeInUp {
+                from {
+                    opacity: 0;
+                    transform: translateY(40px);
+                }
+
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+
+            /* ---------- Responsive ---------- */
+            @media (max-width: 768px) {
+                .hero-section {
+                    height: 80vh;
+                }
+
+                .hero-content h1 {
+                    font-size: 34px;
+                }
+
+                .hero-content h2 {
+                    font-size: 18px;
+                }
+
+                .hero-content p {
+                    font-size: 15px;
+                }
+
+                .hero-btn {
+                    padding: 10px 25px;
+                    font-size: 14px;
+                }
+
+                .abstract-svg {
+                    height: 150px;
+                }
+            }
+        </style>
+
+        <!-- About section -->
+        <section class="prt-row service-section clearfix" data-aos="fade-up" data-aos-offset="600" data-aos-duration="1500"
+            data-aos-once="true">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6">
+                        <div class="section-title">
                             <div class="title-header">
-                              <h2>Stay up <span></span></h2>
+                                <h2 class="title">Innovating Tomorrow with NexcodeForge</h2>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 blog-sm"> 
-                    <div class="process-desc process-desc1">
-                        <p class="desc-text">Web designing in a powerful way of just not a profession, how in a passion for our Company. We have a to the idea.</p>
-                    </div>
-                </div>
-            
-                <div class="col-xl-4 col-lg-3 col-md-12 col-sm-12 blog-sm">
-                    <div class="blog-title text-end mt-15">
-                        <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-fill prt-btn-color-gradiant" href="contact-us.html">Upcoming News!</a>
-                    </div>
-                </div>
-                <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12 "> 
-                    <div class="section-title style2 mt-25 res-991-mt-0 res-991-mt_5">
-                        <div class="title-header">
-                          <h2>to date</h2>
+                    <div class="col-xl-6">
+                        <div class="process-desc pl-90">
+                            <p class="desc-text">
+                                NexcodeForge is a next-generation software company delivering robust IoT, SaaS,
+                                E-Commerce, and custom digital solutions. We help enterprises automate workflows,
+                                scale operations, and unlock innovation through technology.
+                            </p>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row slick_slider mt-10" data-slick='{"slidesToShow": 3, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1610,"settings":{"slidesToShow": 3,"arrows":false,"autoplay":true}}, {"breakpoint":776,"settings":{"slidesToShow": 2,"arrows":false}}, {"breakpoint":550,"settings":{"slidesToShow": 1}}]}' data-aos="fade-up" data-aos-offset="600" data-aos-duration="1500" data-aos-once="true">
-                <div class="col-lg-4">
-                    <div class="featured-imagebox-post-style1">
-                        <div class="featured-post-overlay">
-                            <div class="featured-post-thumbnail">
-                                <img width="414" height="447" class="img-fluid w-auto" src="guest/assets/images/blog/blog-01-828x894.png" loading="lazy" alt="image">
-                            </div>
-                            <div class="featured-post-content">
-                                <div class="post-entry-date">10 Nov 2020</div>
-                                <div class="prt-post-title">
-                                  <h3 class="post-h3">
-                                    <a href="{{ url('blog') }}" class="post-link">How Can I Manage IT Services in Business ?</a>
-                                  </h3>
-                                </div>
-                                <div class="prt-post-catagory">
-                                  <div class="catagory-text">By John Doe</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="featured-imagebox-post-style1">
-                        <div class="featured-post-overlay">
-                            <div class="featured-post-thumbnail">
-                                <img width="414" height="447" class="img-fluid w-auto" src="guest/assets/images/blog/blog-02-828x894.png" loading="lazy" alt="image">
-                            </div>
-                            <div class="featured-post-content">
-                                <div class="post-entry-date">16 Feb 2020</div>
-                                <div class="prt-post-title">
-                                  <h3 class="post-h3">
-                                    <a href="blog-single.html" class="post-link">Digital Conference Of IT Tech Events in 2019</a>
-                                  </h3>
-                                </div>
-                                <div class="prt-post-catagory">
-                                  <div class="catagory-text">By John Doe</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="featured-imagebox-post-style1">
-                        <div class="featured-post-overlay">
-                            <div class="featured-post-thumbnail">
-                                <img width="414" height="447" class="img-fluid w-auto" src="guest/assets/images/blog/blog-03-828x894.jpg" loading="lazy" alt="image">
-                            </div>
-                            <div class="featured-post-content">
-                                <div class="post-entry-date">01 Jan 2020</div>
-                                <div class="prt-post-title">
-                                  <h3 class="post-h3">
-                                    <a href="blog-single.html" class="post-link">Where And How To Watch Live Stream Today</a>
-                                  </h3>
-                                </div>
-                                <div class="prt-post-catagory">
-                                  <div class="catagory-text">By John Doe</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="featured-imagebox-post-style1">
-                        <div class="featured-post-overlay">
-                            <div class="featured-post-thumbnail">
-                                <img width="414" height="447" class="img-fluid w-auto" src="guest/assets/images/blog/blog-04-828x894.png" loading="lazy" alt="image">
-                            </div>
-                            <div class="featured-post-content">
-                                <div class="post-entry-date">22 Dec 2020</div>
-                                <div class="prt-post-title">
-                                  <h3 class="post-h3">
-                                    <a href="blog-single.html" class="post-link">5 Easy Ways to Improve Your Web Security</a>
-                                  </h3>
-                                </div>
-                                <div class="prt-post-catagory">
-                                  <div class="catagory-text">By John Doe</div>
-                                </div>
-                            </div>
-                        </div>
-                      </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!--blog-section end-->
 
-    <!--client-section-->
-    <section class="prt-row prt-bg bg-base-gradient client-section clearfix">
-        <div class="container-fluid">
-            <!-- slick_slider -->
-            <div class="row slick_slider spacing-3" data-slick='{"slidesToShow": 6, "slidesToScroll": 1, "arrows":false, "dots":false, "autoplay":true, "infinite":true, "responsive": [{"breakpoint":1170,"settings":{"slidesToShow": 5,"arrows":false,"autoplay":true}}, {"breakpoint":840,"settings":{"slidesToShow": 4,"arrows":false}}, {"breakpoint":630,"settings":{"slidesToShow": 3}},{"breakpoint":440,"settings":{"slidesToShow": 2}}]}'>
-                <div class="col-lg-2">
-                    <div class="client-box">
-                        <div class="client-thumbnail">
-                            <img src="guest/assets/images/client-07.png" loading="lazy" alt="client-logo" class="client-box-image img-fluid">
+                <div class="row row-equal-height prt-vertical_sep style1 mt-25">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="guest/assets/images/icon-01.png" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="services.html">UI/UX Design Excellence</a>
+                                </h3>
+                                <p>Crafting user-centric interfaces that turn complex ideas into seamless experiences.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="client-box">
-                        <div class="client-thumbnail">
-                            <img src="guest/assets/images/client-04.png" loading="lazy" alt="client-logo" class="client-box-image img-fluid">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="client-box">
-                        <div class="client-thumbnail">
-                            <img src="guest/assets/images/client-06.png" loading="lazy" alt="client-logo" class="client-box-image img-fluid">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="client-box">
-                        <div class="client-thumbnail">
-                            <img src="guest/assets/images/client-04.png" loading="lazy" alt="client-logo" class="client-box-image img-fluid">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="client-box">
-                        <div class="client-thumbnail">
-                            <img src="guest/assets/images/client-05.png" loading="lazy" alt="client-logo" class="client-box-image img-fluid">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-2">
-                    <div class="client-box">
-                        <div class="client-thumbnail">
-                            <img src="guest/assets/images/client-06.png" loading="lazy" alt="client-logo" class="client-box-image img-fluid">
-                        </div>  
-                    </div>
-                </div> 
-                <div class="col-lg-2">
-                    <div class="client-box">
-                        <div class="client-thumbnail">
-                            <img src="guest/assets/images/client-04.png" loading="lazy" alt="client-logo" class="client-box-image img-fluid">
-                        </div>
-                    </div>
-                </div>                       
-            </div>
-        </div>
-    </section>
-    <!--client-section end-->
 
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="guest/assets/images/icon-02.png" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="services.html">Visual & Brand Identity</a>
+                                </h3>
+                                <p>Building digital brands that communicate trust, creativity, and innovation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="guest/assets/images/icon-03.png" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="services.html">Digital Marketing Strategy</a>
+                                </h3>
+                                <p>Helping brands connect, engage, and convert through data-driven campaigns.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="guest/assets/images/icon-04.png" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="services.html">Customer-First Support</a>
+                                </h3>
+                                <p>Delivering quick, reliable, and result-oriented support for all our solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IT Services -->
+        <section class="prt-row padding_zero-section prt-bg bg-base-grey clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <img class="img-fluid w-100 h-100" src="guest/assets/images/cloud.jpg" alt="NexcodeForge IT Services">
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="prt-bg bg-base-grey spacing-1">
+                            <div class="section-title">
+                                <div class="title-header">
+                                    <h2>Smart IT & Cloud Solutions</h2>
+                                </div>
+                                <div class="title-desc">
+                                    <p>
+                                        NexcodeForge delivers scalable and secure IT solutions built on the latest cloud
+                                        infrastructure. From mobile apps to enterprise automation, our experts ensure your
+                                        business stays ahead of technology trends.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mt-10">
+                                <div class="col-lg-6">
+                                    <h3>Innovation that Scales</h3>
+                                    <h3>Driving Real-World Impact</h3>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Tested & Trusted Frameworks</h3>
+                                    <h3>Solutions Built for Growth</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- marquee -->
+        <section class="prt-row padding_zero-section prt-bg bg-base-gradient clearfix">
+            <div class="container-fluid p-0">
+                <div class="marquee-block overflow-hidden">
+                    <div class="marquee">
+                        <div class="marquee-content">
+                            <div class="marquee-text">Automation</div>
+                            <div class="marquee-text">Innovation</div>
+                            <div class="marquee-text">Cloud Computing</div>
+                            <div class="marquee-text">Digital Commerce</div>
+                            <div class="marquee-text">SaaS Solutions</div>
+                            <div class="marquee-text">Smart Analytics</div>
+                            <div class="marquee-text">IoT Systems</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- projects -->
+        <section class="prt-row bg-img1 prt-bgimage-yes prt-bg bg-base-dark project-section clearfix">
+            <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h3 class="row-heading-h3">One<br>Platform</h3>
+                    </div>
+                    <div class="col-lg-10">
+                        <h2 class="row-heading-h2">Endless</h2>
+                        <h2 class="row-heading-h2 pl-220"><span class="text-base-skin">Possibilities</span></h2>
+                    </div>
+                </div>
+
+                <div class="row mt-50" data-aos="fade-up">
+                    @php
+                        $projects = [
+                            ['title' => 'Cloud Computing', 'img' => 'service-02-654x490.jpg'],
+                            ['title' => 'AI-Driven Analytics', 'img' => 'service-06-654x490.jpg'],
+                            ['title' => 'Custom SaaS Platforms', 'img' => 'service-01-654x490.png'],
+                            ['title' => 'E-Commerce Automation', 'img' => 'service-05-654x490.jpg'],
+                            ['title' => 'MLM Business Tools', 'img' => 'service-03-654x490.jpg'],
+                            ['title' => 'IoT Infrastructure', 'img' => 'service-07-654x490.png'],
+                        ];
+                    @endphp
+                    @foreach ($projects as $p)
+                        <div class="col-lg-6 col-md-6">
+                            <div class="service-box style1">
+                                <div class="service-box-thumnail">
+                                    <img width="654" height="490" class="img-fluid"
+                                        src="guest/assets/images/{{ $p['img'] }}" alt="{{ $p['title'] }}">
+                                </div>
+                                <div class="service-box-content">
+                                    <h3 class="service-box-h3">{{ $p['title'] }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
+        <!-- process -->
+        <section class="prt-row step-section clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <h2>Our Work Process</h2>
+                    </div>
+                    <div class="col-xl-5">
+                        <p class="desc-text">
+                            At NexcodeForge, every project follows a streamlined strategy — from ideation and design to
+                            deployment and optimization — ensuring efficiency and measurable success.
+                        </p>
+                        <a class="prt-btn prt-btn-color-gradiant" href="services.html">Discover Our Approach</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials -->
+        <section class="prt-row bg-img2 prt-bgimage-yes prt-bg bg-base-dark testimonial-section clearfix">
+            <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
+            <div class="container-fluid">
+                <div class="row align-items-center spacing-2">
+                    <div class="col-lg-3">
+                        <h3 class="prt-custom-heading counter">150+</h3>
+                        <h3 class="custom-heading-h3">Global Clients</h3>
+                        <p>Trusted by startups, SMEs, and enterprises across the globe.</p>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="testimonials-style1">
+                                    <p>“NexcodeForge transformed our outdated system into a powerful digital platform that
+                                        doubled our efficiency.”</p>
+                                    <h3 class="testimonial-caption-h3">— Rahul Mehta, CEO</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonials-style1">
+                                    <p>“Their SaaS expertise helped us scale faster with zero downtime — simply the best
+                                        team we’ve worked with.”</p>
+                                    <h3 class="testimonial-caption-h3">— Aisha Khan, Product Head</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonials-style1">
+                                    <p>“From idea to execution, NexcodeForge handled everything flawlessly. Highly
+                                        recommended.”</p>
+                                    <h3 class="testimonial-caption-h3">— David Lee, CTO</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- blog -->
+        <section class="prt-row blog-section clearfix">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Latest Insights from NexcodeForge</h2>
+                    <p>Explore trends in IoT, SaaS, digital marketing, and tech innovations shaping the future.</p>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <img src="guest/assets/images/blog/blog-01-828x894.png" class="img-fluid" alt="IoT Blog">
+                        <h3><a href="{{ url('blog') }}">How IoT is Transforming Business Operations</a></h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="guest/assets/images/blog/blog-02-828x894.png" class="img-fluid" alt="SaaS Blog">
+                        <h3><a href="{{ url('blog') }}">SaaS Models that Drive Scalable Growth</a></h3>
+                    </div>
+                    <div class="col-lg-4">
+                        <img src="guest/assets/images/blog/blog-03-828x894.jpg" class="img-fluid"
+                            alt="Digital Marketing Blog">
+                        <h3><a href="{{ url('blog') }}">Digital Marketing in the Age of Automation</a></h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 @endsection

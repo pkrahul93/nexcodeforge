@@ -1,225 +1,185 @@
 @extends('layouts.guest')
-@section('title', 'Project Details')
+@section('title', 'Project Details | NexcodeForge')
 
 @section('content')
 
-<!-- page-title -->
-        <div class="prt-page-title-row style1">
-            <div class="prt-page-title-row-inner">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="prt-page-title-row-heading">
-                                <div class="banner-vertical-block"></div>
-                                <div class="page-title-heading">
-                                    <h2 class="title">Product Design</h2>
-                                </div>
-                                <div class="breadcrumb-wrapper">
-                                    <span>
-                                        <a title="Homepage" href="index.html">Home</a>
-                                    </span>
-                                    <span class="action">Product Design</span>
-                                </div>
-                            </div>
+<!-- Page Title -->
+<div class="prt-page-title-row style1">
+    <div class="prt-page-title-row-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="prt-page-title-row-heading text-center">
+                        <h2 class="title text-white">Smart CRM Dashboard</h2>
+                        <div class="breadcrumb-wrapper text-white">
+                            <span><a href="{{ route('home') }}" class="text-white">Home</a></span>
+                            <span class="action">Project Details</span>
                         </div>
                     </div>
                 </div>
-                <!-- <div class="bg-page-title-overlay"></div> -->
             </div>
         </div>
-        <!-- page-title end -->
+        <div class="bg-page-title-overlay"></div>
+    </div>
+</div>
+<!-- End Page Title -->
 
-        <!-- site-main start -->
-        <div class="site-main">
+<!-- Site Main -->
+<div class="site-main">
 
-            <!-- product-details-section -->
-            <section class="prt-row product-details clearfix">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="prt-Product-details pl-70 pr-70 res-991-pl-0 res-991-pr-0">
-                                <!-- prt_pf_image-wrapper -->
-                                <div class="prt_pf_image-wrapper">
-                                    <img width="1200" height="800" class="img-fluid" src="images/protfolio-01.jpg" alt="portfolio-img">
+    <!-- Project Details Section -->
+    <section class="prt-row product-details py-80 clearfix">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <!-- Project Header Image -->
+                    <div class="prt_pf_image-wrapper mb-5 text-center">
+                        <img class="img-fluid rounded-4 shadow" 
+                             src="https://images.unsplash.com/photo-1590608897129-79da98d159e4?auto=format&fit=crop&w=1400&q=80" 
+                             alt="CRM Dashboard Preview">
+                    </div>
+
+                    <!-- Project Info -->
+                    <div class="bg-light p-5 rounded-4 shadow-sm mb-5">
+                        <div class="row">
+                            <div class="col-md-2 col-6">
+                                <h5 class="fw-bold text-dark mb-1">Category</h5>
+                                <p class="text-muted">AI SaaS, Automation</p>
+                            </div>
+                            <div class="col-md-2 col-6">
+                                <h5 class="fw-bold text-dark mb-1">Services</h5>
+                                <p class="text-muted">Web App Development</p>
+                            </div>
+                            <div class="col-md-3 col-6">
+                                <h5 class="fw-bold text-dark mb-1">Client</h5>
+                                <p class="text-muted">CredFund India Pvt. Ltd.</p>
+                            </div>
+                            <div class="col-md-2 col-6">
+                                <h5 class="fw-bold text-dark mb-1">Date</h5>
+                                <p class="text-muted">September 2024</p>
+                            </div>
+                            <div class="col-md-3 col-12">
+                                <h5 class="fw-bold text-dark mb-1">Share</h5>
+                                <div class="d-flex gap-3 fs-4">
+                                    <a href="#"><i class="ti-facebook text-primary"></i></a>
+                                    <a href="#"><i class="ti-twitter-alt text-info"></i></a>
+                                    <a href="#"><i class="ti-linkedin text-primary"></i></a>
+                                    <a href="#"><i class="ti-instagram text-danger"></i></a>
                                 </div>
-                                <!-- prt_pf_image-wrapper end -->
-                                <div class="bg-base-grey spacing-7">
-                                    <div class="prt-populated-box-main">
-                                        <!-- <div class="prt-populatedbox"> -->
-                                            <div class="prt-populated-box">
-                                                <h3 class="prt-populated-h3-2">Category</h3>
-                                                <p>Bussiness, workshop</p>
-                                            </div>
-                                            <div class="prt-populated-box">
-                                                <h3 class="prt-populated-h3-2">Services</h3>
-                                                <p>IT-Tech.com</p>
-                                            </div>
-                                            <div class="prt-populated-box">
-                                                <h3 class="prt-populated-h3-2">Client</h3>
-                                               <p>Alexa martin</p>
-                                            </div>
-                                        <!-- </div>
-                                        <div class="prt-populatedbox"> -->
-                                            <div class="prt-populated-box">
-                                                <h3 class="prt-populated-h3-2">Date</h3>
-                                                <p>22 october 19</p>
-                                            </div>
-                                            <div class="prt-populated-box last-child">
-                                                <h3 class="prt-populated-h3-2">Share On</h3>
-                                                <ul class="prt-populated-list">
-                                                    <li class="prt-populated-list-item">
-                                                      <a href="#" class="prt-populated-list-link-2"><i class="ti-facebook"></i></a>
-                                                    </li>
-                                                    <li class="prt-populated-list-item">
-                                                      <a href="#" class="prt-populated-list-link-2"><i class="ti-twitter-alt"></i></a>
-                                                    </li>
-                                                    <li class="prt-populated-list-item">
-                                                      <a href="#" class="prt-populated-list-link-2"><i class="ti-instagram"></i></a>
-                                                    </li>
-                                                </ul>
-                                            </div>
-                                        <!-- </div> -->
-                                    </div>
-                                </div>
-                                <div class="row align-items-center mt-50">
-                                    <div class="col-xl-6 col-lg-12">
-                                        <!-- prt_pf_image-wrapper -->
-                                        <div class="prt_pf_image-wrapper pr-10">
-                                            <img width="615" height="360" class="img-fluid w-100" src="images/single-img-05.jpg" alt="portfolio-img">
-                                        </div>
-                                        <!-- prt_pf_image-wrapper end -->
-                                    </div>
-                                    <div class="col-xl-6 col-lg-12">
-                                        <div class="res-1199-mt-30">
-                                            <p>An advertising agency can be characterized as bundles of exercises offered to different organizations that concern the arranging, generation, and conveyance of advertising.Advertising is relied upon to impact the states of mind, expectations, and conduct of the customer’s clients and in this way.It regularly supplies supporting statistical</p>
-                                            <div class="row g-0 prt-vertical_sep style2">
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                                                <!--prt-fid-->
-                                                <div class="prt-fid inside prt-fid-2 style2 first-child">
-                                                    <div class="prt-fid-contents text-start">
-                                                        <h4 class="prt-fid-inner">
-                                                            <span   data-appear-animation = "animateDigits"
-                                                            data-from             = "0"
-                                                            data-to               = "25"
-                                                            data-interval         = "2"
-                                                            data-before           = ""
-                                                            data-before-style     = "sup"
-                                                            data-after            = "+"
-                                                            data-after-style      = "sub"
-                                                        >25</span>
-                                                        </h4>
-                                                        <h3 class="prt-fid-title">Years of experience</h3>
-                                                    </div>
-                                                </div><!-- prt-fid end-->
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                                                <!--prt-fid-->
-                                                <div class="prt-fid inside prt-fid-2 style2">
-                                                    <div class="prt-fid-contents text-start">
-                                                        <h4 class="prt-fid-inner">
-                                                            <span   data-appear-animation = "animateDigits"
-                                                            data-from             = "0"
-                                                            data-to               = "15"
-                                                            data-interval         = "1"
-                                                            data-before           = ""
-                                                            data-before-style     = "sup"
-                                                            data-after            = "+"
-                                                            data-after-style      = "sub"
-                                                        >15</span>
-                                                        <span>k</span>
-                                                        </h4>
-                                                        <h3 class="prt-fid-title">Freelancers</h3>
-                                                    </div>
-                                                </div><!-- prt-fid end-->
-                                            </div>
-                                            <div class="col-xl-4 col-lg-4 col-md-4 col-sm-4">
-                                                <!--prt-fid-->
-                                                <div class="prt-fid inside prt-fid-2 style2">
-                                                    <div class="prt-fid-contents text-start">
-                                                        <h4 class="prt-fid-inner">
-                                                            <span   data-appear-animation = "animateDigits"
-                                                            data-from             = "0"
-                                                            data-to               = "60"
-                                                            data-interval         = "5"
-                                                            data-before           = ""
-                                                            data-before-style     = "sup"
-                                                            data-after            = "+"
-                                                            data-after-style      = "sub"
-                                                        >60</span>
-                                                        <span>+</span>
-                                                        </h4>
-                                                        <h3 class="prt-fid-title">Project done</h3>
-                                                    </div>
-                                                </div><!-- prt-fid end-->
-                                            </div>
-                                        </div>
-                                        </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="row align-items-center mb-5">
+                        <div class="col-lg-6">
+                            <img class="img-fluid rounded-4 shadow" 
+                                 src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80" 
+                                 alt="Dashboard Analytics">
+                        </div>
+                        <div class="col-lg-6 mt-4 mt-lg-0">
+                            <h3 class="fw-bold text-dark mb-3">Project Overview</h3>
+                            <p class="text-muted" style="font-size: 17px;">
+                                NexcodeForge developed a cloud-based CRM solution designed to streamline lead management,
+                                automate daily tasks, and enhance data-driven decision-making for financial service providers.
+                                The dashboard integrates AI modules for customer profiling, sales forecasting, and performance analytics.
+                            </p>
+                            <ul class="list-unstyled text-muted" style="font-size: 16px;">
+                                <li>✔ AI-powered lead scoring and activity tracking</li>
+                                <li>✔ Seamless API integration with WhatsApp and Meta CRM</li>
+                                <li>✔ Role-based dashboards for agents, admins, and managers</li>
+                                <li>✔ 40% improvement in operational efficiency</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Key Metrics -->
+                    <div class="row text-center py-4 bg-dark rounded-4 text-white mb-5">
+                        <div class="col-md-4">
+                            <h2 class="fw-bold mb-1">10+</h2>
+                            <p>Active Clients Using Platform</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="fw-bold mb-1">2M+</h2>
+                            <p>Leads Processed Securely</p>
+                        </div>
+                        <div class="col-md-4">
+                            <h2 class="fw-bold mb-1">99.9%</h2>
+                            <p>Uptime with AWS Auto Scaling</p>
+                        </div>
+                    </div>
+
+                    <!-- Additional Images -->
+                    <div class="row g-4 mb-5">
+                        <div class="col-md-6">
+                            <img class="img-fluid rounded-4 shadow-sm"
+                                 src="https://images.unsplash.com/photo-1581090700227-1e37b190418e?auto=format&fit=crop&w=900&q=80"
+                                 alt="Team Collaboration">
+                        </div>
+                        <div class="col-md-6">
+                            <img class="img-fluid rounded-4 shadow-sm"
+                                 src="https://images.unsplash.com/photo-1581091870622-6c82f4fbd7bf?auto=format&fit=crop&w=900&q=80"
+                                 alt="UI/UX Mockup">
+                        </div>
+                    </div>
+
+                    <!-- Navigation -->
+                    <div class="d-flex justify-content-between mt-5">
+                        <a href="#" class="prt-btn prt-btn-size-md prt-btn-style-border prt-btn-color-dark rounded-pill">
+                            <i class="ti-angle-left me-2"></i> Previous
+                        </a>
+                        <a href="#" class="prt-btn prt-btn-size-md prt-btn-style-fill prt-btn-color-gradiant rounded-pill">
+                            Next <i class="ti-angle-right ms-2"></i>
+                        </a>
+                    </div>
+
+                    <!-- Related Projects -->
+                    <div class="mt-80">
+                        <h3 class="fw-bold text-dark mb-4">Related Projects</h3>
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <div class="position-relative overflow-hidden rounded-4 shadow">
+                                    <img class="img-fluid w-100" 
+                                         src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80" 
+                                         alt="Secure File Sharing">
+                                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
+                                        <h5 class="mb-1">Secure File Sharing</h5>
+                                        <p class="small mb-0">Cloud, Security</p>
                                     </div>
                                 </div>
-                                <div class="prt-horizontal_sep mt-50 mb-30 res-991-mt-30 res-575-mt-20"></div>
-                                <div class="pf-single-btn text-end">
-                                    <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-border prt-btn-color-dark mr-10" href="#">Next</a>
-                                    <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-border prt-btn-color-dark" href="#">Previous</a>
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="position-relative overflow-hidden rounded-4 shadow">
+                                    <img class="img-fluid w-100" 
+                                         src="https://images.unsplash.com/photo-1581093588401-22e8f85b4892?auto=format&fit=crop&w=900&q=80" 
+                                         alt="IoT Analytics Platform">
+                                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
+                                        <h5 class="mb-1">IoT Energy Dashboard</h5>
+                                        <p class="small mb-0">IoT, Automation</p>
+                                    </div>
                                 </div>
-                                <div class="row mt-45 res-991-mt-30">
-                                    <div class="col-lg-12">
-                                        <h3 class="pf-single-related-title-2">Related Projects</h3>
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <!-- featured-imagebox -->
-                                        <div class="featured-imagebox featured-imagebox-gallery">
-                                            <div class="featured-link">
-                                                <div class="featured-thumbnail">
-                                                    <img class="img-fluid" width="635" height="800" src="images/pf-06-635x800.png" alt="gallery-img">
-                                                </div>
-                                                <div class="imagebox-portfolio-bg-overlay"></div>
-                                                <div class="imagebox-content-prtfolio">
-                                                    <div class="imagebox-category-portfolio">
-                                                      <a href="#" class="category-portfolio">Corporate</a>
-                                                      <div class="category-sep">,</div>
-                                                      <a href="#" class="category-portfolio">Workshop</a>
-                                                    </div>
-                                                    <div class="imagebox-title-portfolio">
-                                                      <h3 class="imagebox-heading-portfolio">
-                                                        <a href="project-details.html" class="imagebox-heading-portfolio-link">Cloud services</a>
-                                                      </h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-imagebox end-->
-                                    </div>
-                                    <div class="col-lg-4 col-md-6 col-sm-6">
-                                        <!-- featured-imagebox -->
-                                        <div class="featured-imagebox featured-imagebox-gallery">
-                                            <div class="featured-link">
-                                                <div class="featured-thumbnail">
-                                                    <img class="img-fluid" width="635" height="800" src="images/pf-04-635x800.jpg" alt="gallery-img">
-                                                </div>
-                                                <div class="imagebox-portfolio-bg-overlay"></div>
-                                                <div class="imagebox-content-prtfolio">
-                                                    <div class="imagebox-category-portfolio">
-                                                      <a href="#" class="category-portfolio">Business</a>
-                                                      <div class="category-sep">,</div>
-                                                      <a href="#" class="category-portfolio">Campaign</a>
-                                                    </div>
-                                                    <div class="imagebox-title-portfolio">
-                                                      <h3 class="imagebox-heading-portfolio">
-                                                        <a href="project-details.html" class="imagebox-heading-portfolio-link">Big data analytics</a>
-                                                      </h3>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div><!-- featured-imagebox end-->
+                            </div>
+
+                            <div class="col-md-4">
+                                <div class="position-relative overflow-hidden rounded-4 shadow">
+                                    <img class="img-fluid w-100" 
+                                         src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=900&q=80" 
+                                         alt="E-commerce Portal">
+                                    <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
+                                        <h5 class="mb-1">Insiya Outfits</h5>
+                                        <p class="small mb-0">E-Commerce, Retail</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <!-- Related Projects End -->
+
                 </div>
-            </section>
-            <!-- product-details-section-end -->
-
-        </div><!-- site-main end-->
-
+            </div>
+        </div>
+    </section>
+    <!-- Project Details End -->
+</div>
 @endsection
-
