@@ -19,27 +19,31 @@ class BlogController extends Controller
         return view('backend.blogs.index', compact('posts'));
     }
 
-    // Show form to create post
-    public function create()
+    // Show add/edit form
+    public function createOrEdit($id = null)
     {
         $categories = Category::all();
         $tags = Tag::all();
-        $selectedTags = [];
-        return view('backend.blogs.manage', compact('categories', 'tags', 'selectedTags'));
+
+        $blog = $id ? Blog::with('tags')->findOrFail($id) : null;
+        $selectedTags = $blog ? $blog->tags->pluck('id')->toArray() : [];
+
+        return view('backend.blogs.manage', compact('categories', 'tags', 'blog', 'selectedTags'));
     }
 
-    // Store post
-    public function store(Request $request)
+    // Store or update
+    public function storeOrUpdate(Request $request, $id = null)
     {
         $request->validate([
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
             'content' => 'required|string',
             'status' => 'required|in:draft,published,archived',
-            'tags' => 'array'
+            'tags' => 'array',
+            'featured_image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048'
         ]);
 
-        $post = Blog::create([
+        $data = [
             'user_id' => Auth::id(),
             'category_id' => $request->category_id,
             'title' => $request->title,
@@ -47,56 +51,54 @@ class BlogController extends Controller
             'content' => $request->content,
             'status' => $request->status,
             'published_at' => $request->status === 'published' ? now() : null,
-        ]);
+        ];
 
-        // Attach multiple tags
-        if ($request->has('tags')) {
-            $post->tags()->attach($request->tags);
+        // Handle image
+        if ($request->hasFile('featured_image')) {
+            $file = $request->file('featured_image');
+            $filename = time() . '_' . $file->getClientOriginalName();
+            $file->move(public_path('uploads/blogs'), $filename);
+            $data['featured_image'] = $filename;
         }
 
-        return redirect()->route('blogs.index')->with('success', 'Post created successfully.');
+        // Create or update blog
+        $blog = Blog::updateOrCreate(['id' => $id], $data);
+
+        // Sync tags
+        $blog->tags()->sync($request->tags ?? []);
+
+        return redirect()->route('blogs.index')->with('success', $id ? 'Blog updated successfully' : 'Blog created successfully');
     }
 
-    // Edit post
-    public function edit(Blog $post)
+    // Delete blog
+    public function destroy($id)
     {
-        $categories = Category::all();
-        $tags = Tag::all();
-        $selectedTags = $post->tags->pluck('id')->toArray();
-        return view('backend.blogs.manage', compact('post', 'categories', 'tags', 'selectedTags'));
+        $blog = Blog::findOrFail($id);
+        $blog->delete();
+        return redirect()->route('blogs.index')->with('success', 'Blog deleted successfully');
     }
 
-    // Update post
-    public function update(Request $request, Blog $post)
+    // Update status via AJAX
+    // public function updateStatus(Request $request, $id)
+    // {
+    //     $blog = Blog::findOrFail($id);
+    //     $blog->update(['status' => $request->status]);
+    //     return response()->json(['success' => true, 'message' => 'Status updated successfully']);
+    // }
+    public function updateStatus(Request $request, $id)
     {
         $request->validate([
-            'title' => 'required|string|max:255',
-            'category_id' => 'required|exists:categories,id',
-            'content' => 'required|string',
             'status' => 'required|in:draft,published,archived',
-            'tags' => 'array'
         ]);
 
-        $post->update([
-            'category_id' => $request->category_id,
-            'title' => $request->title,
-            'slug' => Str::slug($request->title),
-            'content' => $request->content,
-            'status' => $request->status,
-            'published_at' => $request->status === 'published' ? now() : null,
+        $blog = Blog::findOrFail($id);
+        $blog->status = $request->status;
+        $blog->save();
+
+        return response()->json([
+            'success' => true,
+            'status' => $blog->status,
+            'message' => 'Blog status updated to ' . ucfirst($blog->status) . '.',
         ]);
-
-        if ($request->has('tags')) {
-            $post->tags()->sync($request->tags); // replaces existing with new ones
-        }
-
-        return redirect()->route('blogs.index')->with('success', 'Post updated successfully.');
-    }
-
-    // Delete post
-    public function destroy(Blog $post)
-    {
-        $post->delete();
-        return redirect()->route('blogs.index')->with('success', 'Post deleted successfully.');
     }
 }
