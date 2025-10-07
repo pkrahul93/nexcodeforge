@@ -96,7 +96,7 @@
            </ul>
          </li>
         <li class="nav-header">TAGS</li>
-         <li class="nav-item {{ isActive(['manage-tag', 'all-tags'], 'menu-is-opening menu-open') }}">
+         <li class="nav-item {{ isActive(['manage-tag', 'tags'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
              <p>
@@ -106,13 +106,7 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="{{ url('manage-tag') }}" class="nav-link {{ isActive(['manage-tag'], 'active') }}">
-                 <i class="far fa-circle nav-icon"></i>
-                 <p>Create New Tag</p>
-               </a>
-             </li>
-             <li class="nav-item">
-               <a href="{{ url('all-tags') }}" class="nav-link {{ isActive(['all-tags'], 'active') }}">
+               <a href="{{ url('tags') }}" class="nav-link {{ isActive(['tags'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
                  <p>All Tags</p>
                </a>
@@ -121,7 +115,7 @@
          </li>
 
          <li class="nav-header">CATEGORIES</li>
-         <li class="nav-item {{ isActive(['manage-category', 'all-categories'], 'menu-is-opening menu-open') }}">
+         <li class="nav-item {{ isActive(['categories'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
              <p>
@@ -131,13 +125,7 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="{{ url('manage-category') }}" class="nav-link {{ isActive(['manage-category'], 'active') }}">
-                 <i class="far fa-circle nav-icon"></i>
-                 <p>Create Category</p>
-               </a>
-             </li>
-             <li class="nav-item">
-               <a href="{{ url('all-categories') }}" class="nav-link {{ isActive(['all-categories'], 'active') }}">
+               <a href="{{ url('categories') }}" class="nav-link {{ isActive(['categories'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
                  <p>All Categories</p>
                </a>

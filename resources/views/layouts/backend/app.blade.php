@@ -71,6 +71,9 @@
     <!-- dropzonejs -->
     <link rel="stylesheet" href="{{ asset('backend/assets/plugins/dropzone/min/dropzone.min.css') }}">
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
+    <!-- Toastr CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css">
+
 
     <style>
         .signout {
@@ -153,6 +156,8 @@
     <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
     <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
     <script src="{{ asset('backend/assets/plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+    <!-- jQuery (already loaded before this line) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
         $(function() {
             $("#example1").DataTable({
@@ -170,6 +175,29 @@
                 "autoWidth": false,
                 "responsive": true,
             });
+        });
+
+        // $('.custom-file-input').on('change', function() {
+        //     let fileName = $(this).val().split('\\').pop();
+        //     $(this).next('.custom-file-label').addClass('selected').html(fileName);
+        // });
+        $('.custom-file-input').on('change', function() {
+            // 1️⃣ Show selected file name
+            let fileName = $(this).val().split('\\').pop();
+            $(this).next('.custom-file-label').addClass('selected').html(fileName);
+
+            // 2️⃣ Show live image preview
+            const input = this;
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    $('#imgPreview img')
+                        .attr('src', e.target.result)
+                        .hide()
+                        .fadeIn(300);
+                };
+                reader.readAsDataURL(input.files[0]);
+            }
         });
     </script>
     <script src="https://cdn.ckeditor.com/ckeditor5/41.2.1/classic/ckeditor.js"></script>
@@ -191,6 +219,14 @@
             console.error(error);
         });
     </script>
+    <!--begin::Bootstrap Tooltips-->
+    <script>
+        const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
+        const tooltipList = [...tooltipTriggerList].map(
+            (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl),
+        );
+    </script>
+    <!--end::Bootstrap Tooltips-->
 </body>
 
 </html>

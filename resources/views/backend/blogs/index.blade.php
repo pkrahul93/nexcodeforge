@@ -1,5 +1,5 @@
 @extends('layouts.backend.app')
-@section('title', 'Blank')
+@section('title', 'All Blogs')
 
 @section('content')
 
@@ -36,36 +36,47 @@
                                         <th>Category</th>
                                         <th>Title</th>
                                         <th>Image(s)</th>
-                                        <th>Contents</th>
+                                        <th class="message">Contents</th>
                                         <th>Published At</th>
                                         <th>Status</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {{-- @foreach ($enquries as $index => $enquiry)
+                                    @foreach ($posts as $index => $post)
                                         <tr>
                                             <td>{{ $index + 1 }} </td>
-                                            <td>{{ $enquiry['name'] }} </td>
-                                            <td>{{ $enquiry['email'] }}</td>
-                                            <td>{{ $enquiry['mobile'] }}</td>
-                                            <td class="message">{{ $enquiry['message'] }}</td>
+                                            <td>{{ $post->category_id }}</td>
+                                            <td>{{ $post->title }} </td>
                                             <td>
-                                                <a href="#" class="btn btn-sm btn-success">Read</a>
-                                                <a href="#" class="btn btn-sm btn-danger">Delete</a>
+                                                <div class="card p-2">
+                                                    <img src="{{ 'uploads/blogs/' . $post->featured_image }}" width="150px"
+                                                        alt="featured-img" class="img-fluid">
+                                                </div>
+                                            </td>
+                                            <td class="message">{!! $post->content !!}</td>
+                                            <td>{{ $post->published_at }}</td>
+                                            <td>
+                                                <select class="form-control status-change" data-id="{{ $post->id }}">
+                                                    <option value="draft" {{ $post->status == 'draft' ? 'selected' : '' }}>
+                                                        Draft</option>
+                                                    <option value="published"
+                                                        {{ $post->status == 'published' ? 'selected' : '' }}>Published
+                                                    </option>
+                                                    <option value="archived"
+                                                        {{ $post->status == 'archived' ? 'selected' : '' }}>Archived
+                                                    </option>
+                                                </select>
+                                            </td>
+                                            <td>
+                                                <a href="{{ url('/add-blog/' . $post->id) }}"
+                                                    class="btn btn-sm btn-success">Edit</a>
+                                                <a href="{{ url('/delete-blog/' . $post->id) }}"
+                                                    class="btn btn-sm btn-danger">Delete</a>
                                             </td>
                                         </tr>
-                                    @endforeach --}}
+                                    @endforeach
                                 </tbody>
-                                {{-- <tfoot>
-                                    <tr>
-                                        <th>Rendering engine</th>
-                                        <th>Browser</th>
-                                        <th>Platform(s)</th>
-                                        <th>Engine version</th>
-                                        <th>CSS grade</th>
-                                    </tr>
-                                </tfoot> --}}
                             </table>
                         </div>
                         <!-- /.card-body -->
@@ -77,5 +88,30 @@
             <!-- /.row -->
         </div>
     </section>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('.status-change').change(function() {
+            const blogId = $(this).data('id');
+            const status = $(this).val();
+
+            $.ajax({
+                url: '/blog/' + blogId + '/status',
+                type: 'PATCH',
+                data: {
+                    _token: '{{ csrf_token() }}',
+                    status: status
+                },
+                success: function(res) {
+                    toastr.success(res.message); // Optional if you're using Toastr
+                },
+                error: function(xhr) {
+                    alert('Failed to update status.');
+                    console.error(xhr.responseText);
+                }
+            });
+        });
+    </script>
 
 @endsection
