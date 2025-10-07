@@ -75,7 +75,7 @@
                                 <div class="site-navigation d-flex align-items-center justify-content-between">
                                     <!-- site-branding -->
                                     <div class="site-branding">
-                                        <h1><a class="home-link" href="index.html" title="Altech" rel="home">
+                                        <h1><a class="home-link" href="/" title="Altech" rel="home">
                                                 <img id="logo-img" height="50" width="200"
                                                     class="img-fluid auto_size" src="{{ asset('images/logo.png') }}"
                                                     alt="logo-img">
@@ -140,7 +140,7 @@
                                         <div class="side-menu-container d-flex align-items-center">
                                             <div class="header_call">
                                                 <span class="call-text">Tollfree : </span>
-                                                <a href="tel:1234567890" class="call_btn"> (+123 456 7890)</a>
+                                                <a href="tel:1234567890" class="call_btn"> +91 7669166975</a>
                                             </div>
                                             <div class="side-menu"><a href="#"><i class="icon-menu"></i></a>
                                             </div>
