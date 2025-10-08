@@ -168,13 +168,11 @@
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="{{ route('blogs') }}"
+                                                        <a href="#"
                                                             class="mega-menu-link">Blogs</a>
-                                                        {{-- <ul class="mega-submenu">
-                                                            <li><a href="{{ route('blogs') }}">Blog</a></li>
-                                                            <li><a href="{{ route('blog-details') }}">Blog Single
-                                                                    View</a></li>
-                                                        </ul> --}}
+                                                        <ul class="mega-submenu">
+                                                            <li><a href="{{ route('blogs') }}">All Blogs</a></li>
+                                                        </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
                                                         <a href="{{ url('contactus') }}">Contact us</a>
