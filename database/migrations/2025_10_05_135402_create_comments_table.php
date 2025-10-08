@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('comments', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('blog_id')->constrained()->cascadeOnDelete();
+            $table->foreignId('blog_id')->constrained('posts')->cascadeOnDelete();
             $table->foreignId('user_id')->nullable()->constrained()->nullOnDelete(); // for guest comments
             $table->string('name')->nullable();
             $table->string('email')->nullable();
