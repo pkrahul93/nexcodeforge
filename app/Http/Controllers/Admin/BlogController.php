@@ -35,6 +35,8 @@ class BlogController extends Controller
     public function storeOrUpdate(Request $request, $id = null)
     {
         $request->validate([
+            'meta_title' => 'nullable|string|max:255',
+            'meta_description' => 'nullable|string',
             'title' => 'required|string|max:255',
             'category_id' => 'required|exists:categories,id',
             'content' => 'required|string',
@@ -46,6 +48,8 @@ class BlogController extends Controller
         $data = [
             'user_id' => Auth::id(),
             'category_id' => $request->category_id,
+            'meta_title' => $request->meta_title,
+            'meta_description' => $request->meta_description,
             'title' => $request->title,
             'slug' => Str::slug($request->title),
             'content' => $request->content,
@@ -79,12 +83,6 @@ class BlogController extends Controller
     }
 
     // Update status via AJAX
-    // public function updateStatus(Request $request, $id)
-    // {
-    //     $blog = Blog::findOrFail($id);
-    //     $blog->update(['status' => $request->status]);
-    //     return response()->json(['success' => true, 'message' => 'Status updated successfully']);
-    // }
     public function updateStatus(Request $request, $id)
     {
         $request->validate([
@@ -92,7 +90,19 @@ class BlogController extends Controller
         ]);
 
         $blog = Blog::findOrFail($id);
+
         $blog->status = $request->status;
+
+        // If status is 'published' and published_at is null or not set, update it
+        if ($request->status === 'published' && empty($blog->published_at)) {
+            $blog->published_at = now(); // uses current timestamp
+        }
+
+        // Optionally, if status is not published, you can clear published_at
+        if ($request->status !== 'published') {
+            $blog->published_at = null;
+        }
+
         $blog->save();
 
         return response()->json([

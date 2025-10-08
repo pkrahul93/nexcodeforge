@@ -10,7 +10,7 @@ class Comment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'post_id', 'user_id', 'name', 'email', 'content', 'status'
+        'blog_id', 'user_id', 'name', 'email', 'website', 'content', 'status'
     ];
 
     // Relationships
