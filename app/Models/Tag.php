@@ -14,7 +14,8 @@ class Tag extends Model
     // Relationship
     public function posts()
     {
-        return $this->belongsToMany(Blog::class);
+        return $this->belongsToMany(Blog::class, 'blog_tag', 'tag_id', 'blog_id');
     }
+
 
 }
