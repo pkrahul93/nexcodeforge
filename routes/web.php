@@ -13,9 +13,21 @@ use App\Http\Controllers\ContactController;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('guest.index');
-})->name('home');
+Route::any('pass',
+function () {
+        $arrData = [];
+         //$str = "bE#XD49US32["; //old - "abhui9@kji5";
+        //$str = "r@mt#JQp686"; //"jngGtrjn@5335dfmn";
+         $str = "Admin@123";
+        
+        $arrData['bcrypt'] = bcrypt($str);
+        
+        dd($arrData);
+    });
+Route::get('/', function () {return view('guest.index');})->name('home');
+
+
+
 
 Route::get('/about', function () {
     return view('guest.about');
