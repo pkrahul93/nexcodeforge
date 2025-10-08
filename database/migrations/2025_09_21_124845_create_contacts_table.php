@@ -17,6 +17,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('mobile');
             $table->text('message');
+            $table->boolean('status')->default(0);
+            $table->boolean('enquiry_type')->default(1);
             $table->timestamps();
         });
     }
