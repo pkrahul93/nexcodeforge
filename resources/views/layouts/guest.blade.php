@@ -39,22 +39,66 @@
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/animate.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/fontello.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/flaticon.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/themify-icons.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/aos.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/slick.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/prettyPhoto.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/shortcodes.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/main.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/megamenu.css">
-    <link rel="stylesheet" type="text/css" href="guest/assets/css/responsive.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/animate.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/all.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/fontello.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/flaticon.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/themify-icons.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/aos.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/slick.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/prettyPhoto.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/shortcodes.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/megamenu.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('guest/assets/css/responsive.css') }}">
     <!-- REVOLUTION LAYERS STYLES -->
-    <link rel='stylesheet' id='rs-plugin-settings-css' href="guest/assets/revolution/css/rs6.css">
+    <link rel='stylesheet' id='rs-plugin-settings-css' href="{{ asset('guest/assets/revolution/css/rs6.css') }}">
+    <!-- Owl Carousel CSS -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
+
+    <style>
+        .blog-cat {
+            font-size: 23px;
+            font-weight: 600;
+            text-shadow: 2px -2px #000;
+        }
+
+        .testimonial-wrapper {
+            position: relative;
+        }
+
+        .testimonial-nav {
+            position: absolute;
+            top: 93%;
+            width: 100%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            z-index: 99;
+            text-align: center;
+        }
+
+        .testimonial-nav button {
+            /* background: #007bff; */
+            color: #007bff;
+            border: none;
+            border-radius: 50%;
+            /* width: 40px;
+            height: 40px; */
+            font-size: 16px;
+            pointer-events: all;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .testimonial-nav button:hover {
+            background: #7cf039;
+        }
+    </style>
 
 </head>
 
@@ -119,16 +163,18 @@
                                                         <ul class="mega-submenu">
                                                             <li><a href="{{ url('projects') }}">Projects</a>
                                                             </li>
-                                                            <li><a href="{{ url('project-details') }}">Project Details</a></li>
+                                                            <li><a href="{{ url('project-details') }}">Project
+                                                                    Details</a></li>
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="#" class="mega-menu-link">Blog</a>
-                                                        <ul class="mega-submenu">
-                                                            <li><a href="{{ route('blogs') }}">Blog Classic</a></li>
+                                                        <a href="{{ route('blogs') }}"
+                                                            class="mega-menu-link">Blogs</a>
+                                                        {{-- <ul class="mega-submenu">
+                                                            <li><a href="{{ route('blogs') }}">Blog</a></li>
                                                             <li><a href="{{ route('blog-details') }}">Blog Single
                                                                     View</a></li>
-                                                        </ul>
+                                                        </ul> --}}
                                                     </li>
                                                     <li class="mega-menu-item">
                                                         <a href="{{ url('contactus') }}">Contact us</a>
@@ -139,7 +185,7 @@
                                         </div>
                                         <div class="side-menu-container d-flex align-items-center">
                                             <div class="header_call">
-                                                <span class="call-text">Tollfree : </span>
+                                                <span class="call-text">Call Now : </span>
                                                 <a href="tel:1234567890" class="call_btn"> +91 7669166975</a>
                                             </div>
                                             <div class="side-menu"><a href="#"><i class="icon-menu"></i></a>
@@ -441,25 +487,25 @@
 
 
     <!-- Javascript -->
-    <script src="guest/assets/js/jquery-3.6.4.min.js"></script>
-    <script src="guest/assets/js/jquery-migrate-3.4.0.min.js"></script>
-    <script src="guest/assets/js/bootstrap.bundle.js"></script>
-    <script src="guest/assets/js/Scrolltrigger.js"></script>
-    <script src="guest/assets/js/SplitText.js"></script>
-    <script src="guest/assets/js/cursor.js"></script>
-    <script src="guest/assets/js/gsap.js"></script>
-    <script src="guest/assets/js/gsap.min.js"></script>
-    <script src="guest/assets/js/gsap-animation.js"></script>
-    <script src="guest/assets/js/jquery-validate.js"></script>
-    <script src="guest/assets/js/jquery.prettyPhoto.js"></script>
-    <script src="guest/assets/js/slick.min.js"></script>
-    <script src="guest/assets/js/jquery-waypoints.js"></script>
-    <script src="guest/assets/js/numinate.min.js"></script>
-    <script src="guest/assets/js/imagesloaded.min.js"></script>
-    <script src="guest/assets/js/jquery-isotope.js"></script>
-    <script src="guest/assets/js/circle-progress.min.js"></script>
-    <script src="guest/assets/js/main.js"></script>
-    <script src="guest/assets/js/aos.js"></script>
+    <script src="{{ asset('guest/assets/js/jquery-3.6.4.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/jquery-migrate-3.4.0.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/bootstrap.bundle.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/Scrolltrigger.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/SplitText.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/cursor.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/gsap.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/gsap.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/gsap-animation.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/jquery-validate.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/jquery.prettyPhoto.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/slick.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/jquery-waypoints.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/numinate.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/imagesloaded.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/jquery-isotope.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/circle-progress.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/main.js') }}"></script>
+    <script src="{{ asset('guest/assets/js/aos.js') }}"></script>
     <script>
         AOS.init({
             offset: 120,
@@ -468,9 +514,47 @@
     </script>
 
     <!-- Revolution Slider -->
-    <script src='guest/assets/revolution/js/revolution.tools.min.js'></script>
-    <script src='guest/assets/revolution/js/rs6.min.js'></script>
-    <script src="guest/assets/revolution/js/slider.js"></script>
+    <script src="{{ asset('guest/assets/revolution/js/revolution.tools.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/revolution/js/rs6.min.js') }}"></script>
+    <script src="{{ asset('guest/assets/revolution/js/slider.js') }}"></script>
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            var owl = $('.testimonial-carousel');
+
+            owl.owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false, // disable default nav
+                dots: true,
+                autoplay: true,
+                autoplayTimeout: 5000,
+                autoplayHoverPause: true,
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    600: {
+                        items: 1
+                    },
+                    1000: {
+                        items: 1
+                    }
+                }
+            });
+
+            // Custom next/prev
+            $('.next-btn').click(function() {
+                owl.trigger('prev.owl.carousel');
+            });
+
+            $('.prev-btn').click(function() {
+                owl.trigger('next.owl.carousel');
+            });
+        });
+    </script>
+
     <!-- Javascript end-->
 
 </body>
