@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EditorUploadController;
 use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\BlogController as PostController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\ContactController;
@@ -36,13 +37,11 @@ Route::get('/services', function () {
     return view('guest.services');
 })->name('services');
 
-Route::get('/blogs', function () {
-    return view('guest.blog');
-})->name('blogs');
-
-Route::get('/blog-details', function () {
-    return view('guest.blog-details');
-})->name('blog-details');
+// Route For Blogs.....
+Route::get('/blogs', [PostController::class, 'index'])->name('blogs');
+Route::get('/blogs/tag/{slug}', [PostController::class, 'blogsByTag'])->name('blogs.byTag');
+Route::get('/blog-details/{slug}', [PostController::class, 'blogDetails'])->name('blog.details');
+Route::post('/blog/{blog}/comment', [PostController::class, 'storeComment'])->name('comments.store');
 
 Route::get('/team', function () {
     return view('guest.team');
