@@ -1,5 +1,5 @@
 @extends('layouts.guest')
-@section('title', 'Blogs')
+@section('title', 'Blogs By Tag')
 
 @php
     // dd($posts);
@@ -15,13 +15,13 @@
                         <div class="prt-page-title-row-heading">
                             <div class="banner-vertical-block"></div>
                             <div class="page-title-heading">
-                                <h2 class="title">All Blogs</h2>
+                                <h2 class="title">All Blogs By Tag</h2>
                             </div>
                             <div class="breadcrumb-wrapper">
                                 <span>
                                     <a title="Homepage" href="{{ url('/') }}">Home</a>
                                 </span>
-                                <span class="action">Blogs</span>
+                                <span class="action">{{ $tag->name }}</span>
                             </div>
                         </div>
                     </div>

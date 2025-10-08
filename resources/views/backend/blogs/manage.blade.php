@@ -45,7 +45,21 @@
                                             <input type="text" name="title" class="form-control"
                                                 placeholder="Write Blog Title Here...."
                                                 value="{{ old('title', $blog->title ?? '') }}"
-                                                data-original="{{ $blog->title ?? '' }}">
+                                                data-original="{{ $blog->title ?? '' }}" required>
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-3">
+                                            <label for="meta_title">Meta Title (Optional)</label>
+                                            <input type="text" name="meta_title" class="form-control"
+                                                placeholder="Write Blog Meta Title Here...."
+                                                value="{{ old('meta_title', $blog->meta_title ?? '') }}"
+                                                data-original="{{ $blog->meta_title ?? '' }}">
+                                        </div>
+
+                                        <div class="form-group col-md-12 mb-3">
+                                            <label for="meta_description">Meta Description (Optioanl)</label>
+                                            <textarea class="form-control" name="meta_description" id="meta_description" cols="30" rows="3"
+                                                placeholder="Write Blog Meta Description Here...." data-original="{{ $blog->meta_description ?? '' }}">{{ old('meta_description', $blog->meta_description ?? '') }}</textarea>
                                         </div>
 
                                         <div class="form-group col-md-6 mb-3">
@@ -79,8 +93,7 @@
                                         <div class="form-group col-md-12 mb-3">
                                             <label for="tags">Choose Tags</label>
                                             <div class="card p-3">
-                                                <div class="row" id="tagsContainer"
-                                                data-original='{{ $originalTags }}'>
+                                                <div class="row" id="tagsContainer" data-original='{{ $originalTags }}'>
                                                     @foreach ($tags as $tag)
                                                         <div class="col-md-4 mb-2">
                                                             <div class="form-check">
@@ -88,7 +101,8 @@
                                                                     id="tag_{{ $tag->id }}" name="tags[]"
                                                                     value="{{ $tag->id }}"
                                                                     {{ in_array($tag->id, old('tags', $selectedTags ?? [])) ? 'checked' : '' }}>
-                                                                <label class="form-check-label" for="tag_{{ $tag->id }}">
+                                                                <label class="form-check-label"
+                                                                    for="tag_{{ $tag->id }}">
                                                                     {{ $tag->name }}
                                                                 </label>
                                                             </div>
@@ -96,12 +110,6 @@
                                                     @endforeach
                                                 </div>
                                             </div>
-                                        </div>
-
-                                        <div class="form-group col-md-12 mb-3">
-                                            <label for="editor-content">Blog Content</label>
-                                            <textarea name="content" id="editor-content" rows="13" class="form-control"
-                                                placeholder="Write Blog Content Here....">{{ old('content', $blog->content ?? '') }}</textarea>
                                         </div>
                                     </div>
                                 </div>
@@ -127,6 +135,12 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+
+                                <div class="form-group col-md-12 mb-3">
+                                    <label for="editor-content">Blog Content</label>
+                                    <textarea name="content" id="editor-content" rows="13" class="form-control"
+                                        placeholder="Write Blog Content Here....">{{ old('content', $blog->content ?? '') }}</textarea>
                                 </div>
                             </div>
 
