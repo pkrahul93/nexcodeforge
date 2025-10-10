@@ -41,7 +41,7 @@
            </a>
          </li> --}}
          <li class="nav-header">PROMOTIONS</li>
-         <li class="nav-item">
+         <li class="nav-item {{ isActive(['manage-promotion', 'promotions'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
              <p>
@@ -52,13 +52,13 @@
            </a>
            <ul class="nav nav-treeview">
              <li class="nav-item">
-               <a href="pages/tables/simple.html" class="nav-link">
+               <a href="{{ url('manage-promotion') }}" class="nav-link {{ isActive(['manage-promotion'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
-                 <p>Create New Promotion</p>
+                 <p>Create New</p>
                </a>
              </li>
              <li class="nav-item">
-               <a href="pages/tables/data.html" class="nav-link">
+               <a href="{{ url('promotions') }}" class="nav-link {{ isActive(['promotions'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
                  <p>All Promotions</p>
                </a>
@@ -66,7 +66,7 @@
            </ul>
          </li>
          <li class="nav-header">ENQUIRIES</li>
-         <li class="nav-item {{ isActive(['all-contacts', 'all-promotional-enquries', 'all-general-enquries'], 'menu-is-opening menu-open') }}">
+         <li class="nav-item {{ isActive(['enquiries', 'all-contacts', 'all-promotional-enquries', 'all-general-enquries'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-envelope"></i>
              <p>
@@ -76,17 +76,23 @@
            </a>
            <ul class="nav nav-treeview">
             <li class="nav-item">
+               <a href="{{ url('enquiries') }}" class="nav-link {{ isActive(['enquiries'], 'active') }}">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>Promotional Enquiries</p>
+               </a>
+             </li>
+            <li class="nav-item">
                <a href="{{ url('all-contacts') }}" class="nav-link {{ isActive(['all-contacts'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
                  <p>Contact Enquiries</p>
                </a>
              </li>
-             <li class="nav-item">
+             {{-- <li class="nav-item">
                <a href="{{ url('all-promotional-enquries') }}" class="nav-link {{ isActive(['all-promotional-enquries'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
                  <p>Promotional Enquiries</p>
                </a>
-             </li>
+             </li> --}}
              <li class="nav-item">
                <a href="{{ url('all-general-enquries') }}" class="nav-link {{ isActive(['all-general-enquries'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
@@ -153,6 +159,25 @@
                <a href="{{ url('all-blogs') }}" class="nav-link {{ isActive(['all-blogs'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
                  <p>All Blogs</p>
+               </a>
+             </li>
+           </ul>
+         </li>
+
+         <li class="nav-header">COMMENTS</li>
+         <li class="nav-item {{ isActive(['comments'], 'menu-is-opening menu-open') }}">
+           <a href="#" class="nav-link">
+             <i class="nav-icon fas fa-table"></i>
+             <p>
+               Comment Manager
+               <i class="fas fa-angle-left right"></i>
+             </p>
+           </a>
+           <ul class="nav nav-treeview">
+             <li class="nav-item">
+               <a href="{{ url('comments') }}" class="nav-link {{ isActive(['comments'], 'active') }}">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>All Comments</p>
                </a>
              </li>
            </ul>

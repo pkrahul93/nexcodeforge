@@ -1,5 +1,6 @@
 @extends('layouts.guest')
-@section('title', 'Content Engineering')
+@section('title', 'Content Engineering Solutions | NexCodeForge')
+@section('meta_description', 'NexCodeForge delivers smart content engineering solutions that combine technology, creativity, and automation. We help businesses organize, optimize, and deliver content that drives engagement and growth.')
 
 @section('content')
 
@@ -25,7 +26,7 @@
                     </div>
                 </div>
                 <!-- <div class="bg-page-title-overlay"></div> -->
-            </div>                    
+            </div>
         </div>
         <!-- page-title end -->
 
@@ -59,7 +60,7 @@
                                     <li><a href="content-engineering.html">  Digital Services  </a></li>
                                     <li><a href="experience-design.html">   IT Consultancy   </a></li>
                                 </ul>
-                            </aside>  
+                            </aside>
                             <aside class="widget widget-download with-title">
                                  <div class="download_block">
                                     <div class="widget-title">
@@ -84,7 +85,7 @@
                                         </div>
                                     </div>
                                 </div>
-                            </aside>                      
+                            </aside>
                             <aside class="widget widget-banner with-title">
                                <div class="prt-col-bgcolor-yes bg-base-dark text-base-white col-bg-img-four prt-col-bgimage-yes prt-bg">
                                     <div class="prt-col-wrapper-bg-layer prt-bg-layer bg-base-dark">
@@ -227,6 +228,6 @@
             <!--sidebar end-->
 
         </div><!-- site-main end-->
-        
+
 @endsection
 
