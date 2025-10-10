@@ -1,5 +1,6 @@
 @extends('layouts.guest')
-@section('title', 'About NexcodeForge | Leading IoT, SaaS & Web Development Company')
+@section('title', 'About NexCodeForge | Building Digital Success Together')
+@section('meta_description', 'Learn about NexCodeForge — a dedicated web and app development company passionate about turning ideas into impactful digital solutions. Our mission is to help businesses grow with innovation, design, and technology.')
 
 @section('content')
 
@@ -50,7 +51,7 @@
                                 <div class="title-desc">
                                     <p>
                                         <b>NexcodeForge</b> is an innovation-driven IT and software development company
-                                        specializing in <b>IoT, SaaS, E-commerce, and digital transformation</b>.  
+                                        specializing in <b>IoT, SaaS, E-commerce, and digital transformation</b>.
                                         We empower startups and enterprises with intelligent, scalable, and performance-focused
                                         technology solutions that help businesses grow sustainably in the digital era.
                                     </p>
@@ -143,7 +144,7 @@
                                 <div class="title-desc">
                                     <p>
                                         Choosing NexcodeForge means partnering with a team that believes in measurable
-                                        success, technical precision, and long-term business impact.  
+                                        success, technical precision, and long-term business impact.
                                         We don’t just deliver projects — we build partnerships that last.
                                     </p>
                                 </div>
@@ -296,7 +297,7 @@
 
             <div class="section-title text-center">
                 <h2 class="section-title-h2">Let’s Build the Future Together</h2>
-                <p>Looking for a reliable technology partner to develop your next big idea?  
+                <p>Looking for a reliable technology partner to develop your next big idea?
                    <b>NexcodeForge</b> is ready to turn your vision into a scalable, successful product.</p>
                 <div class="mt-20">
                     <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-fill prt-btn-color-gradiant"

@@ -37,7 +37,8 @@
                                         <th>Email(s)</th>
                                         <th>Phone No.</th>
                                         <th>Messages</th>
-                                        <th>Action</th>
+                                        <th>Received At</th>
+                                        {{-- <th>Action</th> --}}
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -48,10 +49,11 @@
                                             <td>{{ $enquiry['email'] }}</td>
                                             <td>{{ $enquiry['mobile'] }}</td>
                                             <td class="message">{{ $enquiry['message'] }}</td>
-                                            <td>
+                                            <td>{{ \Carbon\Carbon::parse($enquiry['created_at'])->format('d M Y, h:i A') }}</td>
+                                            {{-- <td>
                                                 <a href="#" class="btn btn-sm btn-success">Read</a>
                                                 <a href="#" class="btn btn-sm btn-danger">Delete</a>
-                                            </td>
+                                            </td> --}}
                                         </tr>
                                     @endforeach
                                 </tbody>

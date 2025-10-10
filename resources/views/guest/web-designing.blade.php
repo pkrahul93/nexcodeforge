@@ -1,5 +1,6 @@
 @extends('layouts.guest')
-@section('title', 'Website Designing | NexcodeForge - UI/UX & Web Development Company')
+@section('title', 'eCommerce Website Development | NexCodeForge')
+@section('meta_description', 'Launch your online store with NexCodeForge. We create scalable, secure, and fast eCommerce websites with seamless user experience and strong SEO foundations.')
 
 @section('content')
 
@@ -52,7 +53,7 @@
                                     </div>
                                     <div class="title-desc">
                                         <p>
-                                            At <b>NexcodeForge</b>, we craft immersive digital experiences that blend creativity, functionality, and innovation. 
+                                            At <b>NexcodeForge</b>, we craft immersive digital experiences that blend creativity, functionality, and innovation.
                                             Our design philosophy revolves around <b>user-centric interfaces</b> and <b>seamless navigation</b> to ensure your brand
                                             stands out in today’s digital-first world.
                                         </p>
@@ -63,7 +64,7 @@
                                     <h3 class="sd-sub-heading">Our Expertise</h3>
                                     <p class="sd-text">
                                         From wireframes to pixel-perfect visuals, we bring together design, strategy, and technology.
-                                        Our team specializes in creating <b>responsive web design, app interfaces, and interactive dashboards</b> 
+                                        Our team specializes in creating <b>responsive web design, app interfaces, and interactive dashboards</b>
                                         that drive engagement and enhance usability.
                                     </p>
                                 </div>
@@ -132,7 +133,7 @@
                                 <div class="service-processbox-content">
                                     <h3 class="sd-sub-heading">Creative Solutions that Redefine Brands</h3>
                                     <p class="sd-text mb-0">
-                                        Our designers think beyond aesthetics — we create visual systems that communicate your story 
+                                        Our designers think beyond aesthetics — we create visual systems that communicate your story
                                         and connect with your audience through emotion and innovation.
                                     </p>
                                 </div>
@@ -158,7 +159,7 @@
                                 <div class="service-processbox-content">
                                     <h3 class="sd-sub-heading">Responsive Design for Every Device</h3>
                                     <p class="sd-text mb-0">
-                                        We ensure every website looks stunning and functions flawlessly across all platforms — 
+                                        We ensure every website looks stunning and functions flawlessly across all platforms —
                                         desktops, tablets, and mobiles — giving your users a seamless experience everywhere.
                                     </p>
                                 </div>
@@ -174,7 +175,7 @@
                                 <div class="service-processbox-content">
                                     <h3 class="sd-sub-heading">User-Centered Digital Experiences</h3>
                                     <p class="sd-text mb-0">
-                                        Every design decision we make is rooted in data and user behavior. 
+                                        Every design decision we make is rooted in data and user behavior.
                                         From UX mapping to interactive prototypes, we build experiences that convert visitors into loyal customers.
                                     </p>
                                 </div>
@@ -214,7 +215,7 @@
                                 <div class="testimonials-style2">
                                     <div class="testimonials-style1-content">
                                         <p class="testimonial-prt-box-desc-p">
-                                            “NexcodeForge transformed our outdated website into a modern, lead-generating platform. 
+                                            “NexcodeForge transformed our outdated website into a modern, lead-generating platform.
                                             Their creative approach and technical precision made all the difference.”
                                         </p>
                                         <div class="prt-box-footer">
@@ -258,7 +259,7 @@
                         <div>
                             <h3 class="sd-sub-heading">A Digital Vision Backed by Experience</h3>
                             <p class="sd-text">
-                                With over 25 years of combined experience in design and technology, 
+                                With over 25 years of combined experience in design and technology,
                                 NexcodeForge helps brands evolve with strategy-driven design solutions.
                             </p>
                         </div>
