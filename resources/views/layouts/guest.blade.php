@@ -143,10 +143,10 @@
                                                         <ul class="mega-submenu">
                                                             <li><a href="{{ route('about') }}">About Us</a></li>
                                                             <li><a href="{{ route('services') }}">Services</a></li>
-                                                            <li><a href="{{ route('team') }}">Our Team</a></li>
+                                                            {{-- <li><a href="{{ route('team') }}">Our Team</a></li>
                                                             <li><a href="{{ route('team-details') }}">Team Details</a>
                                                             </li>
-                                                            <li><a href="{{ route('error') }}">Error Page</a></li>
+                                                            <li><a href="{{ route('error') }}">Error Page</a></li> --}}
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
@@ -184,7 +184,7 @@
                                         <div class="side-menu-container d-flex align-items-center">
                                             <div class="header_call">
                                                 <span class="call-text">Call Now : </span>
-                                                <a href="tel:1234567890" class="call_btn"> +91 7669166975</a>
+                                                <a href="tel:+91 7669166975" class="call_btn"> +91 7669166975</a>
                                             </div>
                                             <div class="side-menu"><a href="#"><i class="icon-menu"></i></a>
                                             </div>
@@ -333,22 +333,6 @@
                     <div class="row g-0">
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="footer-widget-box first-child">
-                                <h3 class="widget-title-h3">Subscribe now!</h3>
-                                <div class="form-block">
-                                    <div class="widget-form">
-                                        <form id="subscribe-form" class="newsletter-form" method="post"
-                                            action="#" data-mailchimp="true">
-                                            <div class="mailchimp-inputbox clearfix" id="subscribe-content">
-                                                <p class="mb-0">
-                                                    <input type="email" name="email" placeholder="Your email"
-                                                        required="">
-                                                </p>
-                                                <button class="submit" type="submit">Send Now<i
-                                                        class="fas fa-long-arrow-alt-up"></i></button>
-                                            </div>
-                                        </form>
-                                    </div>
-                                </div>
                                 <h3 class="widget-title-h3">Our location:</h3>
                                 <div class="prt-iconbox">
                                     <div class="footer-icon">
@@ -356,7 +340,7 @@
                                             <span class="footer-icon-link"><i class="ti-location-pin"></i></span>
                                         </div>
                                         <div class="footer-box-content">
-                                            <p class="mb-0">Schweizer Skischule lohnerhubels Mtrasse 95 CH-3123 Belp
+                                            <p class="mb-0">New Ashoknager Delhi, India
                                             </p>
                                         </div>
                                     </div>
@@ -364,16 +348,24 @@
                                 <div class="footer-social-links-wrapper">
                                     <ul class="footer-social-icons">
                                         <li class="footer-social-icons-item">
-                                            <a href="https://www.facebook.com/preyantechnosys19" target="_blank"
+                                            <a href="https://www.facebook.com/profile.php?id=61581493126362#" target="_blank"
                                                 class="footer-social-icons-link">Facebook</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://twitter.com/PreyanTechnosys" target="_blank"
+                                            <a href="https://twitter.com/" target="_blank"
                                                 class="footer-social-icons-link">Twitter</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://www.instagram.com/preyan_technosys/" target="_blank"
+                                            <a href="https://www.instagram.com/" target="_blank"
                                                 class="footer-social-icons-link">Instagram</a>
+                                        </li>
+                                          <li class="footer-social-icons-item">
+                                            <a href="https://www.linkedin.com/" target="_blank"
+                                                class="footer-social-icons-link">LinkedIn</a>
+                                        </li>
+                                           <li class="footer-social-icons-item">
+                                            <a href="https://nexcodeforge.blogspot.com/" target="_blank"
+                                                class="footer-social-icons-link">Blogger</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -408,10 +400,10 @@
                                             <a href="{{ url('contactus') }}" class="footer-menu-item-link">Free
                                                 Consultation</a>
                                         </li>
-                                        <li class="footer-menu-item">
+                                        {{-- <li class="footer-menu-item">
                                             <a href="{{ route('home') }}" class="footer-menu-item-link">Meet Our
                                                 Experts</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="footer-menu-item">
                                             <a href="{{ route('home') }}" class="footer-menu-item-link">Business
                                                 Growth</a>
@@ -439,8 +431,7 @@
                                         <div class="prt-numbertext">
                                             <p class="prt-numbertext-p">Our phone number</p>
                                             <h3 class="prt-numbertext-h3">
-                                                <a href="tel:+123456789" class="prt-numbertext-link">+1800 123 456789
-                                                    99</a>
+                                                <a href="tel:+91 7669166975" class="prt-numbertext-link">+91 7669166975</a>
                                             </h3>
                                         </div>
                                     </div>
@@ -461,7 +452,7 @@
                                 <div class="widget_nav_menu">
                                     <div class="textwidget-widget-text">
                                         <div class="prt-numbertext">
-                                            <p class="prt-numbertext-p">Copyright © 2023 <a href="index.html"
+                                            <p class="prt-numbertext-p">Copyright © 2023 <a href="/"
                                                     class="prt-numbertext-p-link">NexCodeForge</a> IT Solutions &
                                                 Services</p>
                                         </div>
