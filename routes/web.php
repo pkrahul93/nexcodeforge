@@ -80,6 +80,10 @@ Route::get('/error', function () {
     return view('guest.error');
 })->name('error');
 
+Route::get('/under-construction', function () {
+    return view('guest.under-construction');
+})->name('under-construction');
+
 Route::post('/send-inquiry', [InquiryController::class, 'store'])->name('send.inquiry');
 
 // Routes For Contact Page......
