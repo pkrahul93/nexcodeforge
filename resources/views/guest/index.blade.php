@@ -1,5 +1,12 @@
 @extends('layouts.guest')
+@section('title', 'Custom Website & App Development | NexCodeForge')
+@section('meta_description',
+    'NexCodeForge crafts responsive, SEO-friendly websites and custom applications that turn
+    ideas into powerful digital solutions. Build your online success with us.')
 
+    @php
+        // dd($activePromotions);
+    @endphp
 @section('content')
     <!-- site-main start -->
     <div class="site-main">
@@ -308,7 +315,8 @@
             <div class="container">
                 <div class="row">
                     <div class="col-xl-6">
-                        <img class="img-fluid w-100 h-100" src="guest/assets/images/cloud.jpg" alt="NexcodeForge IT Services">
+                        <img class="img-fluid w-100 h-100" src="guest/assets/images/cloud.jpg"
+                            alt="NexcodeForge IT Services">
                     </div>
                     <div class="col-xl-6">
                         <div class="prt-bg bg-base-grey spacing-1">
@@ -483,4 +491,222 @@
             </div>
         </section>
     </div>
+
+    @if ($activePromotions->count())
+        @foreach ($activePromotions as $promo)
+            @php
+                $popupCookie = 'promo_seen_' . $promo->id;
+            @endphp
+
+            {{-- @if (!Cookie::get($popupCookie)) --}}
+                <div class="promo-popup" id="promo-popup-{{ $promo->id }}">
+                    <div class="promo-overlay"></div>
+                    <div class="promo-content"
+                        style="background-image: url('{{ asset('uploads/promotions/' . $promo->image) }}');">
+                        <div class="promo-inner">
+                            <h2>{{ $promo->title }}</h2>
+                            <hr>
+                            <div class="promo-cont">
+                                <p>{{ $promo->content }}</p>
+                            </div>
+                            @if ($promo->button_link)
+                                <div class="text-center">
+                                    <a href="{{ $promo->button_link }}" class="hero-btn">
+                                        {{ $promo->button_text ?? 'Learn More' }}
+                                    </a>
+                                </div>
+                            @endif
+                            <button class="promo-close" data-id="{{ $promo->id }}">X</button>
+                        </div>
+                    </div>
+                </div>
+            {{-- @endif --}}
+        @endforeach
+
+        <style>
+            .promo-popup {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.2);
+                z-index: 9999;
+                opacity: 0;
+                pointer-events: none;
+                transition: opacity 0.3s ease;
+            }
+
+            .promo-cont {
+                height: 250px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 23px;
+                font-weight: 600;
+                color: #f3e7e7;
+                text-shadow: 2px -2px #000;
+            }
+
+            .promo-popup.show {
+                opacity: 1;
+                pointer-events: auto;
+            }
+
+            /* --- Promo Content Box with Background --- */
+            .promo-content {
+                position: relative;
+                max-width: 700px;
+                height: 455px;
+                width: 90%;
+                border-radius: 12px;
+                overflow: hidden;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+                transform: scale(0.9);
+                transition: transform 0.3s ease;
+            }
+
+            .promo-popup.show .promo-content {
+                transform: scale(1);
+            }
+
+            /* Overlay inside content for readability */
+            .promo-content::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.5);
+                /* darken image */
+                z-index: 0;
+            }
+
+            /* Inner text area */
+            .promo-inner {
+                position: relative;
+                z-index: 1;
+                color: #fff;
+                padding: 30px 20px;
+                text-align: center;
+            }
+
+            .promo-inner h2 {
+                font-size: 32px;
+                line-height: 40px;
+                color: #fff;
+                text-shadow: 2px -2px #000;
+                margin-top: 13px;
+            }
+
+            /* Close button */
+            .promo-close {
+                position: absolute;
+                top: 10px;
+                right: 10px;
+                width: 30px;
+                height: 30px;
+                background: rgba(255, 0, 0, 0.8);
+                color: #fff;
+                border: none;
+                border-radius: 50%;
+                cursor: pointer;
+                padding: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                box-sizing: border-box;
+                font-weight: bold;
+                font-size: 16px;
+                z-index: 2;
+                transition: background 0.2s;
+            }
+
+            .promo-close:hover {
+                background: rgb(240, 239, 236);
+                color: rgba(255, 0, 0, 0.8);
+            }
+        </style>
+
+        <script>
+            const promoTimers = @json($activePromotions->pluck('timer', 'id'));
+        </script>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const popups = document.querySelectorAll('.promo-popup');
+                const promoTimers = @json($activePromotions->pluck('timer', 'id')); // { id: timerInSeconds }
+
+                // Convert NodeList to array for easy sequential processing
+                const popupArray = Array.from(popups);
+
+                // Start showing popups one by one
+                showPopupsSequentially(popupArray);
+
+                async function showPopupsSequentially(popupList) {
+                    for (const popup of popupList) {
+                        const id = popup.id.split('-').pop();
+                        const timer = parseInt(promoTimers[id]) || 0; // if no timer, stays until manually closed
+
+                        // Wait for the popup to close before continuing to next
+                        await showPopup(popup, id, timer);
+                    }
+                }
+
+                // Function to show one popup and return Promise that resolves when it closes
+                function showPopup(popup, id, timer) {
+                    return new Promise(resolve => {
+                        popup.classList.add('show');
+
+                        let autoCloseTimeout = null;
+
+                        // If timer exists, auto-close after that time
+                        if (timer > 0) {
+                            autoCloseTimeout = setTimeout(() => {
+                                closePopup(popup, id);
+                                resolve(); // move to next popup
+                            }, timer * 1000);
+                        }
+
+                        // Manual close button
+                        popup.querySelector('.promo-close').addEventListener('click', () => {
+                            if (autoCloseTimeout) clearTimeout(autoCloseTimeout);
+                            closePopup(popup, id);
+                            resolve(); // move to next popup
+                        });
+                    });
+                }
+
+                // Function to close popup and set cookie via AJAX
+                function closePopup(popup, id) {
+                    popup.classList.remove('show');
+                    setTimeout(() => {
+                        popup.style.display = 'none';
+                    }, 300);
+
+                    // Optional: mark popup as shown (so it won’t appear again soon)
+                    fetch('{{ route('home.cookie') }}', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        body: JSON.stringify({
+                            id: id
+                        })
+                    });
+                }
+            });
+        </script>
+
+    @endif
+
+
 @endsection

@@ -1,9 +1,11 @@
 @extends('layouts.guest')
-@section('title', 'Blogs')
+@section('title', 'Web & App Development Insights | NexCodeForge Blog')
+@section('meta_description', 'Stay updated with NexCodeForge’s latest insights on web design, Laravel development, SEO,
+    and digital innovation. Learn how to grow your online presence.')
 
-@php
-    // dd($posts);
-@endphp
+    @php
+        // dd($posts);
+    @endphp
 @section('content')
 
     <!-- page-title -->
@@ -37,142 +39,61 @@
 
         <!--blog-section-->
         <section class="prt-row blog-section01 clearfix">
-            <div class="container">
+            <div class="container-fluid pl-160 pr-160">
                 <div class="row">
-                    @foreach ($posts as $blog)
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="featured-imagebox-post-style1">
-                                <div class="featured-post-overlay">
-                                    <div class="featured-post-thumbnail">
-                                        <img width="414" height="447" class="img-fluid w-auto"
-                                            src="{{ $blog['image_url'] }}" loading="lazy" alt="image">
-                                    </div>
-                                    <div class="featured-post-content">
-                                        <div class="post-entry-date">
-                                            {{ !empty($blog['published_at']) ? \Carbon\Carbon::parse($blog['published_at'])->format('d M Y') : '-/-/-' }}
+                    <div class="col-lg-9 mb-3">
+                        <h1 class="mb-4 bd-title">Search Results for : {{ $query }}</h1>
+                        <div id="blog-list">
+                            @include('guest.partials.blog-list')
+                        </div>
+                    </div>
+
+                    {{-- Sidebar --}}
+                    <div class="col-lg-3">
+                        <div class="position-sticky" style="top: 100px;">
+
+                            {{-- Search Box --}}
+                            <div class="card mb-4 shadow-sm border-0">
+                                <div class="card-body">
+                                    <form action="{{ route('blogs.search') }}" method="GET">
+                                        <div class="input-group">
+                                            <input type="text" name="q" class="form-control"
+                                                placeholder="Search blogs..." value="{{ request('q') }}">
+                                            <button class="btn btn-primary" type="submit">Search</button>
                                         </div>
-                                        <div class="prt-post-title">
-                                            <h3 class="post-h3">
-                                                <a href="{{ route('blog.details', $blog['slug']) }}" class="post-link">
-                                                    {{ $blog['title'] ?? 'Blog Title' }}
-                                                </a>
-                                            </h3>
-                                        </div>
-                                        <div class="prt-post-catagory blog-cat">
-                                            <div class="catagory-text">
-                                                {{ !empty($blog['category']) ? $blog['category']['name'] : 'Category' }}
-                                            </div>
-                                        </div>
-                                        <div class="prt-post-catagory">
-                                            <div class="catagory-text">
-                                                {{ !empty($blog['user']) ? 'By ' . $blog['user']['name'] : 'By Author' }}
-                                            </div>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
-                        </div>
-                    @endforeach
-                    {{-- <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="featured-imagebox-post-style1">
-                                <div class="featured-post-overlay">
-                                    <div class="featured-post-thumbnail">
-                                        <img width="414" height="447" class="img-fluid w-auto" src="images/blog/blog-02-828x894.png" loading="lazy" alt="image">
-                                    </div>
-                                    <div class="featured-post-content">
-                                        <div class="post-entry-date">16 Feb 2020</div>
-                                        <div class="prt-post-title">
-                                          <h3 class="post-h3">
-                                            <a href="blog-single.html" class="post-link">Digital Conference Of IT Tech Events in 2019</a>
-                                          </h3>
-                                        </div>
-                                        <div class="prt-post-catagory">
-                                          <div class="catagory-text">By John Doe</div>
-                                        </div>
-                                    </div>
+
+                            {{-- Categories --}}
+                            <div class="card mb-4 shadow-sm border-0">
+                                <div class="card-header bg-primary text-white fw-bold">Categories</div>
+                                <ul class="list-group list-group-flush">
+                                    @foreach ($categories as $cat)
+                                        <li class="list-group-item">
+                                            <a href="{{ route('blogs.byCategory', $cat->slug) }}" class="text-dark">
+                                                {{ $cat->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+
+                            {{-- Tags --}}
+                            <div class="card shadow-sm border-0">
+                                <div class="card-header bg-primary text-white fw-bold">Tags</div>
+                                <div class="card-body">
+                                    @foreach ($tags as $tag)
+                                        <a href="{{ route('blogs.byTag', $tag->slug) }}"
+                                            class="badge bg-light text-dark border m-1">
+                                            #{{ $tag->name }}
+                                        </a>
+                                    @endforeach
                                 </div>
                             </div>
+
                         </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="featured-imagebox-post-style1">
-                                <div class="featured-post-overlay">
-                                    <div class="featured-post-thumbnail">
-                                        <img width="414" height="447" class="img-fluid w-auto" src="images/blog/blog-03-828x894.jpg" loading="lazy" alt="image">
-                                    </div>
-                                    <div class="featured-post-content">
-                                        <div class="post-entry-date">01 Jan 2020</div>
-                                        <div class="prt-post-title">
-                                          <h3 class="post-h3">
-                                            <a href="blog-single.html" class="post-link">Where And How To Watch Live Stream Today</a>
-                                          </h3>
-                                        </div>
-                                        <div class="prt-post-catagory">
-                                          <div class="catagory-text">By John Doe</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="featured-imagebox-post-style1">
-                                <div class="featured-post-overlay">
-                                    <div class="featured-post-thumbnail">
-                                        <img width="414" height="447" class="img-fluid w-auto" src="images/blog/blog-04-828x894.png" loading="lazy" alt="image">
-                                    </div>
-                                    <div class="featured-post-content">
-                                        <div class="post-entry-date">22 Dec 2020</div>
-                                        <div class="prt-post-title">
-                                          <h3 class="post-h3">
-                                            <a href="blog-single.html" class="post-link">5 Easy Ways to Improve Your Web Security</a>
-                                          </h3>
-                                        </div>
-                                        <div class="prt-post-catagory">
-                                          <div class="catagory-text">By John Doe</div>
-                                        </div>
-                                    </div>
-                                </div>
-                              </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="featured-imagebox-post-style1">
-                                <div class="featured-post-overlay">
-                                    <div class="featured-post-thumbnail">
-                                        <img width="414" height="447" class="img-fluid w-auto" src="images/blog/blog-05-828x894.jpg" loading="lazy" alt="image">
-                                    </div>
-                                    <div class="featured-post-content">
-                                        <div class="post-entry-date">15 Dec 2020</div>
-                                        <div class="prt-post-title">
-                                          <h3 class="post-h3">
-                                            <a href="blog-single.html" class="post-link">Define world best IT technology</a>
-                                          </h3>
-                                        </div>
-                                        <div class="prt-post-catagory">
-                                          <div class="catagory-text">By John Doe</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="featured-imagebox-post-style1">
-                                <div class="featured-post-overlay">
-                                    <div class="featured-post-thumbnail">
-                                        <img width="414" height="447" class="img-fluid w-auto" src="images/blog/blog-06-828x894.jpg" loading="lazy" alt="image">
-                                    </div>
-                                    <div class="featured-post-content">
-                                        <div class="post-entry-date">01 Dec 2020</div>
-                                        <div class="prt-post-title">
-                                          <h3 class="post-h3">
-                                            <a href="blog-single.html" class="post-link">Define World Best IT Solution Technology</a>
-                                          </h3>
-                                        </div>
-                                        <div class="prt-post-catagory">
-                                          <div class="catagory-text">By John Doe</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div> --}}
+                    </div>
                 </div>
             </div>
         </section>
@@ -248,3 +169,38 @@
     </div><!-- site-main end-->
 
 @endsection
+
+@section('scripts')
+<script>
+$(document).ready(function() {
+    // Handle pagination click
+    $(document).on('click', '.pagination a', function(event) {
+        event.preventDefault();
+
+        let pageUrl = $(this).attr('href'); // Get URL from pagination link
+        if (!pageUrl) return;
+
+        // Smooth scroll to top of blog list
+        $('html, body').animate({ scrollTop: $("#blog-list").offset().top - 100 }, 400);
+
+        // Load new posts
+        $.ajax({
+            url: pageUrl,
+            type: 'GET',
+            beforeSend: function() {
+                $('#blog-list').css('opacity', '0.5');
+            },
+            success: function(response) {
+                $('#blog-list').html(response);
+                $('#blog-list').css('opacity', '1');
+            },
+            error: function() {
+                alert('Something went wrong while loading posts.');
+                $('#blog-list').css('opacity', '1');
+            }
+        });
+    });
+});
+</script>
+@endsection
+

@@ -9,6 +9,8 @@
 
     <meta name="robots" content="noindex, nofollow">
 
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
     <!-- Google Font: Source Sans Pro -->
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -159,6 +161,12 @@
     <!-- jQuery (already loaded before this line) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
     <script>
+        $.ajaxSetup({
+            headers: {
+                'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+            }
+        });
+
         $(function() {
             $("#example1").DataTable({
                 "responsive": true,
@@ -177,10 +185,6 @@
             });
         });
 
-        // $('.custom-file-input').on('change', function() {
-        //     let fileName = $(this).val().split('\\').pop();
-        //     $(this).next('.custom-file-label').addClass('selected').html(fileName);
-        // });
         $('.custom-file-input').on('change', function() {
             // 1️⃣ Show selected file name
             let fileName = $(this).val().split('\\').pop();

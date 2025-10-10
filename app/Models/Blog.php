@@ -25,7 +25,10 @@ class Blog extends Model
         'published_at'
     ];
 
-    protected $dates = ['published_at'];
+    protected $casts = [
+        'published_at' => 'datetime',
+    ];
+
 
     // Relationships
     public function user()

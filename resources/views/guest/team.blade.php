@@ -1,5 +1,6 @@
 @extends('layouts.guest')
-@section('title', 'Blank')
+@section('title', 'Meet Our Team | NexCodeForge Experts Behind Your Success')
+@section('meta_description', 'Get to know the talented team at NexCodeForge — a group of passionate developers, designers, and strategists dedicated to crafting innovative web and app solutions that help your business grow.')
 
 @section('content')
 
@@ -25,7 +26,7 @@
                     </div>
                 </div>
                 <!-- <div class="bg-page-title-overlay"></div> -->
-            </div>                    
+            </div>
         </div>
         <!-- page-title end -->
 
@@ -45,18 +46,18 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 blog-sm"> 
+                        <div class="col-xl-4 col-lg-6 col-md-12 col-sm-12 blog-sm">
                             <div class="process-desc process-desc1">
                                 <p class="desc-text">Web designing in a powerful way of just not a profession, how in a passion for our Company. We have a to the idea.</p>
                             </div>
                         </div>
-                    
+
                         <div class="col-xl-4 col-lg-3 col-md-12 col-sm-12 blog-sm">
                             <div class="blog-title text-end mt-25 res-991-mt-0">
                                 <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-fill prt-btn-color-gradiant" href="team-details.html">Contact Team!</a>
                             </div>
                         </div>
-                        <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12 "> 
+                        <div class="col-xl-8 col-lg-9 col-md-12 col-sm-12 ">
                             <div class="section-title style2 mt-25 res-991-mt-0 res-991-mt_5">
                                 <div class="title-header">
                                   <h2>team</h2>
@@ -263,6 +264,6 @@
             <!--team-section end-->
 
         </div><!-- site-main end-->
-        
+
 @endsection
 

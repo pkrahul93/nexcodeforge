@@ -1,5 +1,8 @@
 @extends('layouts.guest')
-@section('title', 'Contact-Us')
+@section('title', 'Contact NexCodeForge | Let’s Build Your Digital Future')
+@section('meta_description', 'Get in touch with NexCodeForge — your trusted web and app development partner. Let’s
+    discuss your project and create something remarkable together.')
+
 
 @section('content')
 

@@ -1,9 +1,10 @@
 @extends('layouts.guest')
-@section('title', 'Blog-Details')
+<x-blog-meta :pageType="'details'" :blog="$blog" />
 
 @php
     $blogUrl = url('blog-details/' . $blog['slug']); // full URL to the blog
     $blogTitle = $blog['title'] ?? 'Blog Title';
+    // dd($categories);
 @endphp
 
 @section('content')
@@ -55,9 +56,9 @@
 
         <!--blog-single-section-->
         <section class="prt-row clearfix">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-lg-12">
+                    <div class="col-lg-9 mb-3">
                         <div class="prt-blog-single position-relative pl-160 pr-160 res-1199-pr-0 res-1199-pl-0">
                             <div class="prt_single_image-wrapper mb-25">
                                 <img width="1200" height="895" class="img-fluid" src="{{ $blog['image_url'] }}"
@@ -79,26 +80,6 @@
                                             </div>
                                         </blockquote>
                                     @endforeach
-
-                                    {{-- <blockquote class="bg-base-grey">
-                                        <div class="qoute-text">
-                                            <p>Our team discussed every single detail...</p>
-                                            <span class="qoute-txt">Alex John Martin</span>
-                                        </div>
-                                    </blockquote>
-                                    <blockquote class="bg-base-grey">
-                                        <div class="qoute-text">
-                                            <p>Another testimonial content goes here...</p>
-                                            <span class="qoute-txt">Jane Doe</span>
-                                        </div>
-                                    </blockquote>
-                                    <blockquote class="bg-base-grey">
-                                        <div class="qoute-text">
-                                            <p>Another testimonial content goes here...</p>
-                                            <span class="qoute-txt">Jane Doe</span>
-                                        </div>
-                                    </blockquote> --}}
-                                    <!-- Add more blockquotes -->
                                 </div>
 
                                 <!-- Custom navigation buttons -->
@@ -220,7 +201,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="prt-blog-classic-box-comment clearfix">
+                        <div class="prt-blog-classic-box-comment clearfix pl-160 pr-160">
                             <div id="comments" class="comments-area">
                                 <div class="comment-respond">
                                     <h3 class="comment-reply-title">Leave a Reply</h3>
@@ -258,6 +239,107 @@
                                     </form>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+
+                    {{-- <div class="col-lg-3 mb-3">
+                        <div class="card mb-4">
+                            <div class="card-header">
+                                <h3 class="card-title">Blog Categories</h3>
+                            </div>
+                            <div class="card-body">
+                                <ol class="list-group list-group-numbered">
+                                    @foreach ($categories as $category)
+                                        <li class="list-group-item d-flex justify-content-between align-items-start">
+                                            <div class="ms-2 me-auto">
+                                                <div class="fw-bold">{{ $category->name }}</div>
+                                                {{ $category->description }}
+                                            </div>
+                                            <a href="{{ route('blogs.byCategory', $category['slug']) }}" target="_blank" class="badge bg-primary rounded-pill">Explore</a>
+                                        </li>
+                                    @endforeach
+                                </ol>
+                            </div>
+                        </div>
+
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">All Tags</h3>
+                            </div>
+                            <div class="card-body">
+                                <ol class="list-group list-group-numbered">
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Subheading</div>
+                                            Cras justo odio
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">Explore</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Subheading</div>
+                                            Cras justo odio
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">Explore</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                                        <div class="ms-2 me-auto">
+                                            <div class="fw-bold">Subheading</div>
+                                            Cras justo odio
+                                        </div>
+                                        <span class="badge bg-primary rounded-pill">Explore</span>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div> --}}
+
+                    {{-- Sidebar --}}
+                    <div class="col-lg-3">
+                        <div class="position-sticky" style="top: 100px;">
+
+                            {{-- Search Box --}}
+                            <div class="card mb-4 shadow-sm border-0">
+                                <div class="card-body">
+                                    <form action="{{ route('blogs.search') }}" method="GET">
+                                        <div class="input-group">
+                                            <input type="text" name="q" class="form-control"
+                                                placeholder="Search blogs..." value="{{ request('q') }}">
+                                            <button class="btn btn-primary" type="submit">Search</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+
+                            {{-- Categories --}}
+                            <div class="card mb-4 shadow-sm border-0">
+                                <div class="card-header bg-primary text-white fw-bold">Categories</div>
+                                <ul class="list-group list-group-flush">
+                                    @foreach ($categories as $cat)
+                                        {{-- <li class="list-group-item {{ $cat->id === $category->id ? 'active' : '' }}"> --}}
+                                            <li class="list-group-item">
+                                            <a href="{{ route('blogs.byCategory', $cat->slug) }}"
+                                                class="text-dark">
+                                                {{ $cat->name }}
+                                            </a>
+                                        </li>
+                                    @endforeach
+                                </ul>
+                            </div>
+
+                            {{-- Tags --}}
+                            <div class="card shadow-sm border-0">
+                                <div class="card-header bg-primary text-white fw-bold">Tags</div>
+                                <div class="card-body">
+                                    @foreach ($tags as $tag)
+                                        <a href="{{ route('blogs.byTag', $tag->slug) }}"
+                                            class="badge bg-light text-dark border m-1">
+                                            #{{ $tag->name }}
+                                        </a>
+                                    @endforeach
+                                </div>
+                            </div>
+
                         </div>
                     </div>
                 </div>
