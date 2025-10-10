@@ -160,9 +160,11 @@
                     status
                 },
                 success: function(res) {
+                    toastr.success(res.message);
                     console.log(res.message);
                 },
                 error: function() {
+                    toastr.error('Failed to update status.');
                     alert('Error updating status!');
                 }
             });

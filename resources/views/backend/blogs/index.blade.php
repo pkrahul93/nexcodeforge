@@ -107,7 +107,8 @@
                     toastr.success(res.message); // Optional if you're using Toastr
                 },
                 error: function(xhr) {
-                    alert('Failed to update status.');
+                    // alert('Failed to update status.');
+                    toastr.error('Failed to update status.');
                     console.error(xhr.responseText);
                 }
             });

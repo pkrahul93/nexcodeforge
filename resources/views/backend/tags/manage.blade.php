@@ -150,10 +150,12 @@
                     status
                 },
                 success: function(res) {
+                    toastr.success(res.message);
                     console.log(res.message);
                 },
                 error: function() {
-                    alert('Error updating status!');
+                    // alert('Error updating status!');
+                    toastr.error('Failed to update status.');
                 }
             });
         });

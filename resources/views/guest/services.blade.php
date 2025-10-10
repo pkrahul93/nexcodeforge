@@ -1,5 +1,6 @@
 @extends('layouts.guest')
-@section('title', 'Our Services | NexcodeForge - Software, SaaS & IoT Solutions')
+@section('title', 'Web & App Development Services | NexCodeForge')
+@section('meta_description', 'Explore NexCodeForge’s full-stack web and app development services — from corporate sites and eCommerce platforms to CRM and IT solutions built for growth.')
 
 @section('content')
 
