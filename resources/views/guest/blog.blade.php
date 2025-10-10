@@ -42,7 +42,9 @@
             <div class="container-fluid pl-160 pr-160">
                 <div class="row">
                     <div class="col-lg-9 mb-3">
-                        <h1 class="mb-4 bd-title">Search Results for : {{ $query }}</h1>
+                        @if (!empty($query))
+                            <h1 class="mb-4 bd-title">Search Results for : {{ $query }}</h1>
+                        @endif
                         <div id="blog-list">
                             @include('guest.partials.blog-list')
                         </div>
