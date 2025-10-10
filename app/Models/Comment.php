@@ -16,7 +16,7 @@ class Comment extends Model
     // Relationships
     public function post()
     {
-        return $this->belongsTo(Blog::class);
+        return $this->belongsTo(Blog::class, 'blog_id');
     }
 
     public function user()

@@ -1,5 +1,6 @@
 @extends('layouts.guest')
-@section('title', 'Project Details | NexcodeForge')
+@section('title', 'Project Details | NexCodeForge Web & App Development Case Study')
+@section('meta_description', 'Discover the story behind each NexCodeForge project — our strategies, technologies, and creative process that deliver outstanding web and app solutions tailored to every client’s needs.')
 
 @section('content')
 
@@ -34,8 +35,8 @@
                 <div class="col-lg-12">
                     <!-- Project Header Image -->
                     <div class="prt_pf_image-wrapper mb-5 text-center">
-                        <img class="img-fluid rounded-4 shadow" 
-                             src="https://images.unsplash.com/photo-1590608897129-79da98d159e4?auto=format&fit=crop&w=1400&q=80" 
+                        <img class="img-fluid rounded-4 shadow"
+                             src="https://images.unsplash.com/photo-1590608897129-79da98d159e4?auto=format&fit=crop&w=1400&q=80"
                              alt="CRM Dashboard Preview">
                     </div>
 
@@ -73,8 +74,8 @@
                     <!-- Description -->
                     <div class="row align-items-center mb-5">
                         <div class="col-lg-6">
-                            <img class="img-fluid rounded-4 shadow" 
-                                 src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80" 
+                            <img class="img-fluid rounded-4 shadow"
+                                 src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=1000&q=80"
                                  alt="Dashboard Analytics">
                         </div>
                         <div class="col-lg-6 mt-4 mt-lg-0">
@@ -139,8 +140,8 @@
                         <div class="row g-4">
                             <div class="col-md-4">
                                 <div class="position-relative overflow-hidden rounded-4 shadow">
-                                    <img class="img-fluid w-100" 
-                                         src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80" 
+                                    <img class="img-fluid w-100"
+                                         src="https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80"
                                          alt="Secure File Sharing">
                                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
                                         <h5 class="mb-1">Secure File Sharing</h5>
@@ -151,8 +152,8 @@
 
                             <div class="col-md-4">
                                 <div class="position-relative overflow-hidden rounded-4 shadow">
-                                    <img class="img-fluid w-100" 
-                                         src="https://images.unsplash.com/photo-1581093588401-22e8f85b4892?auto=format&fit=crop&w=900&q=80" 
+                                    <img class="img-fluid w-100"
+                                         src="https://images.unsplash.com/photo-1581093588401-22e8f85b4892?auto=format&fit=crop&w=900&q=80"
                                          alt="IoT Analytics Platform">
                                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
                                         <h5 class="mb-1">IoT Energy Dashboard</h5>
@@ -163,8 +164,8 @@
 
                             <div class="col-md-4">
                                 <div class="position-relative overflow-hidden rounded-4 shadow">
-                                    <img class="img-fluid w-100" 
-                                         src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=900&q=80" 
+                                    <img class="img-fluid w-100"
+                                         src="https://images.unsplash.com/photo-1593642634315-48f5414c3ad9?auto=format&fit=crop&w=900&q=80"
                                          alt="E-commerce Portal">
                                     <div class="position-absolute bottom-0 start-0 w-100 p-3 bg-dark bg-opacity-75 text-white">
                                         <h5 class="mb-1">Insiya Outfits</h5>

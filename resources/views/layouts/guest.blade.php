@@ -8,8 +8,7 @@
     <!-- ✅ SEO Optimized Meta -->
     <meta name="keywords"
         content="NexCodeForge, website development, application development, corporate websites, matrimonial portals, eCommerce solutions, IT services, responsive design, SEO-optimized websites">
-    <meta name="description"
-        content="NexCodeForge provides professional website and application development for corporate services, matrimonial sites, eCommerce, and IT solutions. Responsive, SEO-friendly, and tailored to your business needs.">
+    <meta name="description" content="@yield('meta_description', 'provides professional website and application development for corporate services, matrimonial sites, eCommerce, and IT solutions. Responsive, SEO-friendly, and tailored to your business needs.')">
     <meta name="author" content="NexCodeForge">
     <meta name="robots" content="noindex, nofollow">
 
@@ -21,6 +20,10 @@
 
     <!-- ✅ Page Title -->
     <title>@yield('title', 'NexCodeForge - Web & App Development')</title>
+    <title>@yield('title', 'NexCodeForge | Turning Ideas into Digital Solutions')</title>
+    <meta name="description" content="@yield('meta_description', 'NexCodeForge provides professional website and application development for corporate services, matrimonial platforms, eCommerce stores, and IT solutions. Our designs are responsive, SEO-friendly, and tailored to your unique business needs.')">
+
+
 
     <!-- ✅ jQuery (load once, latest stable version) -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -62,6 +65,17 @@
 
 
     <style>
+        .bd-title {
+            font-size: 30px;
+            text-shadow: 1px -1px #8d8484;
+            font-weight: 800;
+            background: #d1cccc;
+            padding: 2px 11px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
         .blog-cat {
             font-size: 23px;
             font-weight: 600;
@@ -168,8 +182,7 @@
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="#"
-                                                            class="mega-menu-link">Blogs</a>
+                                                        <a href="#" class="mega-menu-link">Blogs</a>
                                                         <ul class="mega-submenu">
                                                             <li><a href="{{ route('blogs') }}">All Blogs</a></li>
                                                         </ul>
@@ -552,6 +565,8 @@
             });
         });
     </script>
+
+    @yield('scripts')
 
     <!-- Javascript end-->
 
