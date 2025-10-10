@@ -213,25 +213,28 @@
                                                                     <div class="menu-floatibar-menu-1">
                                                                         <ul class="floatingbar-list">
                                                                             <li class="floatingbar-item pl-0">
-                                                                                <a href="about-us.html"
-                                                                                    class="floatingbar-link">Pages</a>
+                                                                                <a href="{{ url('about') }}"
+                                                                                    class="floatingbar-link">About Us</a>
                                                                             </li>
                                                                             <li class="floatingbar-item">
-                                                                                <a href="contact-us.html"
-                                                                                    class="floatingbar-link">Contact
-                                                                                    Us</a>
+                                                                                <a href="{{ url('contactus') }}"
+                                                                                    class="floatingbar-link">Contact Us</a>
                                                                             </li>
                                                                             <li class="floatingbar-item pl-0">
-                                                                                <a href="services.html"
+                                                                                <a href="{{ url('services') }}"
                                                                                     class="floatingbar-link">Services</a>
                                                                             </li>
                                                                             <li class="floatingbar-item">
-                                                                                <a href="projects-style-1.html"
-                                                                                    class="floatingbar-link">Project</a>
+                                                                                <a href="{{ url('projects') }}"
+                                                                                    class="floatingbar-link">Projects</a>
                                                                             </li>
                                                                             <li class="floatingbar-item">
-                                                                                <a href="blog.html"
+                                                                                <a href="{{ url('blogs') }}"
                                                                                     class="floatingbar-link">Blog</a>
+                                                                            </li>
+                                                                            <li class="floatingbar-item">
+                                                                                <a href="{{ url('enquiry') }}"
+                                                                                    class="floatingbar-link">Enquiry Now</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -247,12 +250,10 @@
                                                                                 <div class="menu-floatibar-text">
                                                                                     <div class="floatbar-menu-box_1">
                                                                                         <h3 class="floatbar-menu-h3">
-                                                                                            Singapore</h3>
+                                                                                            Regional Office :</h3>
                                                                                         <p
                                                                                             class="floatbar-paragraph-text">
-                                                                                            Schweizer Skischule
-                                                                                            lohnerhubelsMtrasse 95
-                                                                                            CH-3123 Belp</p>
+                                                                                            Noida, 3rd Floor, TechnoHub Building – 201301, India</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -263,12 +264,10 @@
                                                                                     <div
                                                                                         class="floatbar-menu-box_1 pl-0">
                                                                                         <h3 class="floatbar-menu-h3">
-                                                                                            Bali, indonesia</h3>
+                                                                                            Head Office :</h3>
                                                                                         <p
                                                                                             class="floatbar-paragraph-text">
-                                                                                            Schweizer Skischule
-                                                                                            lohnerhubels Mtrasse 95
-                                                                                            CH-3123 Belp</p>
+                                                                                            New Ashok-Nager, East-Delhi – 110096, India</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -280,33 +279,33 @@
                                                                                         <ul class="floating-list">
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="#"
+                                                                                                <a href="{{ route('under-construction') }}"
                                                                                                     class="floating-list-item-link">Awards</a>
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="#"
-                                                                                                    class="floating-list-item-link">Brands</a>
+                                                                                                <a href="{{ url('services') }}"
+                                                                                                    class="floating-list-item-link">Services</a>
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="#"
+                                                                                                <a href="{{ route('under-construction') }}"
                                                                                                     class="floating-list-item-link">Careers</a>
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="#"
+                                                                                                <a href="{{ url('enquiry') }}"
                                                                                                     class="floating-list-item-link">Inquiries</a>
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="#"
+                                                                                                <a href="{{ url('contactus') }}"
                                                                                                     class="floating-list-item-link">Help</a>
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="#"
-                                                                                                    class="floating-list-item-link">Transform</a>
+                                                                                                <a href="{{ route('under-construction') }}"
+                                                                                                    class="floating-list-item-link">T&C</a>
                                                                                             </li>
                                                                                         </ul>
                                                                                     </div>
@@ -347,17 +346,29 @@
                         <div class="col-xl-4 col-lg-6 col-md-6">
                             <div class="footer-widget-box first-child">
                                 <h3 class="widget-title-h3">Our location:</h3>
+                                <div class="prt-iconbox mb-3">
+                                    <div class="footer-icon">
+                                        <div class="footer-icon-box">
+                                            <span class="footer-icon-link"><i class="ti-location-pin"></i></span>
+                                        </div>
+                                        <div class="footer-box-content">
+                                            <p class="mb-0">New Ashok-Nager, East-Delhi – 110096, India
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="prt-iconbox">
                                     <div class="footer-icon">
                                         <div class="footer-icon-box">
                                             <span class="footer-icon-link"><i class="ti-location-pin"></i></span>
                                         </div>
                                         <div class="footer-box-content">
-                                            <p class="mb-0">New Ashoknager Delhi, India
+                                            <p class="mb-0">Noida, 3rd Floor, TechnoHub Building – 201301, India
                                             </p>
                                         </div>
                                     </div>
                                 </div>
+                                <hr>
                                 <div class="footer-social-links-wrapper">
                                     <ul class="footer-social-icons">
                                         <li class="footer-social-icons-item">
@@ -365,11 +376,11 @@
                                                 class="footer-social-icons-link">Facebook</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://twitter.com/" target="_blank"
+                                            <a href="https://x.com/ForgeNex3411" target="_blank"
                                                 class="footer-social-icons-link">Twitter</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://www.instagram.com/" target="_blank"
+                                            <a href="https://www.instagram.com/nex.codeforage?igsh=dHFidndiOHk3ZDRu" target="_blank"
                                                 class="footer-social-icons-link">Instagram</a>
                                         </li>
                                           <li class="footer-social-icons-item">
@@ -390,48 +401,38 @@
                                 <div class="footer-menu-links">
                                     <ul class="footer-menu-list">
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('contactus') }}" class="footer-menu-item-link">Make
-                                                Appointment</a>
+                                            <a href="{{ route('about') }}" class="footer-menu-item-link">About Us</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('contactus') }}" class="footer-menu-item-link">Free
-                                                Consultation</a>
+                                            <a href="{{ url('contactus') }}" class="footer-menu-item-link">Contact Us</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ route('home') }}"
-                                                class="footer-menu-item-link">Department</a>
+                                            <a href="{{ url('enquiry') }}" class="footer-menu-item-link">Make Appointment</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ route('about') }}" class="footer-menu-item-link">About
-                                                Company</a>
+                                            <a href="{{ url('services') }}" class="footer-menu-item-link">Our Services</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ route('home') }}" class="footer-menu-item-link">Our Case
-                                                Studies</a>
+                                            <a href="{{ url('blogs') }}" class="footer-menu-item-link">Our Blogs</a>
                                         </li>
-                                        <li class="footer-menu-item">
-                                            <a href="{{ url('contactus') }}" class="footer-menu-item-link">Free
-                                                Consultation</a>
-                                        </li>
+                                        {{-- <li class="footer-menu-item">
+                                            <a href="{{ url('contactus') }}" class="footer-menu-item-link">Get In Touch</a>
+                                        </li> --}}
                                         {{-- <li class="footer-menu-item">
                                             <a href="{{ route('home') }}" class="footer-menu-item-link">Meet Our
                                                 Experts</a>
                                         </li> --}}
                                         <li class="footer-menu-item">
-                                            <a href="{{ route('home') }}" class="footer-menu-item-link">Business
-                                                Growth</a>
+                                            <a href="{{ url('web-designing') }}" class="footer-menu-item-link">Web Designing</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ route('home') }}" class="footer-menu-item-link">IT
-                                                Management</a>
+                                            <a href="{{ url('content-engineering') }}" class="footer-menu-item-link">Content Engineering</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ route('home') }}" class="footer-menu-item-link">Software
-                                                Dev</a>
+                                            <a href="{{ route('under-construction') }}" class="footer-menu-item-link">Terms & Conditions</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
-                                            <a href="{{ route('home') }}" class="footer-menu-item-link">Our Case
-                                                Studies</a>
+                                            <a href="{{ route('under-construction') }}" class="footer-menu-item-link">Privacy Policy</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -455,7 +456,7 @@
                                         <div class="prt-numbertext">
                                             <p class="prt-numbertext-p">Our email address</p>
                                             <h3 class="prt-numbertext-h3">
-                                                <a href="mailto:contact@company.com"
+                                                <a href="mailto:nexcodeforge@gmail.com"
                                                     class="prt-numbertext-link">nexcodeforge@gmail.com</a>
                                             </h3>
                                         </div>
@@ -465,7 +466,7 @@
                                 <div class="widget_nav_menu">
                                     <div class="textwidget-widget-text">
                                         <div class="prt-numbertext">
-                                            <p class="prt-numbertext-p">Copyright © 2023 <a href="/"
+                                            <p class="prt-numbertext-p">Copyright © 2023 <a href="{{ url('/') }}"
                                                     class="prt-numbertext-p-link">NexCodeForge</a> IT Solutions &
                                                 Services</p>
                                         </div>
