@@ -44,46 +44,46 @@
                 <div class="row g-4">
                     @foreach ([
             [
-                'img' => 'http://127.0.0.1:8000/images/crm.jpeg',
+                'img' => asset('images/crm.jpeg'),
                 'cat' => 'AI SaaS, Automation',
                 'title' => 'Smart CRM Dashboard',
                 'desc' => 'An AI-integrated CRM with automated workflows and lead intelligence, streamlining BFSI operations by 40%.',
-                'link' => 'http://127.0.0.1:8000/under-construction',
+                'link' => route('under-construction'),
             ],
             [
                 'img' => 'https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=900&q=80',
                 'cat' => 'E-Commerce, UI/UX',
                 'title' => 'Insiya Outfits - Fashion Store',
                 'desc' => 'Modern multi-language fashion eCommerce site with WhatsApp checkout and real-time inventory sync.',
-                'link' => 'http://127.0.0.1:8000/under-construction',
+                'link' => route('under-construction'),
             ],
             [
-                'img' => 'http://127.0.0.1:8000/images/energy.jpg',
+                'img' => asset('images/energy.jpg'),
                 'cat' => 'IoT, Analytics',
                 'title' => 'Smart Energy Management System',
                 'desc' => 'IoT-driven dashboard for power monitoring — saving 32% energy for industrial clients.',
-                'link' => 'http://127.0.0.1:8000/under-construction',
+                'link' => route('under-construction'),
             ],
             [
-                'img' => 'http://127.0.0.1:8000/images/hospital.jpg',
+                'img' => asset('images/hospital.jpg'),
                 'cat' => 'Healthcare, AI',
                 'title' => 'TeleHealth AI App',
                 'desc' => 'HIPAA-compliant virtual health platform for AI consultations and real-time appointment scheduling.',
-                'link' => 'http://127.0.0.1:8000/under-construction',
+                'link' => route('under-construction'),
             ],
             [
                 'img' => 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=900&q=80',
                 'cat' => 'Fintech, Blockchain',
                 'title' => 'BNB Credit Payment Gateway',
                 'desc' => 'Built a decentralized payment solution with instant crypto settlements and transparency.',
-                'link' => 'http://127.0.0.1:8000/under-construction',
+                'link' => route('under-construction'),
             ],
             [
                 'img' => 'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80',
                 'cat' => 'Cloud, Security',
                 'title' => 'Secure File Sharing Platform',
                 'desc' => 'AES + ECC encrypted document exchange system with OTP-based verification and expiry links.',
-                'link' => 'http://127.0.0.1:8000/under-construction',
+                'link' => route('under-construction'),
             ],
         ] as $project)
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">

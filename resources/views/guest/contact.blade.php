@@ -144,7 +144,7 @@
                                         C-Block, New Ashok Nagar,<br>
                                         Near Metro Station, East Delhi – 110096, India<br>
                                         <strong>Email:</strong> contact@nexcodeforge.com<br>
-                                        <strong>Phone:</strong> +91 98765 43210
+                                        <strong>Phone:</strong> +91 76691 66975
                                     </div>
                                 </div>
                                 <div class="address-box-map-link">
@@ -161,7 +161,7 @@
                                         3rd Floor, TechnoHub Building,<br>
                                         – 201301, India<br>
                                         <strong>Email:</strong> support@nexcodeforge.com<br>
-                                        <strong>Phone:</strong> 91 98765 43210
+                                        <strong>Phone:</strong> 91 76691 66975
                                     </div>
                                 </div>
                                 <div class="address-box-map-link">
