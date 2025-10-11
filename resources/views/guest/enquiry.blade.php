@@ -39,6 +39,8 @@
             class="query_form wrap-form clearfix mt-25 position-relative shadow-lg p-4 bg-white rounded">
             @csrf
 
+            <h1 class="title text-center">Enquiry Now</h1>
+            <hr>
             <div class="row">
                 <div class="col-md-6 mb-3">
                     <label>Name <span class="text-danger">*</span></label>

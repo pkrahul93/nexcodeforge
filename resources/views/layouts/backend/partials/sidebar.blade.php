@@ -101,6 +101,36 @@
              </li>
            </ul>
          </li>
+         <li class="nav-header">SUPPORT TICKETS</li>
+         <li class="nav-item {{ isActive(['ticket/', 'all-tickets', 'pending-tickets', 'resolved-tickets'], 'menu-is-opening menu-open') }}">
+           <a href="#" class="nav-link">
+             <i class="nav-icon fas fa-list"></i>
+             <p>
+               All Tickets
+               <i class="fas fa-angle-left right"></i>
+             </p>
+           </a>
+           <ul class="nav nav-treeview">
+            <li class="nav-item">
+               <a href="{{ url('all-tickets') }}" class="nav-link {{ isActive(['all-tickets'], 'active') }}">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>All Tickets</p>
+               </a>
+             </li>
+            <li class="nav-item">
+               <a href="{{ url('pending-tickets') }}" class="nav-link {{ isActive(['pending-tickets'], 'active') }}">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>Pending Tickets</p>
+               </a>
+             </li>
+            <li class="nav-item">
+               <a href="{{ url('resolved-tickets') }}" class="nav-link {{ isActive(['resolved-tickets'], 'active') }}">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>Resolved Tickets</p>
+               </a>
+             </li>
+           </ul>
+         </li>
         <li class="nav-header">TAGS</li>
          <li class="nav-item {{ isActive(['manage-tag', 'tags'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">

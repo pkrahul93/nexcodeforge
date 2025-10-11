@@ -506,7 +506,7 @@ jQuery(function($) {
 
 $(document).ready(function() {
     var e = '<div class="prt_floting_customsett">'+
-                '<a href="https://nexcodeforge.com/under-construction" class="tmtheme_fbar_icons"><i class="fa fa-headphones"></i><span>Support</span></a>'+
+                '<a href="https://nexcodeforge.com/maintenance-support" class="tmtheme_fbar_icons"><i class="fa fa-headphones"></i><span>Support</span></a>'+
                 '<a href="https://nexcodeforge.com/enquiry" class="tmtheme_fbar_icons"><i class="themifyicon themifyicon ti-email"></i><span>Enquiry</span></a>'+
                 '<a href="https://nexcodeforge.com/contactus" class="tmtheme_fbar_icons"><i class="fa fa-phone"></i><span class="buy_link">Contact<span></span></span></a>'+
                 '<div class="clearfix"></div>'+

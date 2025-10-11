@@ -60,12 +60,12 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="featured-icon-box style1">
                             <div class="featured-icon-thumnail">
-                                <img src="images/icon-01.png" loading="lazy" alt="UI UX Design"
+                                <img src="{{ asset('images/uiux.webp') }}" loading="lazy" alt="UI UX Design"
                                     class="rotate-img img-fluid">
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="#">UI/UX & Creative Design</a>
+                                    <a href="{{ route('creative-design') }}">UI/UX & Creative Design</a>
                                 </h3>
                                 <p>We design visually stunning, conversion-focused interfaces for web and mobile that
                                     enhance user experiences and brand perception.</p>
@@ -76,12 +76,12 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="featured-icon-box style1">
                             <div class="featured-icon-thumnail">
-                                <img src="images/icon-02.png" loading="lazy" alt="Web Development"
+                                <img src="{{ asset('images/website.jpg') }}" loading="lazy" alt="Web Development"
                                     class="rotate-img img-fluid">
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="#">Web & App Development</a>
+                                    <a href="{{ route('web-designing') }}">Web & App Development</a>
                                 </h3>
                                 <p>From enterprise-grade web applications to fast, responsive mobile apps — we develop
                                     products that perform and scale effortlessly.</p>
@@ -92,12 +92,12 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="featured-icon-box style1">
                             <div class="featured-icon-thumnail">
-                                <img src="images/icon-03.png" loading="lazy" alt="Digital Marketing"
+                                <img src="{{ asset('images/digital-marketing.jpg') }}" loading="lazy" alt="Digital Marketing"
                                     class="rotate-img img-fluid">
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="#">Digital Marketing & SEO</a>
+                                    <a href="{{ route('digital-marketing') }}">Digital Marketing & SEO</a>
                                 </h3>
                                 <p>We combine creativity and analytics to grow your online visibility, drive traffic, and
                                     boost your brand through targeted campaigns.</p>
@@ -108,12 +108,12 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="featured-icon-box style1">
                             <div class="featured-icon-thumnail">
-                                <img src="images/icon-04.png" loading="lazy" alt="Customer Support"
+                                <img src="{{ asset('images/maintenance.jpg') }}" loading="lazy" alt="Customer Support"
                                     class="rotate-img img-fluid">
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="#">Maintenance & Support</a>
+                                    <a href="{{ route('maintenance-support') }}">Maintenance & Support</a>
                                 </h3>
                                 <p>We ensure your systems stay secure, updated, and optimized 24/7 — so you can focus on
                                     business while we handle technology.</p>
@@ -177,7 +177,7 @@
                     </div>
 
                     <div class="col-lg-6 text-right pl-20">
-                        <img width="610" height="435" class="img-fluid rounded shadow-lg" src="images/singleimg-04.png""
+                        <img width="610" height="435" class="img-fluid rounded shadow-lg" src="{{ asset('images/logoh.png') }}"
                             alt="Software Solutions">
                     </div>
                 </div>
@@ -215,7 +215,7 @@
                         <div class="content-inner active">
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
-                                    <img class="img-fluid" src="images/tab-img01.png" alt="Hi-Tech Solutions">
+                                    <img class="img-fluid" src="{{ asset('images/hitech.jpg') }}" alt="Hi-Tech Solutions">
                                 </div>
                                 <div class="col-xl-6">
                                     <h3 class="tab-content-h3">Building Tomorrow’s Technology Today</h3>
@@ -238,7 +238,7 @@
                         <div class="content-inner" style="display:none;">
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
-                                    <img class="img-fluid" src="images/tab-img02.jpg" alt="Media and Marketing">
+                                    <img class="img-fluid" src="{{ asset('images/digital-marketing.jpg') }}" alt="Media and Marketing">
                                 </div>
                                 <div class="col-xl-6">
                                     <h3 class="tab-content-h3">Digital Media & Brand Growth</h3>
@@ -260,7 +260,7 @@
                         <div class="content-inner" style="display:none;">
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
-                                    <img class="img-fluid" src="images/tab-img01.png" alt="Automotive Solutions">
+                                    <img class="img-fluid" src="{{ asset('images/automotive.jpg') }}" alt="Automotive Solutions">
                                 </div>
                                 <div class="col-xl-6">
                                     <h3 class="tab-content-h3">Driving Digital Transformation in Automotive</h3>
@@ -281,7 +281,7 @@
                         <div class="content-inner" style="display:none;">
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
-                                    <img class="img-fluid" src="images/tab-img02.jpg" alt="Banking Fintech Solutions">
+                                    <img class="img-fluid" src="{{ asset('images/banking-system.png') }}" alt="Banking Fintech Solutions">
                                 </div>
                                 <div class="col-xl-6">
                                     <h3 class="tab-content-h3">FinTech Solutions that Empower Growth</h3>
@@ -302,7 +302,7 @@
                         <div class="content-inner" style="display:none;">
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
-                                    <img class="img-fluid" src="images/tab-img01.png" alt="Healthcare Solutions">
+                                    <img class="img-fluid" src="{{ asset('images/hospital.jpg') }}" alt="Healthcare Solutions">
                                 </div>
                                 <div class="col-xl-6">
                                     <h3 class="tab-content-h3">Smart Healthcare Technology</h3>
@@ -323,7 +323,7 @@
                         <div class="content-inner" style="display:none;">
                             <div class="row align-items-center">
                                 <div class="col-xl-6">
-                                    <img class="img-fluid" src="images/tab-img02.jpg" alt="E-commerce Development">
+                                    <img class="img-fluid" src="{{ asset('images/ecommerce.jpg') }}" alt="E-commerce Development">
                                 </div>
                                 <div class="col-xl-6">
                                     <h3 class="tab-content-h3">Next-Gen E-Commerce Solutions</h3>
@@ -345,7 +345,7 @@
 
                 <div class="text-center mt-40">
                     <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-fill prt-btn-color-gradiant"
-                        href="{{ url('contactus') }}">
+                        href="{{ url('enquiry') }}">
                         Let’s Build Your Project
                     </a>
                 </div>

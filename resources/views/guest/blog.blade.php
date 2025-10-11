@@ -3,9 +3,7 @@
 @section('meta_description', 'Stay updated with NexCodeForge’s latest insights on web design, Laravel development, SEO,
     and digital innovation. Learn how to grow your online presence.')
 
-    @php
-        // dd($posts);
-    @endphp
+
 @section('content')
 
     <!-- page-title -->

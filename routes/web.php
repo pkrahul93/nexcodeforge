@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EditorUploadController;
 use App\Http\Controllers\Admin\EnquiryController;
 use App\Http\Controllers\Admin\PromotionController;
+use App\Http\Controllers\Admin\SupportTicketController;
 use App\Http\Controllers\Admin\TagController;
 use App\Http\Controllers\BlogController as PostController;
 use App\Http\Controllers\EnquiryController as EnqController;
@@ -14,6 +15,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InquiryController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SupportController;
 use App\Models\Enquiry;
 use App\Models\Tag;
 use Illuminate\Support\Facades\Route;
@@ -68,6 +70,7 @@ Route::get('/team-details', function () {
     return view('guest.team-details');
 })->name('team-details');
 
+// Routes For Multiple Pages....
 Route::get('/web-designing', function () {
     return view('guest.web-designing');
 })->name('web-designing');
@@ -75,6 +78,50 @@ Route::get('/web-designing', function () {
 Route::get('/content-engineering', function () {
     return view('guest.content-engineering');
 })->name('content-engineering');
+
+Route::get('/digital-marketing', function () {
+    return view('guest.digital-marketing');
+})->name('digital-marketing');
+
+Route::get('/creative-design', function () {
+    return view('guest.creative-design');
+})->name('creative-design');
+
+Route::get('/maintenance-support', [SupportController::class, 'index'])->name('maintenance-support');
+Route::post('/support/ticket', [SupportController::class, 'store'])->name('support-ticket.store');
+
+
+Route::get('/web-redesigning', function () {
+    return view('guest.web-redesigning');
+})->name('web-redesigning');
+
+Route::get('/privacy-policy', function () {
+    return view('guest.privacy-policy');
+})->name('privacy-policy');
+
+Route::get('/refund-policy', function () {
+    return view('guest.refund-policy');
+})->name('refund-policy');
+
+Route::get('/terms-conditions', function () {
+    return view('guest.terms-conditions');
+})->name('terms-conditions');
+
+Route::get('/cookie-policy', function () {
+    return view('guest.cookie-policy');
+})->name('cookie-policy');
+
+Route::get('/disclaimer', function () {
+    return view('guest.disclaimer');
+})->name('disclaimer');
+
+Route::get('/faq', function () {
+    return view('guest.faq');
+})->name('faq');
+
+Route::get('/careers', function () {
+    return view('guest.careers');
+})->name('careers');
 
 Route::get('/error', function () {
     return view('guest.error');
@@ -156,6 +203,14 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/manage-promotion/{id?}', [PromotionController::class, 'storeOrUpdate'])->name('promotions.storeOrUpdate');
     Route::delete('/promotions/{id}', [PromotionController::class, 'destroy'])->name('promotions.destroy');
     Route::patch('/promotions/{id}/status', [PromotionController::class, 'updateStatus'])->name('promotions.status');
+
+    // Routes For Support Ticket & Requests...
+    Route::get('/all-tickets', [SupportTicketController::class, 'index'])->name('support.tickets');
+    Route::get('/pending-tickets', [SupportTicketController::class, 'pendingTickets'])->name('support.pending-tickets');
+    Route::get('/resolved-tickets', [SupportTicketController::class, 'resolvedTickets'])->name('support.resolved-tickets');
+    Route::get('/ticket/{id}', [SupportTicketController::class, 'showTicket'])->name('tickets.show');
+    Route::post('/support-tickets/{id}/status', [SupportTicketController::class, 'updateStatus'])->name('tickets.updateStatus');
+    Route::delete('/support-tickets/{id}', [SupportTicketController::class, 'destroy'])->name('tickets.delete');
 });
 
 
