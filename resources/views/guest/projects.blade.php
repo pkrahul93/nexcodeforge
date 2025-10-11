@@ -44,46 +44,46 @@
                 <div class="row g-4">
                     @foreach ([
             [
-                'img' => 'https://images.unsplash.com/photo-1590608897129-79da98d159e4?auto=format&fit=crop&w=900&q=80',
+                'img' => 'http://127.0.0.1:8000/images/crm.jpeg',
                 'cat' => 'AI SaaS, Automation',
                 'title' => 'Smart CRM Dashboard',
                 'desc' => 'An AI-integrated CRM with automated workflows and lead intelligence, streamlining BFSI operations by 40%.',
-                'link' => '#',
+                'link' => 'http://127.0.0.1:8000/under-construction',
             ],
             [
                 'img' => 'https://images.unsplash.com/photo-1556761175-129418cb2dfe?auto=format&fit=crop&w=900&q=80',
                 'cat' => 'E-Commerce, UI/UX',
                 'title' => 'Insiya Outfits - Fashion Store',
                 'desc' => 'Modern multi-language fashion eCommerce site with WhatsApp checkout and real-time inventory sync.',
-                'link' => 'https://insiyaoutfits.com',
+                'link' => 'http://127.0.0.1:8000/under-construction',
             ],
             [
-                'img' => 'https://images.unsplash.com/photo-1581091012184-5c7c2f1d43a3?auto=format&fit=crop&w=900&q=80',
+                'img' => 'http://127.0.0.1:8000/images/energy.jpg',
                 'cat' => 'IoT, Analytics',
                 'title' => 'Smart Energy Management System',
                 'desc' => 'IoT-driven dashboard for power monitoring — saving 32% energy for industrial clients.',
-                'link' => '#',
+                'link' => 'http://127.0.0.1:8000/under-construction',
             ],
             [
-                'img' => 'https://images.unsplash.com/photo-1557821552-17105176677c?auto=format&fit=crop&w=900&q=80',
+                'img' => 'http://127.0.0.1:8000/images/hospital.jpg',
                 'cat' => 'Healthcare, AI',
                 'title' => 'TeleHealth AI App',
                 'desc' => 'HIPAA-compliant virtual health platform for AI consultations and real-time appointment scheduling.',
-                'link' => '#',
+                'link' => 'http://127.0.0.1:8000/under-construction',
             ],
             [
                 'img' => 'https://images.unsplash.com/photo-1542744173-05336fcc7ad4?auto=format&fit=crop&w=900&q=80',
                 'cat' => 'Fintech, Blockchain',
                 'title' => 'BNB Credit Payment Gateway',
                 'desc' => 'Built a decentralized payment solution with instant crypto settlements and transparency.',
-                'link' => '#',
+                'link' => 'http://127.0.0.1:8000/under-construction',
             ],
             [
                 'img' => 'https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=900&q=80',
                 'cat' => 'Cloud, Security',
                 'title' => 'Secure File Sharing Platform',
                 'desc' => 'AES + ECC encrypted document exchange system with OTP-based verification and expiry links.',
-                'link' => 'https://securefileshare-demo.vercel.app',
+                'link' => 'http://127.0.0.1:8000/under-construction',
             ],
         ] as $project)
                         <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12">

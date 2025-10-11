@@ -498,29 +498,29 @@
                 $popupCookie = 'promo_seen_' . $promo->id;
             @endphp
 
-            {{-- @if (!Cookie::get($popupCookie)) --}}
-                <div class="promo-popup" id="promo-popup-{{ $promo->id }}">
-                    <div class="promo-overlay"></div>
-                    <div class="promo-content"
-                        style="background-image: url('{{ asset('uploads/promotions/' . $promo->image) }}');">
-                        <div class="promo-inner">
-                            <h2>{{ $promo->title }}</h2>
-                            <hr>
-                            <div class="promo-cont">
-                                <p>{{ $promo->content }}</p>
-                            </div>
-                            @if ($promo->button_link)
-                                <div class="text-center">
-                                    <a href="{{ $promo->button_link }}" class="hero-btn">
-                                        {{ $promo->button_text ?? 'Learn More' }}
-                                    </a>
-                                </div>
-                            @endif
-                            <button class="promo-close" data-id="{{ $promo->id }}">X</button>
+            @if (!Cookie::get($popupCookie))
+            <div class="promo-popup" id="promo-popup-{{ $promo->id }}">
+                <div class="promo-overlay"></div>
+                <div class="promo-content"
+                    style="background-image: url('{{ asset('uploads/promotions/' . $promo->image) }}');">
+                    <div class="promo-inner">
+                        <h2>{{ $promo->title }}</h2>
+                        <hr>
+                        <div class="promo-cont">
+                            <p>{{ $promo->content }}</p>
                         </div>
+                        @if ($promo->button_link)
+                            <div class="text-center my-3">
+                                <a href="{{ $promo->button_link }}" class="hero-btn">
+                                    {{ $promo->button_text ?? 'Learn More' }}
+                                </a>
+                            </div>
+                        @endif
+                        <button class="promo-close" data-id="{{ $promo->id }}">X</button>
                     </div>
                 </div>
-            {{-- @endif --}}
+            </div>
+            @endif
         @endforeach
 
         <style>
@@ -560,7 +560,7 @@
             .promo-content {
                 position: relative;
                 max-width: 700px;
-                height: 455px;
+                height: 490px;
                 width: 90%;
                 border-radius: 12px;
                 overflow: hidden;
@@ -585,7 +585,6 @@
                 width: 100%;
                 height: 100%;
                 background: rgba(0, 0, 0, 0.5);
-                /* darken image */
                 z-index: 0;
             }
 
@@ -643,31 +642,39 @@
             document.addEventListener('DOMContentLoaded', function() {
                 const popups = document.querySelectorAll('.promo-popup');
                 const promoTimers = @json($activePromotions->pluck('timer', 'id')); // { id: timerInSeconds }
-
-                // Convert NodeList to array for easy sequential processing
                 const popupArray = Array.from(popups);
 
-                // Start showing popups one by one
-                showPopupsSequentially(popupArray);
+                // Delay before first popup appears (in seconds)
+                const initialDelay = 5; // e.g. show first popup after 10 seconds of page load
+
+                // Delay between closing one popup and showing next (in seconds)
+                const gapBetweenPopups = 15; // e.g. 15 seconds gap
+
+                // Start showing popups after initial delay
+                setTimeout(() => {
+                    showPopupsSequentially(popupArray);
+                }, initialDelay * 1000);
 
                 async function showPopupsSequentially(popupList) {
                     for (const popup of popupList) {
                         const id = popup.id.split('-').pop();
-                        const timer = parseInt(promoTimers[id]) || 0; // if no timer, stays until manually closed
+                        const timer = parseInt(promoTimers[id]) || 0; // popup display duration
 
-                        // Wait for the popup to close before continuing to next
+                        // Wait for the popup to finish (close or timeout)
                         await showPopup(popup, id, timer);
+
+                        // Wait some time before showing the next one
+                        await delay(gapBetweenPopups * 1000);
                     }
                 }
 
-                // Function to show one popup and return Promise that resolves when it closes
                 function showPopup(popup, id, timer) {
                     return new Promise(resolve => {
                         popup.classList.add('show');
 
                         let autoCloseTimeout = null;
 
-                        // If timer exists, auto-close after that time
+                        // Auto-close popup after timer
                         if (timer > 0) {
                             autoCloseTimeout = setTimeout(() => {
                                 closePopup(popup, id);
@@ -679,19 +686,18 @@
                         popup.querySelector('.promo-close').addEventListener('click', () => {
                             if (autoCloseTimeout) clearTimeout(autoCloseTimeout);
                             closePopup(popup, id);
-                            resolve(); // move to next popup
+                            resolve();
                         });
                     });
                 }
 
-                // Function to close popup and set cookie via AJAX
                 function closePopup(popup, id) {
                     popup.classList.remove('show');
                     setTimeout(() => {
                         popup.style.display = 'none';
                     }, 300);
 
-                    // Optional: mark popup as shown (so it won’t appear again soon)
+                    // Optional: record that the popup was shown
                     fetch('{{ route('home.cookie') }}', {
                         method: 'POST',
                         headers: {
@@ -699,9 +705,14 @@
                             'X-CSRF-TOKEN': '{{ csrf_token() }}'
                         },
                         body: JSON.stringify({
-                            id: id
+                            id
                         })
                     });
+                }
+
+                // Helper: wait function
+                function delay(ms) {
+                    return new Promise(resolve => setTimeout(resolve, ms));
                 }
             });
         </script>
