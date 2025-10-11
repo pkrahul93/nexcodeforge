@@ -11,6 +11,7 @@
     <meta name="description" content="@yield('meta_description', 'provides professional website and application development for corporate services, matrimonial sites, eCommerce, and IT solutions. Responsive, SEO-friendly, and tailored to your business needs.')">
     <meta name="author" content="NexCodeForge">
     <meta name="robots" content="noindex, nofollow">
+    {{-- <link rel="canonical" href="{{ url()->current() }}"> --}}
 
     <!-- ✅ Mobile Friendly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -63,6 +64,119 @@
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "{{ config('app.name', 'NexCodeForge') }}",
+  "url": "{{ url('/') }}",
+  "logo": "{{ asset('images/logo.png') }}",
+  "sameAs": [
+    "https://www.facebook.com/profile.php?id=61581703355275",
+    "https://www.linkedin.com/in/yourpage",
+    "https://twitter.com/yourpage"
+  ],
+  "contactPoint": [{
+    "@type": "ContactPoint",
+    "email": "support@netambit.com",
+    "contactType": "customer support",
+    "availableLanguage": ["English"]
+  }]
+}
+</script>
+
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "{{ addslashes($meta_title ?? config('app.name', 'NexCodeForge')) }}",
+  "url": "{{ url()->current() }}",
+  "description": "{{ addslashes($meta_description ?? config('app.name', 'NexCodeForge')) }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ config('app.name', 'NexCodeForge') }}",
+    "url": "{{ url('/') }}"
+  },
+  "datePublished": "{{ \Carbon\Carbon::now()->toDateString() }}",
+  "dateModified": "{{ \Carbon\Carbon::now()->toDateString() }}"
+}
+</script>
+
+    <!-- ContactPage Schema -->
+    @if (Request::is('contact') || Request::is('support*') || Request::is('enquiry*'))
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "{{ addslashes($meta_title ?? 'Contact - ' . config('app.name', 'NexCodeForge')) }}",
+  "url": "{{ url()->current() }}",
+  "description": "{{ addslashes($meta_description ?? 'Contact ' . config('app.name', 'NexCodeForge')) }}",
+  "contactType": "customer support",
+  "email": "support@nexcodeforge.com",
+  "telephone": "+91-XXXXXXXXXX",
+  "availableLanguage": ["English"]
+}
+</script>
+    @endif
+
+    <!-- LegalService / TermsPage Schema -->
+    @if (Request::is('terms-conditions'))
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Legislation",
+  "name": "{{ addslashes($meta_title ?? 'Terms & Conditions - ' . config('app.name', 'NexCodeForge')) }}",
+  "url": "{{ url()->current() }}",
+  "description": "{{ addslashes($meta_description ?? 'Terms & Conditions for ' . config('app.name', 'NexCodeForge')) }}",
+  "publisher": {
+    "@type": "Organization",
+    "name": "{{ config('app.name', 'NexCodeForge') }}",
+    "url": "{{ url('/') }}"
+  },
+  "datePublished": "{{ \Carbon\Carbon::now()->toDateString() }}",
+  "dateModified": "{{ \Carbon\Carbon::now()->toDateString() }}"
+}
+</script>
+    @endif
+
+    <!-- FAQPage / Support Ticket -->
+    @if (Request::is('support*') || Request::is('enquiry*'))
+        <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I raise a support ticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can raise a support ticket via our Maintenance & Support page by submitting the form. Our team will respond according to priority."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What are your support hours?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Our standard support hours are Monday to Saturday, 10:00 AM – 7:00 PM IST."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I check the status of my support ticket?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "After submitting a ticket, you will receive updates via email and can also check the status in your account dashboard."
+      }
+    }
+  ]
+}
+</script>
+    @endif
+
 
     <style>
         .bd-title {
@@ -112,6 +226,20 @@
         .testimonial-nav button:hover {
             background: #7cf039;
         }
+
+        .ticket {
+            font-size: 35px;
+            text-shadow: 1px -1px #000;
+            background: #ccc;
+            padding: 15px;
+            text-align: center;
+        }
+
+        @media(max-width:600px) {
+            .ticket {
+                font-size: 28px;
+            }
+        }
     </style>
 
 </head>
@@ -156,8 +284,25 @@
                                                         <a href="#" class="mega-menu-link">Pages</a>
                                                         <ul class="mega-submenu">
                                                             <li><a href="{{ route('about') }}">About Us</a></li>
+                                                            <li><a href="{{ route('enquiry.index') }}">Enquiry Now</a>
+                                                            </li>
                                                             <li><a href="{{ route('services') }}">Services</a></li>
-                                                            {{-- <li><a href="{{ route('team') }}">Our Team</a></li>
+                                                            <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
+                                                            <li><a href="{{ route('refund-policy') }}">Refund Policy</a></li>
+                                                            <li><a href="{{ route('terms-conditions') }}">Terms & Conditions</a></li>
+
+                                                            <li><a href="{{ route('cookie-policy') }}">Cookie Policy</a></li>
+
+                                                            <li><a href="{{ route('disclaimer') }}">Disclaimer</a></li>
+
+                                                            <li><a href="{{ route('faq') }}">FAQ</a></li>
+
+                                                            <li><a href="{{ route('maintenance-support') }}">Maintenance
+                                                                                & Support</a></li>
+
+                                                            <li><a href="{{ route('careers') }}">Careers</a></li>
+
+                                                            {{-- <li><a href="{{ route('team') }}">Our Team</a></li>  careers
                                                             <li><a href="{{ route('team-details') }}">Team Details</a>
                                                             </li>
                                                             <li><a href="{{ route('error') }}">Error Page</a></li> --}}
@@ -166,19 +311,26 @@
                                                     <li class="mega-menu-item">
                                                         <a href="#" class="mega-menu-link">Services</a>
                                                         <ul class="mega-submenu">
+                                                            <li><a href="{{ route('creative-design') }}">UI/UX &
+                                                                    Creative Design</a></li>
+                                                            <li><a href="{{ route('web-designing') }}">Website/App
+                                                                    Development</a></li>
+                                                            <li><a href="{{ route('web-redesigning') }}">Website
+                                                                    Re-Designing</a></li>
+                                                            <li><a href="{{ route('digital-marketing') }}">Digital
+                                                                    Marketing & SEO</a></li>
                                                             <li><a href="{{ route('content-engineering') }}">Content
                                                                     Engineering</a></li>
-                                                            <li><a href="{{ route('web-designing') }}">Wwebsite
-                                                                    Design</a></li>
+
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="#" class="mega-menu-link">Projects</a>
+                                                        <a href="{{ url('projects') }}"
+                                                            class="mega-menu-link">Projects</a>
                                                         <ul class="mega-submenu">
                                                             <li><a href="{{ url('projects') }}">Projects</a>
                                                             </li>
-                                                            <li><a href="{{ url('project-details') }}">Project
-                                                                    Details</a></li>
+                                                            {{-- <li><a href="{{ url('project-details') }}">Project Details</a></li> --}}
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
@@ -188,7 +340,7 @@
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="{{ url('contactus') }}">Contact us</a>
+                                                        <a href="{{ url('contactus') }}">Contact Us</a>
                                                     </li>
                                                 </ul>
                                             </nav><!-- menu end -->
@@ -214,11 +366,13 @@
                                                                         <ul class="floatingbar-list">
                                                                             <li class="floatingbar-item pl-0">
                                                                                 <a href="{{ url('about') }}"
-                                                                                    class="floatingbar-link">About Us</a>
+                                                                                    class="floatingbar-link">About
+                                                                                    Us</a>
                                                                             </li>
                                                                             <li class="floatingbar-item">
                                                                                 <a href="{{ url('contactus') }}"
-                                                                                    class="floatingbar-link">Contact Us</a>
+                                                                                    class="floatingbar-link">Contact
+                                                                                    Us</a>
                                                                             </li>
                                                                             <li class="floatingbar-item pl-0">
                                                                                 <a href="{{ url('services') }}"
@@ -234,7 +388,8 @@
                                                                             </li>
                                                                             <li class="floatingbar-item">
                                                                                 <a href="{{ url('enquiry') }}"
-                                                                                    class="floatingbar-link">Enquiry Now</a>
+                                                                                    class="floatingbar-link">Enquiry
+                                                                                    Now</a>
                                                                             </li>
                                                                         </ul>
                                                                     </div>
@@ -253,7 +408,8 @@
                                                                                             Regional Office :</h3>
                                                                                         <p
                                                                                             class="floatbar-paragraph-text">
-                                                                                            Noida, 3rd Floor, TechnoHub Building – 201301, India</p>
+                                                                                            Noida, 3rd Floor, TechnoHub
+                                                                                            Building – 201301, India</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -267,7 +423,8 @@
                                                                                             Head Office :</h3>
                                                                                         <p
                                                                                             class="floatbar-paragraph-text">
-                                                                                            New Ashok-Nager, East-Delhi – 110096, India</p>
+                                                                                            New Ashok-Nager, East-Delhi
+                                                                                            – 110096, India</p>
                                                                                     </div>
                                                                                 </div>
                                                                             </div>
@@ -289,7 +446,7 @@
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="{{ route('under-construction') }}"
+                                                                                                <a href="{{ route('careers') }}"
                                                                                                     class="floating-list-item-link">Careers</a>
                                                                                             </li>
                                                                                             <li
@@ -299,12 +456,12 @@
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="{{ url('contactus') }}"
+                                                                                                <a href="{{ url('enquiry') }}"
                                                                                                     class="floating-list-item-link">Help</a>
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="{{ route('under-construction') }}"
+                                                                                                <a href="{{ route('terms-conditions') }}"
                                                                                                     class="floating-list-item-link">T&C</a>
                                                                                             </li>
                                                                                         </ul>
@@ -372,22 +529,22 @@
                                 <div class="footer-social-links-wrapper">
                                     <ul class="footer-social-icons">
                                         <li class="footer-social-icons-item">
-                                            <a href="https://www.facebook.com/profile.php?id=61581493126362#" target="_blank"
-                                                class="footer-social-icons-link">Facebook</a>
+                                            <a href="https://www.facebook.com/profile.php?id=61581703355275"
+                                                target="_blank" class="footer-social-icons-link">Facebook</a>
                                         </li>
                                         <li class="footer-social-icons-item">
                                             <a href="https://x.com/ForgeNex3411" target="_blank"
                                                 class="footer-social-icons-link">Twitter</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://www.instagram.com/nex.codeforage?igsh=dHFidndiOHk3ZDRu" target="_blank"
-                                                class="footer-social-icons-link">Instagram</a>
+                                            <a href="https://www.instagram.com/nex.codeforage?igsh=dHFidndiOHk3ZDRu"
+                                                target="_blank" class="footer-social-icons-link">Instagram</a>
                                         </li>
-                                          <li class="footer-social-icons-item">
+                                        <li class="footer-social-icons-item">
                                             <a href="https://www.linkedin.com/" target="_blank"
                                                 class="footer-social-icons-link">LinkedIn</a>
                                         </li>
-                                           <li class="footer-social-icons-item">
+                                        <li class="footer-social-icons-item">
                                             <a href="https://nexcodeforge.blogspot.com/" target="_blank"
                                                 class="footer-social-icons-link">Blogger</a>
                                         </li>
@@ -404,17 +561,21 @@
                                             <a href="{{ route('about') }}" class="footer-menu-item-link">About Us</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('contactus') }}" class="footer-menu-item-link">Contact Us</a>
+                                            <a href="{{ url('contactus') }}" class="footer-menu-item-link">Contact
+                                                Us</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('enquiry') }}" class="footer-menu-item-link">Make Appointment</a>
+                                            <a href="{{ url('enquiry') }}" class="footer-menu-item-link">Make
+                                                Appointment</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('services') }}" class="footer-menu-item-link">Our Services</a>
+                                            <a href="{{ url('services') }}" class="footer-menu-item-link">Our
+                                                Services</a>
                                         </li>
                                         <li class="footer-menu-item">
                                             <a href="{{ url('blogs') }}" class="footer-menu-item-link">Our Blogs</a>
                                         </li>
+
                                         {{-- <li class="footer-menu-item">
                                             <a href="{{ url('contactus') }}" class="footer-menu-item-link">Get In Touch</a>
                                         </li> --}}
@@ -423,16 +584,42 @@
                                                 Experts</a>
                                         </li> --}}
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('web-designing') }}" class="footer-menu-item-link">Web Designing</a>
+                                            <a href="{{ url('web-designing') }}" class="footer-menu-item-link">Web
+                                                Designing</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('content-engineering') }}" class="footer-menu-item-link">Content Engineering</a>
-                                        </li>
-                                        <li class="footer-menu-item">
-                                            <a href="{{ route('under-construction') }}" class="footer-menu-item-link">Terms & Conditions</a>
+                                            <a href="{{ url('content-engineering') }}"
+                                                class="footer-menu-item-link">Content Engineering</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
-                                            <a href="{{ route('under-construction') }}" class="footer-menu-item-link">Privacy Policy</a>
+                                            <a href="{{ route('faq') }}"
+                                                class="footer-menu-item-link">FAQ</a>
+                                        </li>
+                                        <li class="footer-menu-item last-child">
+                                            <a href="{{ route('maintenance-support') }}"
+                                                class="footer-menu-item-link">Help</a>
+                                        </li>
+                                        <li class="footer-menu-item">
+                                            <a href="{{ url('disclaimer') }}" class="footer-menu-item-link">Disclaimer</a>
+                                        </li>
+                                        <li class="footer-menu-item">
+                                            <a href="{{ url('cookie-policy') }}" class="footer-menu-item-link">Cookie Policy</a>
+                                        </li>
+                                        <li class="footer-menu-item last-child">
+                                            <a href="{{ route('under-construction') }}"
+                                            class="footer-menu-item-link">Privacy Policy</a>
+                                        </li>
+                                        <li class="footer-menu-item last-child">
+                                            <a href="{{ route('under-construction') }}"
+                                            class="footer-menu-item-link">Refund Policy</a>
+                                        </li>
+                                        <li class="footer-menu-item">
+                                            <a href="{{ route('under-construction') }}"
+                                                class="footer-menu-item-link">Terms & Conditions</a>
+                                        </li>
+                                        <li class="footer-menu-item">
+                                            <a href="{{ route('careers') }}"
+                                                class="footer-menu-item-link">Careers</a>
                                         </li>
                                     </ul>
                                 </div>
@@ -445,7 +632,8 @@
                                         <div class="prt-numbertext">
                                             <p class="prt-numbertext-p">Our phone number</p>
                                             <h3 class="prt-numbertext-h3">
-                                                <a href="tel:+91 7669166975" class="prt-numbertext-link">+91 7669166975</a>
+                                                <a href="tel:+91 7669166975" class="prt-numbertext-link">+91
+                                                    7669166975</a>
                                             </h3>
                                         </div>
                                     </div>
@@ -458,6 +646,8 @@
                                             <h3 class="prt-numbertext-h3">
                                                 <a href="mailto:nexcodeforge@gmail.com"
                                                     class="prt-numbertext-link">nexcodeforge@gmail.com</a>
+                                                <a href="mailto:support@nexcodeforge.com"
+                                                    class="prt-numbertext-link">support@nexcodeforge.com</a>
                                             </h3>
                                         </div>
                                     </div>
@@ -466,7 +656,8 @@
                                 <div class="widget_nav_menu">
                                     <div class="textwidget-widget-text">
                                         <div class="prt-numbertext">
-                                            <p class="prt-numbertext-p">Copyright © 2023 <a href="{{ url('/') }}"
+                                            <p class="prt-numbertext-p">Copyright © 2023 <a
+                                                    href="{{ url('/') }}"
                                                     class="prt-numbertext-p-link">NexCodeForge</a> IT Solutions &
                                                 Services</p>
                                         </div>

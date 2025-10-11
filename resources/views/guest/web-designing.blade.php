@@ -37,7 +37,7 @@
                     <div class="prt-bg prt-col-bgimage-yes col-bg-img-six">
                         <div class="prt-col-wrapper-bg-layer prt-bg-layer"></div>
                     </div>
-                    <img class="img-fluid prt-equal-height-image w-100 position-relative" src="{{ asset('guest/assets/images/sections/web-design-banner.jpg') }}" alt="Website Design by NexCodeForge">
+                    {{-- <img class="img-fluid prt-equal-height-image w-100 position-relative" src="{{ asset('guest/assets/images/pagetitle02.png') }}" alt="Website Design by NexCodeForge"> --}}
                 </div>
 
                 <div class="col-xl-6 col-lg-6">
@@ -109,7 +109,7 @@
                 <div class="col-lg-5">
                     <div class="section-title mb-0">
                         <div class="title-header">
-                            <h2 class="section-title-h2 mb-0">Why Choose NexCodeForge</h2>
+                            <h2 class="section-title-h2 mb-0">Why Choose Us</h2>
                         </div>
                     </div>
                 </div>

@@ -18,7 +18,7 @@
 
             @if ($enquiry->document)
                 <p><strong>Attachment:</strong>
-                    <a href="{{ $enquiry->document_url }}" target="_blank" class="btn btn-outline-secondary btn-sm">Download</a>
+                    <a href="{{ asset('uploads/enquiries/' . $enquiry->document) }}" target="_blank" class="btn btn-outline-secondary btn-sm">Download</a>
                 </p>
             @endif
 
