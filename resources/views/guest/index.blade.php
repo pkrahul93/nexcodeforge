@@ -221,309 +221,7 @@
                     height: 150px;
                 }
             }
-        </style>
 
-        <!-- About section -->
-        <section class="prt-row service-section clearfix" data-aos="fade-up" data-aos-offset="600" data-aos-duration="1500"
-            data-aos-once="true">
-            <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-xl-6">
-                        <div class="section-title">
-                            <div class="title-header">
-                                <h2 class="title">Innovating Tomorrow with NexcodeForge</h2>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="process-desc pl-90">
-                            <p class="desc-text">
-                                NexcodeForge is a next-generation software company delivering robust IoT, SaaS,
-                                E-Commerce, and custom digital solutions. We help enterprises automate workflows,
-                                scale operations, and unlock innovation through technology.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row row-equal-height prt-vertical_sep style1 mt-25">
-                    <div class="col-lg-3 col-md-6">
-                        <div class="featured-icon-box style1">
-                            <div class="featured-icon-thumnail">
-                                <img src="guest/assets/images/icon-01.png" loading="lazy" alt="Icon"
-                                    class="rotate-img img-fluid">
-                            </div>
-                            <div class="featured-content">
-                                <h3 class="featured-title-h3">
-                                    <a href="services.html">UI/UX Design Excellence</a>
-                                </h3>
-                                <p>Crafting user-centric interfaces that turn complex ideas into seamless experiences.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="featured-icon-box style1">
-                            <div class="featured-icon-thumnail">
-                                <img src="guest/assets/images/icon-02.png" loading="lazy" alt="Icon"
-                                    class="rotate-img img-fluid">
-                            </div>
-                            <div class="featured-content">
-                                <h3 class="featured-title-h3">
-                                    <a href="services.html">Visual & Brand Identity</a>
-                                </h3>
-                                <p>Building digital brands that communicate trust, creativity, and innovation.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="featured-icon-box style1">
-                            <div class="featured-icon-thumnail">
-                                <img src="guest/assets/images/icon-03.png" loading="lazy" alt="Icon"
-                                    class="rotate-img img-fluid">
-                            </div>
-                            <div class="featured-content">
-                                <h3 class="featured-title-h3">
-                                    <a href="services.html">Digital Marketing Strategy</a>
-                                </h3>
-                                <p>Helping brands connect, engage, and convert through data-driven campaigns.</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-lg-3 col-md-6">
-                        <div class="featured-icon-box style1">
-                            <div class="featured-icon-thumnail">
-                                <img src="guest/assets/images/icon-04.png" loading="lazy" alt="Icon"
-                                    class="rotate-img img-fluid">
-                            </div>
-                            <div class="featured-content">
-                                <h3 class="featured-title-h3">
-                                    <a href="services.html">Customer-First Support</a>
-                                </h3>
-                                <p>Delivering quick, reliable, and result-oriented support for all our solutions.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- IT Services -->
-        <section class="prt-row padding_zero-section prt-bg bg-base-grey clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-6">
-                        <img class="img-fluid w-100 h-100" src="guest/assets/images/cloud.jpg"
-                            alt="NexcodeForge IT Services">
-                    </div>
-                    <div class="col-xl-6">
-                        <div class="prt-bg bg-base-grey spacing-1">
-                            <div class="section-title">
-                                <div class="title-header">
-                                    <h2>Smart IT & Cloud Solutions</h2>
-                                </div>
-                                <div class="title-desc">
-                                    <p>
-                                        NexcodeForge delivers scalable and secure IT solutions built on the latest cloud
-                                        infrastructure. From mobile apps to enterprise automation, our experts ensure your
-                                        business stays ahead of technology trends.
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="row mt-10">
-                                <div class="col-lg-6">
-                                    <h3>Innovation that Scales</h3>
-                                    <h3>Driving Real-World Impact</h3>
-                                </div>
-                                <div class="col-lg-6">
-                                    <h3>Tested & Trusted Frameworks</h3>
-                                    <h3>Solutions Built for Growth</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- marquee -->
-        <section class="prt-row padding_zero-section prt-bg bg-base-gradient clearfix">
-            <div class="container-fluid p-0">
-                <div class="marquee-block overflow-hidden">
-                    <div class="marquee">
-                        <div class="marquee-content">
-                            <div class="marquee-text">Automation</div>
-                            <div class="marquee-text">Innovation</div>
-                            <div class="marquee-text">Cloud Computing</div>
-                            <div class="marquee-text">Digital Commerce</div>
-                            <div class="marquee-text">SaaS Solutions</div>
-                            <div class="marquee-text">Smart Analytics</div>
-                            <div class="marquee-text">IoT Systems</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- projects -->
-        <section class="prt-row bg-img1 prt-bgimage-yes prt-bg bg-base-dark project-section clearfix">
-            <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-2">
-                        <h3 class="row-heading-h3">One<br>Platform</h3>
-                    </div>
-                    <div class="col-lg-10">
-                        <h2 class="row-heading-h2">Endless</h2>
-                        <h2 class="row-heading-h2 pl-220"><span class="text-base-skin">Possibilities</span></h2>
-                    </div>
-                </div>
-
-                <div class="row mt-50" data-aos="fade-up">
-                    @php
-                        $projects = [
-                            ['title' => 'Cloud Computing', 'img' => 'service-02-654x490.jpg'],
-                            ['title' => 'AI-Driven Analytics', 'img' => 'service-06-654x490.jpg'],
-                            ['title' => 'Custom SaaS Platforms', 'img' => 'service-01-654x490.png'],
-                            ['title' => 'E-Commerce Automation', 'img' => 'service-05-654x490.jpg'],
-                            ['title' => 'MLM Business Tools', 'img' => 'service-03-654x490.jpg'],
-                            ['title' => 'IoT Infrastructure', 'img' => 'service-07-654x490.png'],
-                        ];
-                    @endphp
-                    @foreach ($projects as $p)
-                        <div class="col-lg-6 col-md-6">
-                            <div class="service-box style1">
-                                <div class="service-box-thumnail">
-                                    <img width="654" height="490" class="img-fluid"
-                                        src="guest/assets/images/{{ $p['img'] }}" alt="{{ $p['title'] }}">
-                                </div>
-                                <div class="service-box-content">
-                                    <h3 class="service-box-h3">{{ $p['title'] }}</h3>
-                                </div>
-                            </div>
-                        </div>
-                    @endforeach
-                </div>
-            </div>
-        </section>
-
-        <!-- process -->
-        <section class="prt-row step-section clearfix">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xl-7">
-                        <h2>Our Work Process</h2>
-                    </div>
-                    <div class="col-xl-5">
-                        <p class="desc-text">
-                            At NexcodeForge, every project follows a streamlined strategy — from ideation and design to
-                            deployment and optimization — ensuring efficiency and measurable success.
-                        </p>
-                        <a class="prt-btn prt-btn-color-gradiant" href="services.html">Discover Our Approach</a>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- testimonials -->
-        <section class="prt-row bg-img2 prt-bgimage-yes prt-bg bg-base-dark testimonial-section clearfix">
-            <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
-            <div class="container-fluid">
-                <div class="row align-items-center spacing-2">
-                    <div class="col-lg-3">
-                        <h3 class="prt-custom-heading counter">150+</h3>
-                        <h3 class="custom-heading-h3">Global Clients</h3>
-                        <p>Trusted by startups, SMEs, and enterprises across the globe.</p>
-                    </div>
-                    <div class="col-lg-9">
-                        <div class="row">
-                            <div class="col-lg-4">
-                                <div class="testimonials-style1">
-                                    <p>“NexcodeForge transformed our outdated system into a powerful digital platform that
-                                        doubled our efficiency.”</p>
-                                    <h3 class="testimonial-caption-h3">— Rahul Mehta, CEO</h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="testimonials-style1">
-                                    <p>“Their SaaS expertise helped us scale faster with zero downtime — simply the best
-                                        team we’ve worked with.”</p>
-                                    <h3 class="testimonial-caption-h3">— Aisha Khan, Product Head</h3>
-                                </div>
-                            </div>
-                            <div class="col-lg-4">
-                                <div class="testimonials-style1">
-                                    <p>“From idea to execution, NexcodeForge handled everything flawlessly. Highly
-                                        recommended.”</p>
-                                    <h3 class="testimonial-caption-h3">— David Lee, CTO</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- blog -->
-        <section class="prt-row blog-section clearfix">
-            <div class="container">
-                <div class="section-title text-center">
-                    <h2>Latest Insights from NexcodeForge</h2>
-                    <p>Explore trends in IoT, SaaS, digital marketing, and tech innovations shaping the future.</p>
-                </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="guest/assets/images/blog/blog-01-828x894.png" class="img-fluid" alt="IoT Blog">
-                        <h3><a href="{{ url('blog') }}">How IoT is Transforming Business Operations</a></h3>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="guest/assets/images/blog/blog-02-828x894.png" class="img-fluid" alt="SaaS Blog">
-                        <h3><a href="{{ url('blog') }}">SaaS Models that Drive Scalable Growth</a></h3>
-                    </div>
-                    <div class="col-lg-4">
-                        <img src="guest/assets/images/blog/blog-03-828x894.jpg" class="img-fluid"
-                            alt="Digital Marketing Blog">
-                        <h3><a href="{{ url('blog') }}">Digital Marketing in the Age of Automation</a></h3>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
-
-    @if ($activePromotions->count())
-        @foreach ($activePromotions as $promo)
-            @php
-                $popupCookie = 'promo_seen_' . $promo->id;
-            @endphp
-
-            @if (!Cookie::get($popupCookie))
-            <div class="promo-popup" id="promo-popup-{{ $promo->id }}">
-                <div class="promo-overlay"></div>
-                <div class="promo-content"
-                    style="background-image: url('{{ asset('uploads/promotions/' . $promo->image) }}');">
-                    <div class="promo-inner">
-                        <h2>{{ $promo->title }}</h2>
-                        <hr>
-                        <div class="promo-cont">
-                            <p>{{ $promo->content }}</p>
-                        </div>
-                        @if ($promo->button_link)
-                            <div class="text-center my-3">
-                                <a href="{{ $promo->button_link }}" class="hero-btn">
-                                    {{ $promo->button_text ?? 'Learn More' }}
-                                </a>
-                            </div>
-                        @endif
-                        <button class="promo-close" data-id="{{ $promo->id }}">X</button>
-                    </div>
-                </div>
-            </div>
-            @endif
-        @endforeach
-
-        <style>
             .promo-popup {
                 display: flex;
                 justify-content: center;
@@ -632,7 +330,318 @@
                 background: rgb(240, 239, 236);
                 color: rgba(255, 0, 0, 0.8);
             }
+
+            @media(max-width:600px){
+                .promo-content{
+                    height:510px !important;
+                }
+
+                .promo-cont{
+                    font-size: 16px !important;
+                }
+
+                .promo-inner h2{
+                    font-size: 25px !important;
+                }
+            }
         </style>
+
+        <!-- About section -->
+        <section class="prt-row service-section clearfix" data-aos="fade-up" data-aos-offset="600" data-aos-duration="1500"
+            data-aos-once="true">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6">
+                        <div class="section-title">
+                            <div class="title-header">
+                                <h2 class="title">Innovating Tomorrow with NexcodeForge</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="process-desc pl-90">
+                            <p class="desc-text">
+                                NexcodeForge is a next-generation software company delivering robust IoT, SaaS,
+                                E-Commerce, and custom digital solutions. We help enterprises automate workflows,
+                                scale operations, and unlock innovation through technology.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row row-equal-height prt-vertical_sep style1 mt-25">
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="{{ asset('guest/assets/images/icon-01.png') }}" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="{{ url('under-construction') }}">UI/UX Design Excellence</a>
+                                </h3>
+                                <p>Crafting user-centric interfaces that turn complex ideas into seamless experiences.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="{{ asset('guest/assets/images/icon-02.png') }}" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="{{ url('under-construction') }}">Visual & Brand Identity</a>
+                                </h3>
+                                <p>Building digital brands that communicate trust, creativity, and innovation.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="{{ asset('guest/assets/images/icon-03.png') }}" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="{{ url('under-construction') }}">Digital Marketing Strategy</a>
+                                </h3>
+                                <p>Helping brands connect, engage, and convert through data-driven campaigns.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="featured-icon-box style1">
+                            <div class="featured-icon-thumnail">
+                                <img src="{{ asset('guest/assets/images/icon-04.png') }}" loading="lazy" alt="Icon"
+                                    class="rotate-img img-fluid">
+                            </div>
+                            <div class="featured-content">
+                                <h3 class="featured-title-h3">
+                                    <a href="{{ url('maintenance-support') }}">Customer-First Support</a>
+                                </h3>
+                                <p>Delivering quick, reliable, and result-oriented support for all our solutions.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- IT Services -->
+        <section class="prt-row padding_zero-section prt-bg bg-base-grey clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-6">
+                        <img class="img-fluid w-100 h-100" src="{{ asset('guest/assets/images/cloud.jpg') }}"
+                            alt="NexcodeForge IT Services">
+                    </div>
+                    <div class="col-xl-6">
+                        <div class="prt-bg bg-base-grey spacing-1">
+                            <div class="section-title">
+                                <div class="title-header">
+                                    <h2>Smart IT & Cloud Solutions</h2>
+                                </div>
+                                <div class="title-desc">
+                                    <p>
+                                        NexcodeForge delivers scalable and secure IT solutions built on the latest cloud
+                                        infrastructure. From mobile apps to enterprise automation, our experts ensure your
+                                        business stays ahead of technology trends.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="row mt-10">
+                                <div class="col-lg-6">
+                                    <h3>Innovation that Scales</h3>
+                                    <h3>Driving Real-World Impact</h3>
+                                </div>
+                                <div class="col-lg-6">
+                                    <h3>Tested & Trusted Frameworks</h3>
+                                    <h3>Solutions Built for Growth</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- marquee -->
+        <section class="prt-row padding_zero-section prt-bg bg-base-gradient clearfix">
+            <div class="container-fluid p-0">
+                <div class="marquee-block overflow-hidden">
+                    <div class="marquee">
+                        <div class="marquee-content">
+                            <div class="marquee-text">Automation</div>
+                            <div class="marquee-text">Innovation</div>
+                            <div class="marquee-text">Cloud Computing</div>
+                            <div class="marquee-text">Digital Commerce</div>
+                            <div class="marquee-text">SaaS Solutions</div>
+                            <div class="marquee-text">Smart Analytics</div>
+                            <div class="marquee-text">IoT Systems</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- projects -->
+        <section class="prt-row bg-img1 prt-bgimage-yes prt-bg bg-base-dark project-section clearfix">
+            <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2">
+                        <h3 class="row-heading-h3">One<br>Platform</h3>
+                    </div>
+                    <div class="col-lg-10">
+                        <h2 class="row-heading-h2">Endless</h2>
+                        <h2 class="row-heading-h2 pl-220"><span class="text-base-skin">Possibilities</span></h2>
+                    </div>
+                </div>
+
+                <div class="row mt-50" data-aos="fade-up">
+                    @php
+                        $projects = [
+                            ['title' => 'Cloud Computing', 'img' => 'service-02-654x490.jpg'],
+                            ['title' => 'AI-Driven Analytics', 'img' => 'service-06-654x490.jpg'],
+                            ['title' => 'Custom SaaS Platforms', 'img' => 'service-01-654x490.png'],
+                            ['title' => 'E-Commerce Automation', 'img' => 'service-05-654x490.jpg'],
+                            ['title' => 'MLM Business Tools', 'img' => 'service-03-654x490.jpg'],
+                            ['title' => 'IoT Infrastructure', 'img' => 'service-07-654x490.png'],
+                        ];
+                    @endphp
+                    @foreach ($projects as $p)
+                        <div class="col-lg-6 col-md-6">
+                            <div class="service-box style1">
+                                <div class="service-box-thumnail">
+                                    <img width="654" height="490" class="img-fluid"
+                                        src="guest/assets/images/{{ $p['img'] }}" alt="{{ $p['title'] }}">
+                                </div>
+                                <div class="service-box-content">
+                                    <h3 class="service-box-h3">{{ $p['title'] }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+
+        <!-- process -->
+        <section class="prt-row step-section clearfix">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <h2>Our Work Process</h2>
+                    </div>
+                    <div class="col-xl-5">
+                        <p class="desc-text">
+                            At NexcodeForge, every project follows a streamlined strategy — from ideation and design to
+                            deployment and optimization — ensuring efficiency and measurable success.
+                        </p>
+                        <a class="prt-btn prt-btn-color-gradiant" href="{{ url('under-construction') }}">Discover Our
+                            Approach</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- testimonials -->
+        <section class="prt-row bg-img2 prt-bgimage-yes prt-bg bg-base-dark testimonial-section clearfix">
+            <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
+            <div class="container-fluid">
+                <div class="row align-items-center spacing-2">
+                    <div class="col-lg-3">
+                        <h3 class="prt-custom-heading counter">150+</h3>
+                        <h3 class="custom-heading-h3">Global Clients</h3>
+                        <p>Trusted by startups, SMEs, and enterprises across the globe.</p>
+                    </div>
+                    <div class="col-lg-9">
+                        <div class="row">
+                            <div class="col-lg-4">
+                                <div class="testimonials-style1">
+                                    <p>“NexcodeForge transformed our outdated system into a powerful digital platform that
+                                        doubled our efficiency.”</p>
+                                    <h3 class="testimonial-caption-h3">— Rahul Mehta, CEO</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonials-style1">
+                                    <p>“Their SaaS expertise helped us scale faster with zero downtime — simply the best
+                                        team we’ve worked with.”</p>
+                                    <h3 class="testimonial-caption-h3">— Aisha Khan, Product Head</h3>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="testimonials-style1">
+                                    <p>“From idea to execution, NexcodeForge handled everything flawlessly. Highly
+                                        recommended.”</p>
+                                    <h3 class="testimonial-caption-h3">— David Lee, CTO</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- blog -->
+        <section class="prt-row blog-section clearfix">
+            <div class="container">
+                <div class="section-title text-center">
+                    <h2>Latest Insights from NexcodeForge</h2>
+                    <p>Explore trends in IoT, SaaS, digital marketing, and tech innovations shaping the future.</p>
+                </div>
+                <div class="row">
+                    @foreach ($blogs as $blog)
+                        <div class="col-lg-4">
+                            <a href="{{ route('blog.details', $blog->slug) }}" target="_blank" rel="noopener noreferrer">
+                                <img src="{{ $blog->image_url ?? asset('images/default-blog.jpg') }}" loading="lazy" class="img-fluid" alt="IoT Blog">
+                                <h3>{{ $blog->title }}</h3>
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </section>
+    </div>
+
+    @if ($activePromotions->count())
+        @foreach ($activePromotions as $promo)
+            @php
+                $popupCookie = 'promo_seen_' . $promo->id;
+            @endphp
+
+            @if (!Cookie::get($popupCookie))
+                <div class="promo-popup" id="promo-popup-{{ $promo->id }}">
+                    <div class="promo-overlay"></div>
+                    <div class="promo-content"
+                        style="background-image: url('{{ asset('uploads/promotions/' . $promo->image) }}');">
+                        <div class="promo-inner">
+                            <h2>{{ $promo->title }}</h2>
+                            <hr>
+                            <div class="promo-cont">
+                                <p>{{ $promo->content }}</p>
+                            </div>
+                            @if ($promo->button_link)
+                                <div class="text-center my-3">
+                                    <a href="{{ $promo->button_link }}" class="hero-btn">
+                                        {{ $promo->button_text ?? 'Learn More' }}
+                                    </a>
+                                </div>
+                            @endif
+                            <button class="promo-close" data-id="{{ $promo->id }}">X</button>
+                        </div>
+                    </div>
+                </div>
+            @endif
+        @endforeach
+
 
         <script>
             const promoTimers = @json($activePromotions->pluck('timer', 'id'));

@@ -1,4 +1,6 @@
 @extends('layouts.guest')
+@section('title', 'Contact & Enquiry | NexCodeForge')
+@section('meta_description', 'Have questions or need a custom solution? Send your enquiry to NexCodeForge and our experts will guide you with the right solution.')
 
 @section('content')
     <!-- page-title -->
