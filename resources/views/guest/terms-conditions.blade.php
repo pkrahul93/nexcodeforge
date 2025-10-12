@@ -42,7 +42,7 @@
                     <section class="mb-4">
                         <h2 class="h4">1. Introduction</h2>
                         <p>
-                            Welcome to <strong>{{ config('app.name', 'YourSite') }}</strong>. These Terms &amp; Conditions ("Terms")
+                            Welcome to <strong>{{ config('app.name', 'YourSite') }}</strong>. These <b><a href="{{ route('terms-conditions') }}" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></b> ("Terms")
                             govern your access to and use of our website and services. By using or accessing our site you agree to be
                             bound by these Terms. If you do not agree, please do not use our services.
                         </p>
@@ -57,7 +57,7 @@
                     <section class="mb-4">
                         <h2 class="h4">3. Use of the Website</h2>
                         <ul>
-                            <li>You must be 18 years or older (or the legal minimum age in your jurisdiction) to use our services.</li>
+                            <li>You must be 18 years or older to use our services.</li>
                             <li>You agree not to misuse the Service, including uploading malicious content, violating applicable laws,
                                 or interfering with site operations.</li>
                             <li>We reserve the right to suspend or terminate accounts for breaches of these Terms.</li>
@@ -76,7 +76,7 @@
                         <h2 class="h4">5. Payment &amp; Refunds (if applicable)</h2>
                         <p>
                             For paid services, all fees are displayed on the relevant product pages or invoices. Refunds, if any,
-                            are processed according to our Refund Policy (link if you have one). We may change pricing with notice.
+                            are processed according to our <b><a href="{{ route('refund-policy') }}" target="_blank" rel="noopener noreferrer">Refund Policy</a></b>. We may change pricing with notice.
                         </p>
                     </section>
 
@@ -99,7 +99,7 @@
                     <section class="mb-4">
                         <h2 class="h4">8. Privacy</h2>
                         <p>
-                            Our <a href="{{ route('privacy-policy') }}">Privacy Policy</a> explains how we collect and use personal data.
+                            Our <a href="{{ route('privacy-policy') }}" target="_blank">Privacy Policy</a> explains how we collect and use personal data.
                             By using the Service you agree to data practices outlined there.
                         </p>
                     </section>
@@ -139,7 +139,7 @@
                     <section class="mb-4">
                         <h2 class="h4">13. Governing Law</h2>
                         <p>
-                            These Terms are governed by the laws of <strong>[Your Jurisdiction]</strong> (replace with your country/state).
+                            These Terms are governed by the laws of <strong>[India]</strong>.
                             Any dispute will be resolved in the courts located in that jurisdiction unless otherwise agreed.
                         </p>
                     </section>
@@ -158,7 +158,7 @@
                     <hr>
 
                     <p class="small text-muted text-center mb-0">
-                        These Terms &amp; Conditions were last updated on {{ \Carbon\Carbon::now()->format('F j, Y') }}.
+                        These <b><a href="{{ route('terms-conditions') }}" target="_blank" rel="noopener noreferrer">Terms &amp; Conditions</a></b> were last updated on {{ \Carbon\Carbon::now()->format('F j, Y') }}.
                     </p>
                 </div>
 
