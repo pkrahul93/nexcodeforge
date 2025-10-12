@@ -1,6 +1,7 @@
 @extends('layouts.guest')
 @section('title', 'FAQ | NexCodeForge')
-@section('meta_description', 'Frequently Asked Questions about NexCodeForge — answers to common queries about our services, policies, and support.')
+@section('meta_description', 'Frequently Asked Questions about NexCodeForge — answers to common queries about our
+    services, policies, and support.')
 
 @section('content')
     <!-- page-title -->
@@ -32,16 +33,20 @@
                 <div class="shadow-lg p-4 bg-white rounded">
 
                     <section class="mb-4">
+                        <h1 class="fw-b text-center">Frequently Asked Questions</h1>
+                        <hr>
                         <h2 class="h4">1. How do I contact support?</h2>
                         <p>
-                            You can contact us via the <a href="{{ route('contact.index') }}">Contact Us</a> page or email at <a href="mailto:support@nexcodeforge.com">support@nexcodeforge.com</a>.
+                            You can contact us via the <a href="{{ route('contact.index') }}">Contact Us</a> page or email
+                            at <a href="mailto:support@nexcodeforge.com">support@nexcodeforge.com</a>.
                         </p>
                     </section>
 
                     <section class="mb-4">
                         <h2 class="h4">2. What payment methods are accepted?</h2>
                         <p>
-                            We accept payments via online banking, credit/debit cards, and other options specified on our service pages.
+                            We accept payments via online banking, credit/debit cards, and other options specified on our
+                            service pages.
                         </p>
                     </section>
 
@@ -55,7 +60,8 @@
                     <section class="mb-4">
                         <h2 class="h4">4. How is my data protected?</h2>
                         <p>
-                            We take your privacy seriously. Refer to our <a href="{{ route('privacy-policy') }}">Privacy Policy</a> for details on data protection.
+                            We take your privacy seriously. Refer to our <a href="{{ route('privacy-policy') }}">Privacy
+                                Policy</a> for details on data protection.
                         </p>
                     </section>
 
