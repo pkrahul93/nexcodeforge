@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Promotion;
 use Illuminate\Http\Request;
 
@@ -11,7 +12,9 @@ class HomeController extends Controller
     {
         // Get all active promotions as a collection
         $activePromotions = Promotion::where('status', 1)->latest()->get();
-        return view('guest.index', compact('activePromotions'));
+        $blogs = Blog::where('status', 'published')->latest()->take(6)->get();
+
+        return view('guest.index', compact('activePromotions', 'blogs'));
     }
 
     public function setCookie(Request $request)
