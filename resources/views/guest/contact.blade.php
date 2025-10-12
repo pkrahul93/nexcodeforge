@@ -101,12 +101,12 @@
                                                 </span>
                                             </label>
                                         </div>
-                                        {{-- <div class="col-md-12">
+                                        <div class="col-md-12">
                                                 <label>
                                                    <span class="checkbox"><input type="checkbox" name="cookies-consent" id="cookies-consent2">
-                                                     Accept <a href="#"> Terms of services</a> and <a href="#"> Privacy Policy.</a></span>
+                                                     I Accept <a href="{{ url('terms-conditions') }}"> Terms of services</a> and <a href="{{ url('privacy-policy') }}"> Privacy Policy.</a></span>
                                                 </label>
-                                            </div> --}}
+                                            </div>
                                         <div class="col-md-12">
                                             <div class="mt-25">
                                                 <button
@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
                                 <div class="address-box-map-link">
-                                    <a href="https://www.google.com/maps/search/3rd+Floor+TechnoHub+Building+br+201301+India/@28.5821099,77.2658157,12z?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank"
+                                    <a href="https://maps.app.goo.gl/tWLBcowx3jbaNQ5w9" target="_blank"
                                         rel="noopener" class="address-box-link">View on Map</a>
                                 </div>
                             </div>
