@@ -4,31 +4,31 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- ✅ Page Title -->
+    <title>@yield('title', 'NexCodeForge | Turning Ideas into Digital Solutions')</title>
     <!-- ✅ SEO Optimized Meta -->
-    <meta name="keywords"
-        content="NexCodeForge, website development, application development, corporate websites, matrimonial portals, eCommerce solutions, IT services, responsive design, SEO-optimized websites">
-    <meta name="description" content="@yield('meta_description', 'provides professional website and application development for corporate services, matrimonial sites, eCommerce, and IT solutions. Responsive, SEO-friendly, and tailored to your business needs.')">
+    <meta name="keywords" content="NexCodeForge, website development, application development, corporate websites, matrimonial portals, eCommerce solutions, IT services, responsive design, SEO-optimized websites">
+    <meta name="description" content="@yield('meta_description', 'NexCodeForge provides professional website and application development for corporate services, matrimonial platforms, eCommerce stores, and IT solutions. Our designs are responsive, SEO-friendly, and tailored to your unique business needs.')">
+
     <meta name="author" content="NexCodeForge">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
+
     <link rel="canonical" href="{{ url()->current() }}">
 
     <!-- ✅ Mobile Friendly -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ✅ Security -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <!-- ✅ Page Title -->
-    <title>@yield('title', 'NexCodeForge - Web & App Development')</title>
-    <title>@yield('title', 'NexCodeForge | Turning Ideas into Digital Solutions')</title>
-    <meta name="description" content="@yield('meta_description', 'NexCodeForge provides professional website and application development for corporate services, matrimonial platforms, eCommerce stores, and IT solutions. Our designs are responsive, SEO-friendly, and tailored to your unique business needs.')">
+
+
 
 
 
     <!-- ✅ jQuery (load once, latest stable version) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
-        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <!-- ✅ CSRF Setup for AJAX -->
     <script>
@@ -40,6 +40,7 @@
             });
         });
     </script>
+
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <link rel="shortcut icon" href="{{ asset('images/logo.png') }}">
@@ -261,7 +262,7 @@
                                 <div class="site-navigation d-flex align-items-center justify-content-between">
                                     <!-- site-branding -->
                                     <div class="site-branding">
-                                        <h1><a class="home-link" href="/" title="Altech" rel="home">
+                                        <h1><a class="home-link" href="{{ url('/') }}" title="NexCodeForge" rel="home">
                                                 <img id="logo-img" height="50" width="200"
                                                     class="img-fluid auto_size" src="{{ asset('images/logo.png') }}"
                                                     alt="logo-img">
@@ -423,7 +424,7 @@
                                                                                             Head Office :</h3>
                                                                                         <p
                                                                                             class="floatbar-paragraph-text">
-                                                                                            New Ashok-Nager, East-Delhi
+                                                                                            New Ashok-Nagar, East-Delhi
                                                                                             – 110096, India</p>
                                                                                     </div>
                                                                                 </div>
@@ -509,7 +510,7 @@
                                             <span class="footer-icon-link"><i class="ti-location-pin"></i></span>
                                         </div>
                                         <div class="footer-box-content">
-                                            <p class="mb-0">New Ashok-Nager, East-Delhi – 110096, India
+                                            <p class="mb-0">New Ashok-Nagar, East-Delhi – 110096, India
                                             </p>
                                         </div>
                                     </div>
@@ -633,7 +634,7 @@
                                             <p class="prt-numbertext-p">Our phone number</p>
                                             <h3 class="prt-numbertext-h3">
                                                 <a href="tel:+91 7669166975" class="prt-numbertext-link">+91
-                                                    7669166975</a>
+                                                    76691 66975</a>
                                             </h3>
                                         </div>
                                     </div>

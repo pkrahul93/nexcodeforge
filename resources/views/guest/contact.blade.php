@@ -143,7 +143,7 @@
                                     <div class="address-box-text">
                                         C-Block, New Ashok Nagar,<br>
                                         Near Metro Station, East Delhi – 110096, India<br>
-                                        <strong>Email:</strong> contact@nexcodeforge.com<br>
+                                        <strong>Email:</strong> nexcodeforge@gmail.com<br>
                                         <strong>Phone:</strong> +91 76691 66975
                                     </div>
                                 </div>

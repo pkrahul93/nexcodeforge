@@ -1,5 +1,7 @@
 @extends('layouts.guest')
 @section('title', 'Website Designing Company in India | NexCodeForge - UI/UX, Responsive Web Development & Digital Solutions')
+@section('meta_description', 'Transform your digital presence with NexCodeForge’s Website Design and UI/UX Development services — crafting visually stunning, user-friendly, and conversion-focused web experiences.')
+
 
 @section('content')
 
