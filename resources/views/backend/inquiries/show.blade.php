@@ -13,8 +13,7 @@
             <p><strong>Subject:</strong> {{ $enquiry->subject ?? '—' }}</p>
             <p><strong>Website:</strong> {{ $enquiry->website ?? '—' }}</p>
             <p><strong>Status:</strong> <span class="badge bg-{{ $enquiry->status == 'pending' ? 'warning' : 'success' }}">{{ ucfirst($enquiry->status) }}</span></p>
-            <p><strong>Message:</strong></p>
-            <p>{{ $enquiry->message ?? 'No message provided.' }}</p>
+            <p><strong>Message:</strong> {{ $enquiry->message ?? 'No message provided.' }}</p>
 
             @if ($enquiry->document)
                 <p><strong>Attachment:</strong>
@@ -27,7 +26,7 @@
     </div>
 
     <div class="mt-3">
-        <a href="{{ route('admin.enquiries.index') }}" class="btn btn-secondary">Back to List</a>
+        <a href="{{ route('admin.enquiries.index') }}" class="btn btn-secondary">⬅ Back to List</a>
     </div>
 </div>
 @endsection

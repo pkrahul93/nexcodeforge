@@ -20,7 +20,7 @@
     <div class="container py-4">
         <h2 class="mb-4">Ticket Details</h2>
 
-        <div class="card shadow-sm mb-4">
+        <div class="card shadow-sm">
             <div class="card-body">
                 <p><strong>Ticket No:</strong> #{{ $ticket->ticket_no }}</p>
                 <p><strong>Name:</strong> {{ $ticket->name }}</p>
@@ -50,44 +50,12 @@
                         ? '<span class="badge bg-success me-1 fs-8">' . $ticket->resolved_at->diffForHumans() . '</span>'
                         : '<span class="badge bg-danger me-1 fs-8">Not Resolved Yet.</span>' !!}
                 </p>
-            </div>
-        </div>
 
-        {{-- Admin Reply and Status Update --}}
-        <div class="card shadow-sm">
-            <div class="card-header bg-light">
-                <h5 class="mb-0">🎯 Respond to User / Update Ticket</h5>
-            </div>
-            <div class="card-body">
-                <form action="{{ route('admin.tickets.update', $ticket->id) }}" method="POST">
-                    @csrf
-                    @method('PUT')
-
-                    <div class="col-md-3 mb-3">
-                        <label for="status" class="form-label">Change Ticket Status</label>
-                        <select name="status" id="status" class="form-control">
-                            <option value="open" {{ $ticket->status == 'open' ? 'selected' : '' }}>⏳ Open</option>
-                            <option value="in_progress" {{ $ticket->status == 'in_progress' ? 'selected' : '' }}>🔧 In Progress</option>
-                            <option value="resolved" {{ $ticket->status == 'resolved' ? 'selected' : '' }}>✅ Resolved</option>
-                        </select>
-                    </div>
-
-                    <div class="mb-3">
-                        <label for="admin_message" class="form-label">Message to User</label>
-                        <textarea name="admin_message" id="admin_message" class="form-control" rows="4" placeholder="Type your reply or update message here..."></textarea>
-                    </div>
-
-                    <div class="text-end">
-                        <button type="submit" class="btn btn-primary px-4">
-                            <i class="fa fa-paper-plane me-1"></i> Send Reply & Update
-                        </button>
-                    </div>
-                </form>
             </div>
         </div>
 
         <div class="mt-3">
-            <a href="{{ route('admin.enquiries.index') }}" class="btn btn-secondary">⬅ Back to List</a>
+            <a href="{{ route('admin.enquiries.index') }}" class="btn btn-secondary">Back to List</a>
         </div>
     </div>
 @endsection

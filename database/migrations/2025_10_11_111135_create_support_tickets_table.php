@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('support_tickets', function (Blueprint $table) {
             $table->id();
+            $table->string('ticket_no')->unique();
             $table->string('name');
             $table->string('email');
             $table->string('mobile', 15);
@@ -21,6 +22,7 @@ return new class extends Migration
             $table->string('attachment')->nullable();
             $table->enum('priority', ['low', 'medium', 'high'])->default('medium');
             $table->enum('status', ['open', 'in_progress', 'resolved'])->default('open');
+            $table->text('admin_message')->nullable();
             $table->timestamp('resolved_at')->nullable();
             $table->timestamps();
         });

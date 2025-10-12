@@ -33,6 +33,8 @@
                 <div class="shadow-lg p-4 bg-white rounded">
 
                     <section class="mb-4">
+                        <h1 class="fw-b text-center">Our Disclaimer</h1>
+                        <hr>
                         <h2 class="h4">General Disclaimer</h2>
                         <p>
                             The information provided by <strong>{{ config('app.name', 'YourSite') }}</strong> is for general informational purposes only.
