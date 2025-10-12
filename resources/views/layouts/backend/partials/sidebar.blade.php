@@ -102,7 +102,7 @@
            </ul>
          </li>
          <li class="nav-header">SUPPORT TICKETS</li>
-         <li class="nav-item {{ isActive(['ticket/', 'all-tickets', 'pending-tickets', 'resolved-tickets'], 'menu-is-opening menu-open') }}">
+         <li class="nav-item {{ isActive(['ticket/?', 'all-tickets', 'pending-tickets', 'resolved-tickets'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-list"></i>
              <p>

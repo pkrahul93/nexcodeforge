@@ -11,6 +11,7 @@ class SupportTicket extends Model
     use HasFactory;
 
     protected $fillable = [
+        'ticket_no',
         'name',
         'email',
         'mobile',
@@ -19,6 +20,7 @@ class SupportTicket extends Model
         'attachment',
         'priority',
         'status',
+        'admin_message',
         'resolved_at',
     ];
 

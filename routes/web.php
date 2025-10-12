@@ -89,7 +89,7 @@ Route::get('/creative-design', function () {
 
 Route::get('/maintenance-support', [SupportController::class, 'index'])->name('maintenance-support');
 Route::post('/support/ticket', [SupportController::class, 'store'])->name('support-ticket.store');
-
+Route::post('/support/check', [SupportController::class, 'checkStatus'])->name('support-ticket.check');
 
 Route::get('/web-redesigning', function () {
     return view('guest.web-redesigning');
@@ -210,6 +210,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::get('/resolved-tickets', [SupportTicketController::class, 'resolvedTickets'])->name('support.resolved-tickets');
     Route::get('/ticket/{id}', [SupportTicketController::class, 'showTicket'])->name('tickets.show');
     Route::post('/support-tickets/{id}/status', [SupportTicketController::class, 'updateStatus'])->name('tickets.updateStatus');
+    Route::put('admin/tickets/{ticket}', [SupportTicketController::class, 'update'])->name('admin.tickets.update');
     Route::delete('/support-tickets/{id}', [SupportTicketController::class, 'destroy'])->name('tickets.delete');
 });
 

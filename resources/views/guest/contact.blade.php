@@ -165,7 +165,7 @@
                                     </div>
                                 </div>
                                 <div class="address-box-map-link">
-                                    <a href="https://www.google.com/maps?q=Andheri+East,+Mumbai" target="_blank"
+                                    <a href="https://www.google.com/maps/search/3rd+Floor+TechnoHub+Building+br+201301+India/@28.5821099,77.2658157,12z?entry=ttu&g_ep=EgoyMDI1MTAwOC4wIKXMDSoASAFQAw%3D%3D" target="_blank"
                                         rel="noopener" class="address-box-link">View on Map</a>
                                 </div>
                             </div>
