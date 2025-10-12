@@ -190,6 +190,15 @@
                                         <textarea name="message" rows="4" class="form-control" required>{{ old('message') }}</textarea>
                                     </div>
 
+                                    <div class="col-md-12 mb-3">
+                                        <p class="form-submit cookies">
+                                            <span class="checkbox"><input type="checkbox" name="cookies-consent"
+                                                    id="cookies-consent2" required>
+                                                Save my name, email, mobile, and other in this browser for the next time I
+                                                raised a ticket.</span>
+                                        </p>
+                                    </div>
+
                                     <div class="col-12 text-center">
                                         <button type="submit" class="btn btn-primary px-5">Raise Ticket</button>
                                     </div>
