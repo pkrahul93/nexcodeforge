@@ -1,5 +1,6 @@
 @extends('layouts.guest')
-
+@section('title', 'Maintenance & Support | NexCodeForge')
+@section('meta_description', 'Explore NexCodeForge’s Maintenance & Support services — ensuring your website, app, and software run smoothly with regular updates, security monitoring, and performance optimization.')
 
 @php
     $defaultMessages = [

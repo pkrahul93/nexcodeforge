@@ -65,7 +65,7 @@
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="{{ route('creative-design') }}">UI/UX & Creative Design</a>
+                                    <a href="{{ route('under-construction') }}">UI/UX & Creative Design</a>
                                 </h3>
                                 <p>We design visually stunning, conversion-focused interfaces for web and mobile that
                                     enhance user experiences and brand perception.</p>
@@ -81,7 +81,7 @@
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="{{ route('web-designing') }}">Web & App Development</a>
+                                    <a href="{{ route('under-construction') }}">Web & App Development</a>
                                 </h3>
                                 <p>From enterprise-grade web applications to fast, responsive mobile apps — we develop
                                     products that perform and scale effortlessly.</p>
@@ -97,7 +97,7 @@
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="{{ route('digital-marketing') }}">Digital Marketing & SEO</a>
+                                    <a href="{{ route('under-construction') }}">Digital Marketing & SEO</a>
                                 </h3>
                                 <p>We combine creativity and analytics to grow your online visibility, drive traffic, and
                                     boost your brand through targeted campaigns.</p>

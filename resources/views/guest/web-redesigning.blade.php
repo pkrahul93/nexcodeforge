@@ -1,8 +1,8 @@
 @extends('layouts.guest')
-@section('title', 'Blank')
+@section('title', 'Website Re-Designing | NexCodeForge')
 
 @section('content')
 
-        
+
 @endsection
 
