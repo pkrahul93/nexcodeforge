@@ -111,7 +111,7 @@
                         </p>
                         <p>
                             <strong>Email:</strong> <a href="mailto:support@nexcodeforge.com">support@nexcodeforge.com</a><br>
-                            <strong>Website:</strong> <a href="{{ url('/') }}">{{ url('/') }}</a>
+                            <strong>Website:</strong> <a href="{{ url('/') }}">www.nexcodeforge.com</a>
                         </p>
 
                     </section>

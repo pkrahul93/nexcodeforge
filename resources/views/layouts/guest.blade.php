@@ -607,15 +607,15 @@
                                             <a href="{{ url('cookie-policy') }}" class="footer-menu-item-link">Cookie Policy</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
-                                            <a href="{{ route('under-construction') }}"
+                                            <a href="{{ route('privacy-policy') }}"
                                             class="footer-menu-item-link">Privacy Policy</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
-                                            <a href="{{ route('under-construction') }}"
+                                            <a href="{{ route('refund-policy') }}"
                                             class="footer-menu-item-link">Refund Policy</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ route('under-construction') }}"
+                                            <a href="{{ route('terms-conditions') }}"
                                                 class="footer-menu-item-link">Terms & Conditions</a>
                                         </li>
                                         <li class="footer-menu-item">
