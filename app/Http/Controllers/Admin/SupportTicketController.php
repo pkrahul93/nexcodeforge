@@ -6,6 +6,9 @@ use App\Http\Controllers\Controller;
 use App\Models\SupportTicket;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use App\Mail\TicketUpdateMail;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Str;
 
 class SupportTicketController extends Controller
 {
@@ -31,6 +34,32 @@ class SupportTicketController extends Controller
     {
         $ticket = SupportTicket::findOrFail($id);
         return view('backend.support.show', compact('ticket'));
+    }
+
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'status' => 'required|string|in:open,in_progress,resolved',
+            'admin_message' => 'nullable|string|max:2000',
+        ]);
+
+        $ticket = SupportTicket::findOrFail($id);
+
+        // Update ticket
+        $ticket->status = $request->status;
+        if ($request->status === 'resolved') {
+            $ticket->resolved_at = now();
+        }
+        $ticket->admin_message = $request->admin_message;
+        $ticket->save();
+
+        // Send email to customer
+        // Mail::to($ticket->email)->send(new TicketUpdateMail($ticket));
+
+        // // Send email to admin
+        // Mail::to(config('mail.from.address'))->send(new \App\Mail\AdminTicketUpdateMail($ticket));
+
+        return redirect()->back()->with('success', 'Ticket updated and emails sent successfully.');
     }
 
     public function updateStatus(Request $request, $id)

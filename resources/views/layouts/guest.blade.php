@@ -11,7 +11,7 @@
     <meta name="description" content="@yield('meta_description', 'provides professional website and application development for corporate services, matrimonial sites, eCommerce, and IT solutions. Responsive, SEO-friendly, and tailored to your business needs.')">
     <meta name="author" content="NexCodeForge">
     <meta name="robots" content="noindex, nofollow">
-    {{-- <link rel="canonical" href="{{ url()->current() }}"> --}}
+    <link rel="canonical" href="{{ url()->current() }}">
 
     <!-- ✅ Mobile Friendly -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -74,12 +74,12 @@
   "logo": "{{ asset('images/logo.png') }}",
   "sameAs": [
     "https://www.facebook.com/profile.php?id=61581703355275",
-    "https://www.linkedin.com/in/yourpage",
-    "https://twitter.com/yourpage"
+    "https://www.linkedin.com/in/nexcodeforge",
+    "https://x.com/ForgeNex3411"
   ],
   "contactPoint": [{
     "@type": "ContactPoint",
-    "email": "support@netambit.com",
+    "email": "support@nexcodeforge.com",
     "contactType": "customer support",
     "availableLanguage": ["English"]
   }]
@@ -105,7 +105,7 @@
 </script>
 
     <!-- ContactPage Schema -->
-    @if (Request::is('contact') || Request::is('support*') || Request::is('enquiry*'))
+    @if (Request::is('contactus') || Request::is('maintenance-support*') || Request::is('enquiry*'))
         <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -115,7 +115,7 @@
   "description": "{{ addslashes($meta_description ?? 'Contact ' . config('app.name', 'NexCodeForge')) }}",
   "contactType": "customer support",
   "email": "support@nexcodeforge.com",
-  "telephone": "+91-XXXXXXXXXX",
+  "telephone": "+91-7669166975",
   "availableLanguage": ["English"]
 }
 </script>
@@ -142,7 +142,7 @@
     @endif
 
     <!-- FAQPage / Support Ticket -->
-    @if (Request::is('support*') || Request::is('enquiry*'))
+    @if (Request::is('maintenance-support*') || Request::is('enquiry*'))
         <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -456,7 +456,7 @@
                                                                                             </li>
                                                                                             <li
                                                                                                 class="floating-list-item">
-                                                                                                <a href="{{ url('enquiry') }}"
+                                                                                                <a href="{{ url('maintenance-support') }}"
                                                                                                     class="floating-list-item-link">Help</a>
                                                                                             </li>
                                                                                             <li

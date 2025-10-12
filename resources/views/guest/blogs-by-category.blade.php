@@ -5,6 +5,7 @@
     $category->name)
 
 @section('content')
+
     <!-- page-title -->
     <div class="prt-page-title-row style1">
         <div class="prt-page-title-row-inner">
@@ -34,7 +35,7 @@
     </div>
     <!-- page-title end -->
 
-    <div class="container-fluid py-5 pl-160 pr-160">
+    <div class="container-fluid py-5 pl-30 pr-30">
         <div class="row">
             {{-- Blog Posts --}}
             <div class="col-lg-9 mb-3">

@@ -32,6 +32,8 @@
                 <div class="shadow-lg p-4 bg-white rounded">
 
                     <section class="mb-4">
+                        <h1 class="fw-b text-center">Our Cookie Policy</h1>
+                        <hr>
                         <h2 class="h4">1. What Are Cookies?</h2>
                         <p>
                             Cookies are small text files stored on your device when you visit a website. They help improve your browsing experience and enable certain features.
