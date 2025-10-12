@@ -33,6 +33,8 @@
                 <div class="shadow-lg p-4 bg-white rounded">
 
                     <section class="mb-4">
+                        <h1 class="fw-b text-center">Work With Us</h1>
+                        <hr>
                         <h2 class="h4">Join Our Team</h2>
                         <p>
                             At <strong>{{ config('app.name', 'YourSite') }}</strong>, we are always looking for talented, passionate, and motivated individuals to join our growing team. Our company culture emphasizes innovation, collaboration, and continuous learning.
