@@ -6,6 +6,13 @@
 
 @section('content')
 
+<style>
+    @media(max-width:600px){
+        .featured-post-content{
+            top: 5px!important;
+        }
+    }
+</style>
     <!-- page-title -->
     <div class="prt-page-title-row style1">
         <div class="prt-page-title-row-inner">
@@ -37,7 +44,7 @@
 
         <!--blog-section-->
         <section class="prt-row blog-section01 clearfix">
-            <div class="container-fluid pl-160 pr-160">
+            <div class="container-fluid pl-30 pr-30">
                 <div class="row">
                     <div class="col-lg-9 mb-3">
                         @if (!empty($query))

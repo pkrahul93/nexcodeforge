@@ -35,7 +35,8 @@
                             <table id="example1" class="table table-bordered table-striped">
                                 <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th>S/L</th>
+                                        <th>Ticket No</th>
                                         <th>Client</th>
                                         <th>Subject</th>
                                         <th>Priority</th>
@@ -49,6 +50,7 @@
                                     @foreach ($tickets as $ticket)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
+                                            <td><b>{{ $ticket->ticket_no ?? '—' }}</b></td>
                                             <td>
                                                 {{ $ticket->name }}<br>
                                                 <small>{{ $ticket->email }}</small><br>
