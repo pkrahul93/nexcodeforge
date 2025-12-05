@@ -1,6 +1,7 @@
 @extends('layouts.guest')
 @section('title', 'Contact NexCodeForge | Let’s Build Your Digital Future')
-@section('meta_description', 'Get in touch with NexCodeForge — your trusted web and app development partner. Let’s
+@section('meta_description',
+    'Get in touch with NexCodeForge — your trusted web and app development partner. Let’s
     discuss your project and create something remarkable together.')
 
 
@@ -78,35 +79,39 @@
                                     <div class="row">
                                         <div class="col-md-12">
                                             <label>
-                                                <span class="text-input"><input name="name" type="text" value=""
-                                                        placeholder="Name" required="required"></span>
+                                                <span class="text-input">
+                                                    <input class="px-2" name="name" type="text" value="" placeholder="Name"
+                                                        required="required">
+                                                </span>
                                             </label>
                                         </div>
                                         <div class="col-md-12">
                                             <label>
-                                                <span class="text-input"><input name="email" type="text" value=""
+                                                <span class="text-input"><input class="px-2" name="email" type="text" value=""
                                                         placeholder="Email" required="required"></span>
                                             </label>
                                         </div>
                                         <div class="col-md-12">
                                             <label>
-                                                <span class="text-input"><input name="mobile" type="text" value=""
+                                                <span class="text-input"><input class="px-2" name="mobile" type="text" value=""
                                                         placeholder="Phone" maxlength="10" required="required"></span>
                                             </label>
                                         </div>
                                         <div class="col-md-12">
                                             <label>
                                                 <span class="text-input">
-                                                    <textarea name="message" rows="5" placeholder=" your message" required="required"></textarea>
+                                                    <textarea class="px-2" name="message" rows="5" placeholder=" your message" required="required"></textarea>
                                                 </span>
                                             </label>
                                         </div>
                                         <div class="col-md-12">
-                                                <label>
-                                                   <span class="checkbox"><input type="checkbox" name="cookies-consent" id="cookies-consent2">
-                                                     I Accept <a href="{{ url('terms-conditions') }}"> Terms of services</a> and <a href="{{ url('privacy-policy') }}"> Privacy Policy.</a></span>
-                                                </label>
-                                            </div>
+                                            <label>
+                                                <span class="checkbox"><input type="checkbox" name="cookies-consent"
+                                                        id="cookies-consent2">
+                                                    I Accept <a href="{{ url('terms-conditions') }}"> Terms of services</a>
+                                                    and <a href="{{ url('privacy-policy') }}"> Privacy Policy.</a></span>
+                                            </label>
+                                        </div>
                                         <div class="col-md-12">
                                             <div class="mt-25">
                                                 <button
@@ -165,8 +170,8 @@
                                     </div>
                                 </div>
                                 <div class="address-box-map-link">
-                                    <a href="https://maps.app.goo.gl/tWLBcowx3jbaNQ5w9" target="_blank"
-                                        rel="noopener" class="address-box-link">View on Map</a>
+                                    <a href="https://maps.app.goo.gl/tWLBcowx3jbaNQ5w9" target="_blank" rel="noopener"
+                                        class="address-box-link">View on Map</a>
                                 </div>
                             </div>
                         </div>
@@ -200,8 +205,8 @@
                                 <div class="mt-15">
                                     <h3 class="contact-heading-h3">Connect with Us</h3>
                                     <ul class="social-icons map-links">
-                                        <li><a href="https://www.facebook.com/profile.php?id=61581703355275" target="_blank"
-                                                rel="noopener" aria-label="facebook">Facebook</a></li>
+                                        <li><a href="https://www.facebook.com/profile.php?id=61581703355275"
+                                                target="_blank" rel="noopener" aria-label="facebook">Facebook</a></li>
                                         <li><a href="https://x.com/ForgeNex3411" target="_blank" rel="noopener"
                                                 aria-label="twitter">Twitter</a></li>
                                         <li><a href="https://www.instagram.com/nex.codeforage?igsh=dHFidndiOHk3ZDRu"

@@ -61,8 +61,8 @@
                     <div class="col-lg-9 mb-3">
                         <div class="prt-blog-single position-relative pl-160 pr-160 res-1199-pr-0 res-1199-pl-0">
                             <div class="prt_single_image-wrapper mb-25">
-                                <img width="1200" height="895" class="img-fluid" src="{{ $blog['image_url'] }}"
-                                    loading="lazy" alt="post-img">
+                                <img width="1200" height="895" class="img-fluid blog-img" src="{{ $blog['image_url'] }}"
+                                    loading="lazy" alt="{{ $blog['title'] }}">
                             </div>
                             <h1>{{ $blog['title'] ?? 'N/A' }}</h1>
 
@@ -88,46 +88,6 @@
                                     <button class="next-btn"><i class="fas fa-arrow-right"></i></button>
                                 </div>
                             </div>
-
-
-                            {{-- <div class="row">
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="">
-                                        <a class="prt_prettyphoto" href="images/blog/blogdetails01.jpg"
-                                            rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
-                                            <div class="prt_image-wrapper">
-                                                <img width="416" height="203" class="img-fluid w-100"
-                                                    src="{{ asset('guest/assets/images/blog/blogdetails01.jpg') }}"
-                                                    loading="lazy" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="res-575-mt-30">
-                                        <a class="prt_prettyphoto" href="images/blog/blogdetails02.jpg"
-                                            rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
-                                            <div class="prt_image-wrapper">
-                                                <img width="416" height="203" class="img-fluid w-100"
-                                                    src="{{ asset('guest/assets/images/blog/blogdetails02.jpg') }}"
-                                                    loading="lazy" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-6">
-                                    <div class="res-767-mt-30">
-                                        <a class="prt_prettyphoto" href="images/blog/blogdetails03.jpg"
-                                            rel="prettyPhoto[coregallery]" data-rel="prettyPhoto">
-                                            <div class="prt_image-wrapper">
-                                                <img width="416" height="203" class="img-fluid w-100"
-                                                    src="{{ asset('guest/assets/images/blog/blogdetails03.jpg') }}"
-                                                    loading="lazy" alt="">
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div> --}}
 
                             <div class="post-content position-relative">
                                 <div class="prt-horizontal_sep mt-45 mb-35 res-991-mt-20 res-991-mb-15"></div>

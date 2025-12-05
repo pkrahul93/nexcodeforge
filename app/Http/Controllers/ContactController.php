@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -30,6 +31,19 @@ class ContactController extends Controller
 
         // Store in database
         $contact = Contact::create($validated);
+
+        // Send email to user
+        Mail::send('emails.contact_confirmation', ['contact' => $contact], function ($message) use ($contact) {
+            $message->to($contact->email)
+                ->subject('Thank You for Contacting NexCodeForge');
+        });
+
+        // Send email to admin
+        Mail::send('emails.enquiry_admin', ['enquiry' => $contact], function ($message) {
+            $message->to('support@nexcodeforge.com')
+                ->cc('pkrahul93@gmail.com')
+                ->subject('New Contact Enquiry Received - NexCodeForge');
+        });
 
         // Redirect or return response
         return redirect()->back()->with('success', 'Your message has been submitted successfully!');
