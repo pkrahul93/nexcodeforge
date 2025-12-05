@@ -2,7 +2,7 @@
     @foreach ($posts as $post)
         <div class="card mb-4 shadow-sm border-0">
             @if (!empty($post->image_url))
-                <img src="{{ $post->image_url }}" class="card-img-top" width="414" height="447" loading="lazy"
+                <img src="{{ $post->image_url }}" class="card-img-top blog-img" width="414" height="447" loading="lazy"
                     alt="{{ $post->title }}">
             @endif
 

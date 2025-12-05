@@ -16,7 +16,7 @@
                         <div class="prt-page-title-row-heading">
                             <div class="banner-vertical-block"></div>
                             <div class="page-title-heading">
-                                <h2 class="title">About NexcodeForge</h2>
+                                <h2 class="title">About NexCodeForge</hz>
                             </div>
                             <div class="breadcrumb-wrapper">
                                 <span>
@@ -42,7 +42,7 @@
                     <div class="col-xl-6 col-lg-6">
                         <img class="img-fluid prt-equal-height-image w-100 position-relative"
                             src="{{ asset('guest/assets/images/about/Who_we_are.png') }}"
-                            alt="NexcodeForge Web and Software Development">
+                            alt="NexCodeForge Who we are">
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="prt-bg spacing-4" data-aos="fade-left">
@@ -53,7 +53,7 @@
                                     </div>
                                     <div class="title-desc">
                                         <p>
-                                            <b>NexcodeForge</b> is an innovation-driven IT and software development company
+                                            <b>NexCodeForge</b> is an innovation-driven IT and software development company
                                             specializing in <b>IoT, SaaS, E-commerce, and digital transformation</b>.
                                             We empower startups and enterprises with intelligent, scalable, and
                                             performance-focused
@@ -95,7 +95,7 @@
                                     </div>
                                     <div class="title-desc">
                                         <p>
-                                            At <b>NexcodeForge</b>, we turn ideas into intelligent digital products.
+                                            At <b>NexCodeForge</b>, we turn ideas into intelligent digital products.
                                             From <b>custom software development</b> to <b>IoT systems, cloud-based SaaS
                                                 applications,
                                                 business automation, and SEO-optimized websites</b> — we build solutions
@@ -110,17 +110,17 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <ul>
-                                            <li><a href="#">Custom Web & App Development</a></li>
-                                            <li><a href="#">E-Commerce & Marketplace Solutions</a></li>
-                                            <li><a href="#">SaaS Product Engineering</a></li>
-                                            <li><a href="#">IoT Integration & Automation</a></li>
-                                            <li><a href="#">UI/UX & Experience Design</a></li>
-                                            <li><a href="#">AI-Driven Business Intelligence</a></li>
-                                            <li><a href="#">Digital Marketing & SEO Optimization</a></li>
-                                            <li><a href="#">Enterprise IT Consulting</a></li>
-                                            <li><a href="#">Cloud & DevOps Solutions</a></li>
-                                            <li><a href="#">Mobile App Development (Android/iOS)</a></li>
-                                            <li><a href="#">Maintenance, Hosting & Support</a></li>
+                                            <li><a href="{{ url('under-construction') }}">Custom Web & App Development</a></li>
+                                            <li><a href="{{ url('under-construction') }}">E-Commerce & Marketplace Solutions</a></li>
+                                            <li><a href="{{ url('under-construction') }}">SaaS Product Engineering</a></li>
+                                            <li><a href="{{ url('under-construction') }}">IoT Integration & Automation</a></li>
+                                            <li><a href="{{ url('under-construction') }}">UI/UX & Experience Design</a></li>
+                                            <li><a href="{{ url('under-construction') }}">AI-Driven Business Intelligence</a></li>
+                                            <li><a href="{{ url('under-construction') }}">Digital Marketing & SEO Optimization</a></li>
+                                            <li><a href="{{ url('under-construction') }}">Enterprise IT Consulting</a></li>
+                                            <li><a href="{{ url('under-construction') }}">Cloud & DevOps Solutions</a></li>
+                                            <li><a href="{{ url('under-construction') }}">Mobile App Development (Android/iOS)</a></li>
+                                            <li><a href="{{ url('under-construction') }}">Maintenance, Hosting & Support</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -130,7 +130,7 @@
                     <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
                         <img class="img-fluid prt-equal-height-image w-100 position-relative"
                             src="{{ asset('guest/assets/images/about/What_we_do.png') }}" style="height:550px;"
-                            alt="NexcodeForge Software Services">
+                            alt="NexCodeForge Core Services">
                     </div>
                 </div>
             </div>
@@ -145,11 +145,11 @@
                             <div class="layer-content">
                                 <div class="section-title">
                                     <div class="title-header">
-                                        <h2 class="section-title-h2">Why Choose NexcodeForge</h2>
+                                        <h2 class="section-title-h2">Why Choose NexCodeForge</h2>
                                     </div>
                                     <div class="title-desc">
                                         <p>
-                                            Choosing NexcodeForge means partnering with a team that believes in measurable
+                                            Choosing NexCodeForge means partnering with a team that believes in measurable
                                             success, technical precision, and long-term business impact.
                                             We don’t just deliver projects — we build partnerships that last.
                                         </p>
@@ -183,7 +183,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
                         <img class="img-fluid prt-equal-height-image w-100 position-relative"
-                            src="{{ asset('guest/assets/images/about/why2.webp') }}" alt="Why Choose NexcodeForge">
+                            src="{{ asset('guest/assets/images/about/why2.webp') }}" alt="NexCodeForge Team">
                     </div>
                 </div>
             </div>
@@ -198,7 +198,7 @@
                         <div class="pr-20">
                             <h3 class="prt-custom-heading counter">500+</h3>
                             <h3 class="custom-heading-h3">Happy Clients Worldwide</h3>
-                            <p>Trusted by businesses from diverse industries who rely on NexcodeForge to power their digital
+                            <p>Trusted by businesses from diverse industries who rely on NexCodeForge to power their digital
                                 growth.</p>
                         </div>
                     </div>
@@ -208,7 +208,7 @@
                             <div class="col-lg-4 testimonials-main">
                                 <div class="testimonials-style1">
                                     <div class="testimonial-prt-box-desc">
-                                        <p>“NexcodeForge built our SaaS dashboard exactly as envisioned — high performance,
+                                        <p>“NexCodeForge built our SaaS dashboard exactly as envisioned — high performance,
                                             responsive, and visually stunning.”</p>
                                         <h3 class="testimonial-caption-h3">— Rohit Sharma, CTO</h3>
                                     </div>
@@ -226,7 +226,7 @@
                             <div class="col-lg-4 testimonials-main">
                                 <div class="testimonials-style1">
                                     <div class="testimonial-prt-box-desc">
-                                        <p>“NexcodeForge’s SEO-ready websites helped us rank on Google within weeks —
+                                        <p>“NexCodeForge’s SEO-ready websites helped us rank on Google within weeks —
                                             incredible results!”</p>
                                         <h3 class="testimonial-caption-h3">— Jason Lee, Marketing Director</h3>
                                     </div>
@@ -243,7 +243,7 @@
             <div class="container">
                 <div class="section-title text-center mb-40">
                     <h2 class="section-title-h2">Our Goals, Vision & Mission</h2>
-                    <p>At NexcodeForge, we are committed to helping businesses thrive in a digital-first world through
+                    <p>At NexCodeForge, we are committed to helping businesses thrive in a digital-first world through
                         innovation, automation, and human-centric design.</p>
                 </div>
 
@@ -271,7 +271,7 @@
                                     </p>
 
                                     <p>
-                                        At <b>NexcodeForge</b>, we focus on combining <b>creative design</b> with
+                                        At <b>NexCodeForge</b>, we focus on combining <b>creative design</b> with
                                         <b>cutting-edge development</b> to deliver scalable systems that help
                                         organizations achieve <b>digital transformation</b> with ease. Whether it’s
                                         <b>web applications, mobile apps, enterprise platforms,</b> or
@@ -297,7 +297,7 @@
                                         To be a globally recognized <b>technology partner</b> empowering businesses
                                         through <b>innovative software solutions, digital products,</b> and
                                         <b>connected IoT systems</b> that redefine <b>efficiency, creativity,</b> and
-                                        <b>impact</b>. At <b>NexcodeForge</b>, our vision is to shape a smarter,
+                                        <b>impact</b>. At <b>NexCodeForge</b>, our vision is to shape a smarter,
                                         more connected world where technology drives <b>sustainable growth</b> and
                                         unlocks new possibilities for organizations of every scale.
                                     </p>
@@ -319,7 +319,7 @@
                                     <h3 class="tab-content-h3">✨ Our Journey</h3>
                                     <p>
                                         Started with a vision to fuse <b>design, innovation, and technology</b>,
-                                        <b>NexcodeForge</b> has evolved into a
+                                        <b>NexCodeForge</b> has evolved into a
                                         <b>full-stack digital solutions partner</b> empowering businesses across
                                         India and overseas. From our humble beginnings as a passionate development team,
                                         we’ve grown into a trusted name delivering
@@ -338,7 +338,7 @@
                                     </p>
 
                                     <p>
-                                        At <b>NexcodeForge</b>, we believe in more than just building software;
+                                        At <b>NexCodeForge</b>, we believe in more than just building software;
                                         we build <b>digital experiences</b> that inspire trust and engagement.
                                         With a focus on <b>performance, security,</b> and <b>innovation,</b>
                                         our journey continues toward creating smarter solutions that redefine
@@ -356,7 +356,7 @@
                     <h2 class="section-title-h2">Let’s Build the Future Together</h2>
                     <p>Looking for a reliable technology partner to develop your next big idea?
                         <b><a href="{{ url('contactus') }}" target="_blank"
-                                rel="noopener noreferrer">NexcodeForge</a></b> is ready to turn your vision into a
+                                rel="noopener noreferrer">NexCodeForge</a></b> is ready to turn your vision into a
                         scalable, successful product.
                     </p>
                     <div class="mt-20">

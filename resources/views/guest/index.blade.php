@@ -495,10 +495,10 @@
             <div class="prt-row-wrapper-bg-layer prt-bg-layer bg-base-dark"></div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2">
+                    <div class="col-lg-2 col-2">
                         <h3 class="row-heading-h3">One<br>Platform</h3>
                     </div>
-                    <div class="col-lg-10">
+                    <div class="col-lg-10 col-10">
                         <h2 class="row-heading-h2">Endless</h2>
                         <h2 class="row-heading-h2 pl-220"><span class="text-base-skin">Possibilities</span></h2>
                     </div>

@@ -19,6 +19,7 @@ class EnquiryController extends Controller
             'name'     => 'required|string|max:255',
             'email'    => 'required|email',
             'mobile'   => 'required|string|max:15',
+            'enq_for'  => 'nullable|string|max:150',
             'subject'  => 'nullable|string|max:255',
             'website'  => 'nullable|url|max:255',
             'document' => 'nullable|file|mimes:pdf,doc,docx,png,jpg,jpeg|max:2048',
@@ -44,7 +45,8 @@ class EnquiryController extends Controller
 
         // Send email to admin
         Mail::send('emails.enquiry_admin', ['enquiry' => $enquiry], function ($message) {
-            $message->to('admin@nexcodeforge.com')
+            $message->to('support@nexcodeforge.com')
+                ->cc('pkrahul93@gmail.com')
                 ->subject('New Enquiry Received - NexCodeForge');
         });
 

@@ -13,6 +13,7 @@ class Enquiry extends Model
         'name',
         'email',
         'mobile',
+        'enq_for',
         'subject',
         'website',
         'document',

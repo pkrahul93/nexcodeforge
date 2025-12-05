@@ -32,6 +32,48 @@ class BlogController extends Controller
     }
 
     // Store or update
+    // public function storeOrUpdate(Request $request, $id = null)
+    // {
+    //     $request->validate([
+    //         'meta_title' => 'nullable|string|max:255',
+    //         'meta_description' => 'nullable|string',
+    //         'title' => 'required|string|max:255',
+    //         'category_id' => 'required|exists:categories,id',
+    //         'content' => 'required|string',
+    //         'status' => 'required|in:draft,published,archived',
+    //         'tags' => 'array',
+    //         'featured_image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048'
+    //     ]);
+
+    //     $data = [
+    //         'user_id' => Auth::id(),
+    //         'category_id' => $request->category_id,
+    //         'meta_title' => $request->meta_title,
+    //         'meta_description' => $request->meta_description,
+    //         'title' => $request->title,
+    //         'slug' => Str::slug($request->title),
+    //         'content' => $request->content,
+    //         'status' => $request->status,
+    //         'published_at' => $request->status === 'published' ? now() : null,
+    //     ];
+
+    //     // Handle image
+    //     if ($request->hasFile('featured_image')) {
+    //         $file = $request->file('featured_image');
+    //         $filename = time() . '_' . $file->getClientOriginalName();
+    //         $file->move(public_path('uploads/blogs'), $filename);
+    //         $data['featured_image'] = $filename;
+    //     }
+
+    //     // Create or update blog
+    //     $blog = Blog::updateOrCreate(['id' => $id], $data);
+
+    //     // Sync tags
+    //     $blog->tags()->sync($request->tags ?? []);
+
+    //     return redirect()->route('blogs.index')->with('success', $id ? 'Blog updated successfully' : 'Blog created successfully');
+    // }
+
     public function storeOrUpdate(Request $request, $id = null)
     {
         $request->validate([
@@ -45,6 +87,9 @@ class BlogController extends Controller
             'featured_image' => 'nullable|image|mimes:jpg,jpeg,png,gif|max:2048'
         ]);
 
+        // If updating, fetch existing record
+        $existingBlog = $id ? Blog::find($id) : null;
+
         $data = [
             'user_id' => Auth::id(),
             'category_id' => $request->category_id,
@@ -54,8 +99,17 @@ class BlogController extends Controller
             'slug' => Str::slug($request->title),
             'content' => $request->content,
             'status' => $request->status,
-            'published_at' => $request->status === 'published' ? now() : null,
         ];
+
+        // Handle published_at logic
+        if ($request->status === 'published') {
+            if (!$existingBlog || !$existingBlog->published_at) {
+                // Only set published_at if new blog or was never published before
+                $data['published_at'] = now();
+            }
+        } else {
+            $data['published_at'] = null; // reset for drafts/archived
+        }
 
         // Handle image
         if ($request->hasFile('featured_image')) {
