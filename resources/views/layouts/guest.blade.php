@@ -9,7 +9,8 @@
     <!-- ✅ Page Title -->
     <title>@yield('title', 'NexCodeForge | Turning Ideas into Digital Solutions')</title>
     <!-- ✅ SEO Optimized Meta -->
-    <meta name="keywords" content="NexCodeForge, website development, application development, corporate websites, matrimonial portals, eCommerce solutions, IT services, responsive design, SEO-optimized websites">
+    <meta name="keywords"
+        content="NexCodeForge, website development, application development, corporate websites, matrimonial portals, eCommerce solutions, IT services, responsive design, SEO-optimized websites">
     <meta name="description" content="@yield('meta_description', 'NexCodeForge provides professional website and application development for corporate services, matrimonial platforms, eCommerce stores, and IT solutions. Our designs are responsive, SEO-friendly, and tailored to your unique business needs.')">
 
     <meta name="author" content="NexCodeForge">
@@ -28,7 +29,8 @@
 
 
     <!-- ✅ jQuery (load once, latest stable version) -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <!-- ✅ CSRF Setup for AJAX -->
     <script>
@@ -64,6 +66,8 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    {{-- Bootstrap Icons CDN (same as pricing page) --}}
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
     <!-- Organization Schema -->
     <script type="application/ld+json">
@@ -236,9 +240,20 @@
             text-align: center;
         }
 
+        .blog-img {
+            width: 100%;
+            height: 550px;
+        }
+
+
         @media(max-width:600px) {
             .ticket {
                 font-size: 28px;
+            }
+
+            .blog-img {
+                width: 100%;
+                height: 250px;
             }
         }
     </style>
@@ -262,7 +277,8 @@
                                 <div class="site-navigation d-flex align-items-center justify-content-between">
                                     <!-- site-branding -->
                                     <div class="site-branding">
-                                        <h1><a class="home-link" href="{{ url('/') }}" title="NexCodeForge" rel="home">
+                                        <h1><a class="home-link" href="{{ url('/') }}" title="NexCodeForge"
+                                                rel="home">
                                                 <img id="logo-img" height="50" width="200"
                                                     class="img-fluid auto_size" src="{{ asset('images/logo.png') }}"
                                                     alt="logo-img">
@@ -288,23 +304,28 @@
                                                             <li><a href="{{ route('enquiry.index') }}">Enquiry Now</a>
                                                             </li>
                                                             <li><a href="{{ route('services') }}">Services</a></li>
-                                                            <li><a href="{{ route('privacy-policy') }}">Privacy Policy</a></li>
-                                                            <li><a href="{{ route('refund-policy') }}">Refund Policy</a></li>
-                                                            <li><a href="{{ route('terms-conditions') }}">Terms & Conditions</a></li>
+                                                            <li><a href="{{ route('privacy-policy') }}">Privacy
+                                                                    Policy</a></li>
+                                                            <li><a href="{{ route('refund-policy') }}">Refund
+                                                                    Policy</a></li>
+                                                            <li><a href="{{ route('terms-conditions') }}">Terms &
+                                                                    Conditions</a></li>
 
-                                                            <li><a href="{{ route('cookie-policy') }}">Cookie Policy</a></li>
+                                                            <li><a href="{{ route('cookie-policy') }}">Cookie
+                                                                    Policy</a></li>
 
-                                                            <li><a href="{{ route('disclaimer') }}">Disclaimer</a></li>
+                                                            <li><a href="{{ route('disclaimer') }}">Disclaimer</a>
+                                                            </li>
 
                                                             <li><a href="{{ route('faq') }}">FAQ</a></li>
 
                                                             <li><a href="{{ route('maintenance-support') }}">Maintenance
-                                                                                & Support</a></li>
+                                                                    & Support</a></li>
 
                                                             <li><a href="{{ route('careers') }}">Careers</a></li>
 
-                                                            {{-- <li><a href="{{ route('team') }}">Our Team</a></li>  careers
-                                                            <li><a href="{{ route('team-details') }}">Team Details</a>
+                                                            {{-- <li><a href="{{ route('team') }}">Our Team</a></li> --}}
+                                                            {{-- <li><a href="{{ route('team-details') }}">Team Details</a>
                                                             </li>
                                                             <li><a href="{{ route('error') }}">Error Page</a></li> --}}
                                                         </ul>
@@ -327,11 +348,26 @@
                                                     </li>
                                                     <li class="mega-menu-item">
                                                         <a href="{{ url('projects') }}"
-                                                            class="mega-menu-link">Projects</a>
+                                                            class="mega-menu-link">Others</a>
                                                         <ul class="mega-submenu">
                                                             <li><a href="{{ url('projects') }}">Projects</a>
                                                             </li>
                                                             {{-- <li><a href="{{ url('project-details') }}">Project Details</a></li> --}}
+                                                            {{-- <li><a href="{{ route('portfolio') }}">Portfolio</a> --}}
+                                                            </li>
+                                                            <li class="mega-menu-item">
+                                                                <a href="#" class="mega-menu-link">Tools</a>
+                                                                <ul class="mega-submenu">
+                                                                    {{-- <li><a href="{{ route('pricing') }}">Pricing</a></li> --}}
+
+                                                                    <li><a href="{{ route('audit.show') }}">Free Audit
+                                                                            Report</a></li>
+                                                                    <li><a href="{{ route('color-picker') }}">HTML
+                                                                            Color Picker</a></li>
+                                                                    <li><a href="{{ route('remove-bg') }}">Remove
+                                                                            Background</a></li>
+                                                                </ul>
+                                                            </li>
                                                         </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
@@ -593,26 +629,27 @@
                                                 class="footer-menu-item-link">Content Engineering</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
-                                            <a href="{{ route('faq') }}"
-                                                class="footer-menu-item-link">FAQ</a>
+                                            <a href="{{ route('faq') }}" class="footer-menu-item-link">FAQ</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
                                             <a href="{{ route('maintenance-support') }}"
                                                 class="footer-menu-item-link">Help</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('disclaimer') }}" class="footer-menu-item-link">Disclaimer</a>
+                                            <a href="{{ url('disclaimer') }}"
+                                                class="footer-menu-item-link">Disclaimer</a>
                                         </li>
                                         <li class="footer-menu-item">
-                                            <a href="{{ url('cookie-policy') }}" class="footer-menu-item-link">Cookie Policy</a>
+                                            <a href="{{ url('cookie-policy') }}" class="footer-menu-item-link">Cookie
+                                                Policy</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
                                             <a href="{{ route('privacy-policy') }}"
-                                            class="footer-menu-item-link">Privacy Policy</a>
+                                                class="footer-menu-item-link">Privacy Policy</a>
                                         </li>
                                         <li class="footer-menu-item last-child">
                                             <a href="{{ route('refund-policy') }}"
-                                            class="footer-menu-item-link">Refund Policy</a>
+                                                class="footer-menu-item-link">Refund Policy</a>
                                         </li>
                                         <li class="footer-menu-item">
                                             <a href="{{ route('terms-conditions') }}"

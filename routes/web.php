@@ -6,9 +6,12 @@ use App\Http\Controllers\Admin\CommentController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EditorUploadController;
 use App\Http\Controllers\Admin\EnquiryController;
+use App\Http\Controllers\Admin\InvoiceController;
 use App\Http\Controllers\Admin\PromotionController;
 use App\Http\Controllers\Admin\SupportTicketController;
 use App\Http\Controllers\Admin\TagController;
+use App\Http\Controllers\AuditController;
+use App\Http\Controllers\BackgroundRemoveController;
 use App\Http\Controllers\BlogController as PostController;
 use App\Http\Controllers\EnquiryController as EnqController;
 use App\Http\Controllers\ProfileController;
@@ -127,9 +130,24 @@ Route::get('/error', function () {
     return view('guest.error');
 })->name('error');
 
+// Route::get('/free-tools', function () {
+//     return view('guest.free_tools');
+// })->name('free-tools');
+
 Route::get('/under-construction', function () {
     return view('guest.under-construction');
 })->name('under-construction');
+
+Route::get('/remove-bg', function () {
+    return view('guest.remove-bg');
+})->name('remove-bg');
+
+Route::post('/remove-bg', [BackgroundRemoveController::class, 'removeBackground']);
+
+Route::get('/free-audit', [AuditController::class, 'show'])->name('audit.show');
+Route::post('/free-audit/run', [AuditController::class, 'run'])->name('audit.run');
+Route::get('/free-audit/download/{filename}', [AuditController::class, 'download'])->name('audit.download');
+
 
 Route::post('/send-inquiry', [InquiryController::class, 'store'])->name('send.inquiry');
 
@@ -144,11 +162,28 @@ Route::post('/enquiry', [EnqController::class, 'store'])->name('enquiry.store');
 Route::get('/projects', function () {
     return view('guest.projects');
 })->name('projects');
+
 Route::get('/project-details', function () {
     return view('guest.project-details');
 })->name('project-details');
 
-// Route::get('/dashboard', function () {
+Route::get('/portfolio', function () {
+    return view('guest.portfolio');
+})->name('portfolio');
+
+Route::get('/quotation', function () {
+    return view('guest.quotation');
+})->name('quotation');
+
+Route::get('/color-picker', function () {
+    return view('guest.color-picker');
+})->name('color-picker');
+
+Route::get('/pricing', function () {
+    return view('guest.pricing');
+})->name('pricing');
+
+// Route::get('/dashboard', function () {  color-picker
 //     return view('dashboard');
 // })->middleware(['auth', 'verified'])->name('dashboard');
 
@@ -212,6 +247,25 @@ Route::middleware(['auth', 'verified'])->group(function () {
     Route::post('/support-tickets/{id}/status', [SupportTicketController::class, 'updateStatus'])->name('tickets.updateStatus');
     Route::put('admin/tickets/{ticket}', [SupportTicketController::class, 'update'])->name('admin.tickets.update');
     Route::delete('/support-tickets/{id}', [SupportTicketController::class, 'destroy'])->name('tickets.delete');
+
+    // Routes For Invoices.....
+    Route::get('/all-invoices', [InvoiceController::class, 'index'])->name('invoices.index');
+    Route::get('/add-invoice', [InvoiceController::class, 'create'])->name('invoices.add');
+    Route::get('/edit-invoice/{id}', [InvoiceController::class, 'edit'])->name('invoices.edit');
+    Route::post('/save-invoice', [InvoiceController::class, 'store'])->name('invoices.store');
+    Route::post('/update-invoice/{id}', [InvoiceController::class, 'update'])->name('invoices.update');
+    Route::get('/delete-invoice/{id}', [InvoiceController::class, 'destroy'])->name('invoices.delete');
+    Route::get('/view-invoice/{id}', [InvoiceController::class, 'show'])->name('invoices.show');
+    // PDF Routes...
+    Route::get('/invoice/{id}/pdf/view', [InvoiceController::class, 'viewPdf'])->name('invoices.pdf.view');
+    Route::get('/invoice/{id}/pdf/download', [InvoiceController::class, 'downloadPdf'])->name('invoices.pdf.download');
+    // Send Email...
+    Route::post('/invoice/{id}/send-email', [InvoiceController::class, 'sendEmail'])->name('invoices.send_email');
+
+
+    // audit history / admin pages
+    // Route::get('/audits', [AuditController::class, 'index'])->name('audits.index');
+    // Route::get('/audits/{id}', [AuditController::class, 'showDetail'])->name('audits.show');
 });
 
 

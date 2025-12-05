@@ -131,7 +131,7 @@
              </li>
            </ul>
          </li>
-        <li class="nav-header">TAGS</li>
+        <li class="nav-header">SYSTEM MANAGERS</li>
          <li class="nav-item {{ isActive(['manage-tag', 'tags'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
@@ -150,7 +150,7 @@
            </ul>
          </li>
 
-         <li class="nav-header">CATEGORIES</li>
+         {{-- <li class="nav-header">CATEGORIES</li> --}}
          <li class="nav-item {{ isActive(['categories'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
@@ -169,7 +169,7 @@
            </ul>
          </li>
 
-         <li class="nav-header">BLOGS</li>
+         {{-- <li class="nav-header">BLOGS</li> --}}
          <li class="nav-item {{ isActive(['add-blog', 'all-blogs'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
@@ -194,7 +194,7 @@
            </ul>
          </li>
 
-         <li class="nav-header">COMMENTS</li>
+         {{-- <li class="nav-header">COMMENTS</li> --}}
          <li class="nav-item {{ isActive(['comments'], 'menu-is-opening menu-open') }}">
            <a href="#" class="nav-link">
              <i class="nav-icon fas fa-table"></i>
@@ -208,6 +208,31 @@
                <a href="{{ url('comments') }}" class="nav-link {{ isActive(['comments'], 'active') }}">
                  <i class="far fa-circle nav-icon"></i>
                  <p>All Comments</p>
+               </a>
+             </li>
+           </ul>
+         </li>
+
+         {{-- <li class="nav-header">INVOICES</li> --}}
+         <li class="nav-item {{ isActive(['all-invoices', 'add-invoice'], 'menu-is-opening menu-open') }}">
+           <a href="#" class="nav-link">
+             <i class="nav-icon fas fa-table"></i>
+             <p>
+               Invoice Manager
+               <i class="fas fa-angle-left right"></i>
+             </p>
+           </a>
+           <ul class="nav nav-treeview">
+             <li class="nav-item">
+               <a href="{{ url('all-invoices') }}" class="nav-link {{ isActive(['all-invoices'], 'active') }}">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>All Invoices</p>
+               </a>
+             </li>
+             <li class="nav-item">
+               <a href="{{ url('add-invoice') }}" class="nav-link {{ isActive(['add-invoice'], 'active') }}">
+                 <i class="far fa-circle nav-icon"></i>
+                 <p>Create New Invoice</p>
                </a>
              </li>
            </ul>

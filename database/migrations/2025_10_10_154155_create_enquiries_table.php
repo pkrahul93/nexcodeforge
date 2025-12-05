@@ -16,6 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('email');
             $table->string('mobile', 15);
+            $table->string('enq_for')->nullable();
             $table->string('subject')->nullable();
             $table->string('website')->nullable();
             $table->string('document')->nullable(); // good for optional file uploads

@@ -106,7 +106,7 @@
                     </div>
                     <div class="col-lg-4">
                         <div class="res-991-mt-30">
-                            <img width="417" height="503" class="img-fluid" src="images/team01.jpg" loading="lazy"
+                            <img width="417" height="503" class="img-fluid" src="{{ asset('guest/assets/images/team01.jpg') }}" loading="lazy"
                                 alt="detail-img">
                             <div class="team-detail-main">
                                 <ul class="team-detail-list">

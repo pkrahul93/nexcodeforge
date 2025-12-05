@@ -1,46 +1,47 @@
 @extends('layouts.guest')
 @section('title', 'Maintenance & Support | NexCodeForge')
-@section('meta_description', 'Explore NexCodeForge’s Maintenance & Support services — ensuring your website, app, and software run smoothly with regular updates, security monitoring, and performance optimization.')
+@section('meta_description', 'Explore NexCodeForge’s Maintenance & Support services — ensuring your website, app, and
+    software run smoothly with regular updates, security monitoring, and performance optimization.')
 
-@php
-    $defaultMessages = [
-        'open' =>
-            'Thank you for your patience. Our support team has received your ticket and it is currently being reviewed.',
-        'in_progress' =>
-            'Your ticket is being actively worked on by our support team. We’ll update you with progress shortly.',
-        'resolved' => 'Your ticket has been resolved. If you have any further questions, feel free to reply.',
-    ];
+    @php
+        $defaultMessages = [
+            'open' =>
+                'Thank you for your patience. Our support team has received your ticket and it is currently being reviewed.',
+            'in_progress' =>
+                'Your ticket is being actively worked on by our support team. We’ll update you with progress shortly.',
+            'resolved' => 'Your ticket has been resolved. If you have any further questions, feel free to reply.',
+        ];
 
-    // Fallback if status is unknown
-    $status = session('ticket_status')->status ?? 'open';
-    $message =
-        session('ticket_status')->admin_message ??
-        ($defaultMessages[$status] ?? 'Thank you for contacting us. Your ticket is under review.');
+        // Fallback if status is unknown
+        $status = session('ticket_status')->status ?? 'open';
+        $message =
+            session('ticket_status')->admin_message ??
+            ($defaultMessages[$status] ?? 'Thank you for contacting us. Your ticket is under review.');
 
-    // Map statuses to colors and icons
-    $statusMap = [
-        'open' => [
-            'label' => 'Open',
-            'color' => 'warning',
-            'icon' => '⏳', // hourglass
-        ],
-        'in_progress' => [
-            'label' => 'In Progress',
-            'color' => 'info',
-            'icon' => '🔧', // wrench
-        ],
-        'resolved' => [
-            'label' => 'Resolved',
-            'color' => 'success',
-            'icon' => '✅', // checkmark
-        ],
-    ];
+        // Map statuses to colors and icons
+        $statusMap = [
+            'open' => [
+                'label' => 'Open',
+                'color' => 'warning',
+                'icon' => '⏳', // hourglass
+            ],
+            'in_progress' => [
+                'label' => 'In Progress',
+                'color' => 'info',
+                'icon' => '🔧', // wrench
+            ],
+            'resolved' => [
+                'label' => 'Resolved',
+                'color' => 'success',
+                'icon' => '✅', // checkmark
+            ],
+        ];
 
-    $ticketStatus = session('ticket_status')->status ?? 'open';
-    $statusLabel = $statusMap[$ticketStatus]['label'] ?? 'Unknown';
-    $statusColor = $statusMap[$ticketStatus]['color'] ?? 'secondary';
-    $statusIcon = $statusMap[$ticketStatus]['icon'] ?? '❔';
-@endphp
+        $ticketStatus = session('ticket_status')->status ?? 'open';
+        $statusLabel = $statusMap[$ticketStatus]['label'] ?? 'Unknown';
+        $statusColor = $statusMap[$ticketStatus]['color'] ?? 'secondary';
+        $statusIcon = $statusMap[$ticketStatus]['icon'] ?? '❔';
+    @endphp
 
 @section('content')
     <!-- page-title -->
@@ -72,7 +73,10 @@
     <div class="container-fluid py-5 px-4">
         <div class="row justify-content-center">
             <div class="col-lg-10">
-
+                <div class="text-center mb-3">
+                    <img src="{{ asset('guest/assets/images/support.png') }}" class="img-fluid" width="350"
+                        alt="Maintenance & Support">
+                </div>
                 <h1 class="fw-bold text-center mb-4">Maintenance & Support</h1>
                 <p class="text-center text-muted mb-5">
                     Keep your website and applications running smoothly with our reliable support system.

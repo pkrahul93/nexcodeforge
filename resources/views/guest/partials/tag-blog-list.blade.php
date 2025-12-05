@@ -4,7 +4,7 @@
             <div class="featured-imagebox-post-style1">
                 <div class="featured-post-overlay">
                     <div class="featured-post-thumbnail">
-                        <img width="414" height="447" class="img-fluid w-auto"
+                        <img width="414" height="447" class="img-fluid w-auto blog-img"
                             src="{{ $blog->image_url ?? asset('images/default-blog.jpg') }}" loading="lazy"
                             alt="{{ $blog->title }}">
                     </div>
