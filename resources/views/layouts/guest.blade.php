@@ -570,11 +570,11 @@
                                                 target="_blank" class="footer-social-icons-link">Facebook</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://x.com/ForgeNex3411" target="_blank"
+                                            <a href="https://x.com/Nexcodeforge" target="_blank"
                                                 class="footer-social-icons-link">Twitter</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://www.instagram.com/nex.codeforage?igsh=dHFidndiOHk3ZDRu"
+                                            <a href="https://www.instagram.com/nexcodeforge"
                                                 target="_blank" class="footer-social-icons-link">Instagram</a>
                                         </li>
                                         <li class="footer-social-icons-item">
