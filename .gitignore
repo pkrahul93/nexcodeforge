@@ -33,3 +33,14 @@ rembg_env/
 /vendor/
 node_modules/
 .env
+
+# audit outputs and tmp debug probes
+/storage/app/public/audits/*.docx
+/tmp/audit*.txt
+/tmp/free_audit.html
+/tmp/*.json
+
+# common ignores
+/vendor/
+node_modules/
+.env
