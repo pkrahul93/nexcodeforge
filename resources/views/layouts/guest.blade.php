@@ -68,6 +68,7 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
     {{-- Bootstrap Icons CDN (same as pricing page) --}}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     <!-- Organization Schema -->
     <script type="application/ld+json">
@@ -354,31 +355,31 @@
                                                             </li>
                                                             {{-- <li><a href="{{ url('project-details') }}">Project Details</a></li> --}}
                                                             {{-- <li><a href="{{ route('portfolio') }}">Portfolio</a> --}}
-                                                            </li>
-                                                            <li class="mega-menu-item">
-                                                                <a href="#" class="mega-menu-link">Tools</a>
-                                                                <ul class="mega-submenu">
-                                                                    {{-- <li><a href="{{ route('pricing') }}">Pricing</a></li> --}}
-
-                                                                    <li><a href="{{ route('audit.show') }}">Free Audit
-                                                                            Report</a></li>
-                                                                    <li><a href="{{ route('color-picker') }}">HTML
-                                                                            Color Picker</a></li>
-                                                                    <li><a href="{{ route('remove-bg') }}">Remove
-                                                                            Background</a></li>
-                                                                </ul>
-                                                            </li>
-                                                        </ul>
                                                     </li>
                                                     <li class="mega-menu-item">
-                                                        <a href="#" class="mega-menu-link">Blogs</a>
+                                                        <a href="#" class="mega-menu-link">Tools</a>
                                                         <ul class="mega-submenu">
-                                                            <li><a href="{{ route('blogs') }}">All Blogs</a></li>
+                                                            {{-- <li><a href="{{ route('pricing') }}">Pricing</a></li> --}}
+
+                                                            <li><a href="{{ route('audit.show') }}">Free Audit
+                                                                    Report</a></li>
+                                                            <li><a href="{{ route('color-picker') }}">HTML
+                                                                    Color Picker</a></li>
+                                                            <li><a href="{{ route('remove-bg') }}">Remove
+                                                                    Background</a></li>
                                                         </ul>
                                                     </li>
-                                                    <li class="mega-menu-item">
-                                                        <a href="{{ url('contactus') }}">Contact Us</a>
-                                                    </li>
+                                                </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="#" class="mega-menu-link">Blogs</a>
+                                                    <ul class="mega-submenu">
+                                                        <li><a href="{{ route('blogs') }}">All Blogs</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="mega-menu-item">
+                                                    <a href="{{ url('contactus') }}">Contact Us</a>
+                                                </li>
                                                 </ul>
                                             </nav><!-- menu end -->
                                             <!-- header_extra -->
@@ -574,8 +575,8 @@
                                                 class="footer-social-icons-link">Twitter</a>
                                         </li>
                                         <li class="footer-social-icons-item">
-                                            <a href="https://www.instagram.com/nexcodeforge"
-                                                target="_blank" class="footer-social-icons-link">Instagram</a>
+                                            <a href="https://www.instagram.com/nexcodeforge" target="_blank"
+                                                class="footer-social-icons-link">Instagram</a>
                                         </li>
                                         <li class="footer-social-icons-item">
                                             <a href="https://www.linkedin.com/" target="_blank"
