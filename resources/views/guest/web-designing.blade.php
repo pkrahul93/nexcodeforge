@@ -132,7 +132,7 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="service-process-image res-991-mt-20">
-                                    <img class="img-fluid w-100" src="{{ asset('guest/assets/images/sections/creative-web-design.jpg') }}" alt="Creative Website Design India">
+                                    <img class="img-fluid w-100" src="{{ asset('guest/assets/images/design/innovative.png') }}" alt="Creative Website Design India">
                                 </div>
                             </div>
                         </div>
@@ -144,7 +144,7 @@
                         <div class="row align-items-center">
                             <div class="col-lg-7 img-order-md-1">
                                 <div class="service-process-image res-991-mt-20">
-                                    <img class="img-fluid w-100" src="{{ asset('guest/assets/images/sections/responsive-design.jpg') }}" alt="Responsive Website Development">
+                                    <img class="img-fluid w-100" src="{{ asset('guest/assets/images/design/responsive_design.png') }}" alt="Responsive Website Development">
                                 </div>
                             </div>
                             <div class="col-lg-5">
@@ -172,7 +172,7 @@
                             </div>
                             <div class="col-lg-7">
                                 <div class="service-process-image res-991-mt-20">
-                                    <img class="img-fluid w-100" src="{{ asset('guest/assets/images/sections/user-interface-design.jpg') }}" alt="UI/UX Design NexCodeForge">
+                                    <img class="img-fluid w-100" src="{{ asset('guest/assets/images/design/user_interface.png') }}" alt="UI/UX Design NexCodeForge">
                                 </div>
                             </div>
                         </div>
