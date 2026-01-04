@@ -314,7 +314,7 @@
 	}
 	.prt-header-style-01 .prt-stickable-header.fixed-header { padding: 0 0px !important; }
 	.prt-header-style-01 .site-branding h1 { padding: 0;}
-	.site-branding img#logo-img { width: 190px; margin-top: -5px; }
+	.site-branding img#logo-img { width: 125px; margin-top: -5px; }
 
 	rs-module#rev_slider_3_1 .rs-layer:not(.rs-wtbindex){margin-left:0px !important;}
 	rs-module#rev_slider_2_1 .rs-layer:not(.rs-wtbindex){margin-left:105px !important;margin-right:105px !important;}

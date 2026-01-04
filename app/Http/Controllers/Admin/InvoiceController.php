@@ -138,12 +138,9 @@ class InvoiceController extends Controller
     /**
      * Delete invoice (and items because of cascade).
      */
-    public function destroy(Invoice $invoice)
+    public function destroy($id)
     {
-        // Optional authorization
-        if (Gate::denies('delete-invoice', $invoice)) {
-            abort(Response::HTTP_FORBIDDEN);
-        }
+        $invoice = Invoice::with('items')->findOrFail($id);
 
         // Remove stored PDF if exists
         if ($invoice->pdf_path) {
