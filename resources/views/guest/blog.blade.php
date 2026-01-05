@@ -1,18 +1,19 @@
 @extends('layouts.guest')
 @section('title', 'Web & App Development Insights | NexCodeForge Blog')
-@section('meta_description', 'Stay updated with NexCodeForge’s latest insights on web design, Laravel development, SEO,
+@section('meta_description',
+    'Stay updated with NexCodeForge’s latest insights on web design, Laravel development, SEO,
     and digital innovation. Learn how to grow your online presence.')
 
 
 @section('content')
 
-<style>
-    @media(max-width:600px){
-        .featured-post-content{
-            top: 5px!important;
+    <style>
+        @media(max-width:600px) {
+            .featured-post-content {
+                top: 5px !important;
+            }
         }
-    }
-</style>
+    </style>
     <!-- page-title -->
     <div class="prt-page-title-row style1">
         <div class="prt-page-title-row-inner">
@@ -178,36 +179,37 @@
 @endsection
 
 @section('scripts')
-<script>
-$(document).ready(function() {
-    // Handle pagination click
-    $(document).on('click', '.pagination a', function(event) {
-        event.preventDefault();
+    <script>
+        $(document).ready(function() {
+            // Handle pagination click
+            $(document).on('click', '.pagination a', function(event) {
+                event.preventDefault();
 
-        let pageUrl = $(this).attr('href'); // Get URL from pagination link
-        if (!pageUrl) return;
+                let pageUrl = $(this).attr('href'); // Get URL from pagination link
+                if (!pageUrl) return;
 
-        // Smooth scroll to top of blog list
-        $('html, body').animate({ scrollTop: $("#blog-list").offset().top - 100 }, 400);
+                // Smooth scroll to top of blog list
+                $('html, body').animate({
+                    scrollTop: $("#blog-list").offset().top - 100
+                }, 400);
 
-        // Load new posts
-        $.ajax({
-            url: pageUrl,
-            type: 'GET',
-            beforeSend: function() {
-                $('#blog-list').css('opacity', '0.5');
-            },
-            success: function(response) {
-                $('#blog-list').html(response);
-                $('#blog-list').css('opacity', '1');
-            },
-            error: function() {
-                alert('Something went wrong while loading posts.');
-                $('#blog-list').css('opacity', '1');
-            }
+                // Load new posts
+                $.ajax({
+                    url: pageUrl,
+                    type: 'GET',
+                    beforeSend: function() {
+                        $('#blog-list').css('opacity', '0.5');
+                    },
+                    success: function(response) {
+                        $('#blog-list').html(response);
+                        $('#blog-list').css('opacity', '1');
+                    },
+                    error: function() {
+                        alert('Something went wrong while loading posts.');
+                        $('#blog-list').css('opacity', '1');
+                    }
+                });
+            });
         });
-    });
-});
-</script>
+    </script>
 @endsection
-

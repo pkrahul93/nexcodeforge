@@ -42,7 +42,7 @@
                     <div class="col-xl-6 col-lg-6">
                         <img class="img-fluid prt-equal-height-image w-100 position-relative"
                             src="{{ asset('guest/assets/images/about/Who_we_are.png') }}"
-                            alt="NexCodeForge Who we are">
+                            alt="NexCodeForge Who we are" height="auto">
                     </div>
                     <div class="col-xl-6 col-lg-6">
                         <div class="prt-bg spacing-4" data-aos="fade-left">
@@ -110,17 +110,17 @@
                                     </div>
                                     <div class="col-lg-12">
                                         <ul>
-                                            <li><a href="{{ url('under-construction') }}">Custom Web & App Development</a></li>
-                                            <li><a href="{{ url('under-construction') }}">E-Commerce & Marketplace Solutions</a></li>
-                                            <li><a href="{{ url('under-construction') }}">SaaS Product Engineering</a></li>
-                                            <li><a href="{{ url('under-construction') }}">IoT Integration & Automation</a></li>
-                                            <li><a href="{{ url('under-construction') }}">UI/UX & Experience Design</a></li>
-                                            <li><a href="{{ url('under-construction') }}">AI-Driven Business Intelligence</a></li>
-                                            <li><a href="{{ url('under-construction') }}">Digital Marketing & SEO Optimization</a></li>
+                                            <li><a href="{{ url('/services/custom-web-app-development') }}">Custom Web & App Development</a></li>
+                                            <li><a href="{{ url('/services/ecommerce-development') }}">E-Commerce & Marketplace Solutions</a></li>
+                                            <li><a href="{{ url('/services/business-websites') }}">Professional Business Websites</a></li>
+                                            <li><a href="{{ url('/services/mlm-software-solutions') }}">MLM Software Solutions</a></li>
+                                            <li><a href="{{ route('creative-design') }}">UI/UX & Experience Design</a></li>
+                                            <li><a href="{{ url('web-redesigning') }}">Website Re-Designing</a></li>
+                                            <li><a href="{{ route('digital-marketing') }}">Digital Marketing & SEO Optimization</a></li>
                                             <li><a href="{{ url('under-construction') }}">Enterprise IT Consulting</a></li>
-                                            <li><a href="{{ url('under-construction') }}">Cloud & DevOps Solutions</a></li>
-                                            <li><a href="{{ url('under-construction') }}">Mobile App Development (Android/iOS)</a></li>
-                                            <li><a href="{{ url('under-construction') }}">Maintenance, Hosting & Support</a></li>
+                                            <li><a href="{{ url('content-engineering') }}">Content Engineering</a></li>
+                                            <li><a href="{{ url('/services/custom-web-app-development') }}">Custom Web & App Development</a></li>
+                                            <li><a href="{{ url('maintenance-support') }}">Maintenance, Hosting & Support</a></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -129,7 +129,7 @@
                     </div>
                     <div class="col-xl-6 col-lg-6 d-flex justify-content-center align-items-center">
                         <img class="img-fluid prt-equal-height-image w-100 position-relative"
-                            src="{{ asset('guest/assets/images/about/What_we_do.png') }}" style="height:550px;"
+                            src="{{ asset('guest/assets/images/about/What_we_do.png') }}" style="height:auto;"
                             alt="NexCodeForge Core Services">
                     </div>
                 </div>
@@ -261,8 +261,8 @@
                                         alt="Our Goals">
                                 </div>
                                 <div class="col-lg-6">
-                                    <h3 class="tab-content-h3">✨ Driving Innovation with Purpose</h3>
-                                    <p>
+                                    <h3 class="tab-content-h3 px-3">✨ Driving Innovation with Purpose</h3>
+                                    <p class="px-3">
                                         Our goal is to <b>simplify technology for businesses</b> — making
                                         <b>innovation accessible, affordable,</b> and <b>results-driven.</b>
                                         We aim to build intelligent digital solutions that
@@ -270,7 +270,7 @@
                                         <b>boost profitability</b> across every industry we serve.
                                     </p>
 
-                                    <p>
+                                    <p class="px-3">
                                         At <b>NexCodeForge</b>, we focus on combining <b>creative design</b> with
                                         <b>cutting-edge development</b> to deliver scalable systems that help
                                         organizations achieve <b>digital transformation</b> with ease. Whether it’s
@@ -280,7 +280,7 @@
                                         <b>long-term success.</b>
                                     </p>
 
-                                    <p>
+                                    <p class="px-3">
                                         By fostering collaboration, innovation, and continuous improvement,
                                         we’re shaping a future where businesses can thrive through smarter,
                                         more connected, and more sustainable digital ecosystems.
@@ -292,8 +292,8 @@
                         <div class="content-inner" style="display:none;">
                             <div class="row align-items-center">
                                 <div class="col-lg-6">
-                                    <h3 class="tab-content-h3">✨ Our Vision</h3>
-                                    <p>
+                                    <h3 class="tab-content-h3 px-3">✨ Our Vision</h3>
+                                    <p class="px-3">
                                         To be a globally recognized <b>technology partner</b> empowering businesses
                                         through <b>innovative software solutions, digital products,</b> and
                                         <b>connected IoT systems</b> that redefine <b>efficiency, creativity,</b> and
@@ -316,8 +316,8 @@
                                         alt="Our Journey">
                                 </div>
                                 <div class="col-lg-6">
-                                    <h3 class="tab-content-h3">✨ Our Journey</h3>
-                                    <p>
+                                    <h3 class="tab-content-h3 px-3">✨ Our Journey</h3>
+                                    <p class="px-3">
                                         Started with a vision to fuse <b>design, innovation, and technology</b>,
                                         <b>NexCodeForge</b> has evolved into a
                                         <b>full-stack digital solutions partner</b> empowering businesses across
@@ -327,7 +327,7 @@
                                         <b>enterprise-grade applications</b> that drive real business results.
                                     </p>
 
-                                    <p>
+                                    <p class="px-3">
                                         Our diverse portfolio spans industries such as
                                         <b>fintech, e-commerce, healthcare, real estate,</b> and
                                         <b>corporate services,</b> reflecting our adaptability and commitment to
@@ -337,7 +337,7 @@
                                         success for our clients.
                                     </p>
 
-                                    <p>
+                                    <p class="px-3">
                                         At <b>NexCodeForge</b>, we believe in more than just building software;
                                         we build <b>digital experiences</b> that inspire trust and engagement.
                                         With a focus on <b>performance, security,</b> and <b>innovation,</b>
@@ -354,18 +354,22 @@
 
                 <div class="section-title text-center">
                     <h2 class="section-title-h2">Let’s Build the Future Together</h2>
-                    <p>Looking for a reliable technology partner to develop your next big idea?
+                    <p class="px-2">Looking for a reliable technology partner to develop your next big idea?
                         <b><a href="{{ url('contactus') }}" target="_blank"
                                 rel="noopener noreferrer">NexCodeForge</a></b> is ready to turn your vision into a
                         scalable, successful product.
                     </p>
                     <div class="mt-20">
                         <a class="prt-btn prt-btn-size-md prt-btn-shape-round prt-btn-style-fill prt-btn-color-gradiant"
-                            href="{{ url('enquiry') }}" target="_blank">Enquiry Now</a>
+                            href="{{ url('enquiry') }}" target="_blank">Quick Enquiry Now</a>
                     </div>
                 </div>
             </div>
         </section>
+
+        @include('guest.partials.workflow')
+
+        @include('guest.partials.final-cta')
 
         <!-- clients -->
         {{-- <section class="prt-row prt-bg bg-base-gradient client-section clearfix">

@@ -4,6 +4,104 @@
 
 @section('content')
 
+<style>
+    /* ================= SERVICES ADVANCED ================= */
+
+        .service-card {
+            position: relative;
+            background: #fff;
+            border-radius: 18px;
+            padding: 42px 30px 55px;
+            text-align: center;
+            height: 100%;
+            transition: all 0.35s ease;
+            overflow: hidden;
+        }
+
+        .service-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+        }
+
+        .service-icon {
+            width: 75px;
+            height: 75px;
+            margin: 0 auto 18px;
+            border-radius: 50%;
+            /* background: linear-gradient(135deg, #05c8f9, #007bff); */
+            background: linear-gradient(135deg, #05c8f9, #050608);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 34px;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(5, 200, 249, 0.45);
+        }
+
+        .service-card h3 {
+            font-size: 19px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Price badge */
+        .price-badge {
+            position: absolute;
+            top: 18px;
+            right: 18px;
+            background: linear-gradient(135deg, #05c8f9, #007bff);
+            color: #fff;
+            font-size: 12px;
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        /* Detail link */
+        .service-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 14px;
+            color: #007bff;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        /* Hover CTA */
+        .hover-cta {
+            position: absolute;
+            bottom: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, #05c8f9, #007bff);
+            color: #fff;
+            padding: 10px 22px;
+            border-radius: 25px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.35s ease;
+        }
+
+        .service-card:hover .hover-cta {
+            bottom: 8px;
+        }
+
+        /* Mobile spacing */
+        @media (max-width: 767px) {
+            .service-card {
+                /* margin-bottom: 25px; */
+                padding-bottom: 60px;
+            }
+        }
+</style>
+
     <!-- page-title -->
     <div class="prt-page-title-row style1">
         <div class="prt-page-title-row-inner">
@@ -65,7 +163,7 @@
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="{{ route('under-construction') }}">UI/UX & Creative Design</a>
+                                    <a href="{{ route('creative-design') }}">UI/UX & Creative Design</a>
                                 </h3>
                                 <p>We design visually stunning, conversion-focused interfaces for web and mobile that
                                     enhance user experiences and brand perception.</p>
@@ -81,7 +179,7 @@
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="{{ route('under-construction') }}">Web & App Development</a>
+                                    <a href="{{ route('web-designing') }}">Web & App Development</a>
                                 </h3>
                                 <p>From enterprise-grade web applications to fast, responsive mobile apps — we develop
                                     products that perform and scale effortlessly.</p>
@@ -97,7 +195,7 @@
                             </div>
                             <div class="featured-content">
                                 <h3 class="featured-title-h3">
-                                    <a href="{{ route('under-construction') }}">Digital Marketing & SEO</a>
+                                    <a href="{{ route('digital-marketing') }}">Digital Marketing & SEO</a>
                                 </h3>
                                 <p>We combine creativity and analytics to grow your online visibility, drive traffic, and
                                     boost your brand through targeted campaigns.</p>
@@ -124,6 +222,138 @@
             </div>
         </section>
         <!--service-section end-->
+
+        <!-- ================= SERVICES ================= -->
+        <section class="prt-row bg-base-grey service-enhanced clearfix">
+            <div class="container">
+
+                <!-- Heading -->
+                <div class="section-title text-center mb-40" data-aos="fade-up">
+                    <h2>Our Core Services</h2>
+                    <p>Complete digital solutions to launch, scale, and grow your business</p>
+                </div>
+
+                <div class="row">
+
+                    <!-- Service 1 -->
+                    <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                        <div class="service-box service-card">
+                            <span class="price-badge">Starting ₹9,999</span>
+                            <div class="service-icon">🚀</div>
+                            <h3>Professional Business Websites</h3>
+                            <p>
+                                High-converting, mobile-first websites designed
+                                to build trust and generate leads.
+                            </p>
+                            <a href="{{ url('/services/business-websites') }}" class="service-link">
+                                View Details →
+                            </a>
+                            <a href="{{ url('/enquiry') }}" class="hover-cta">
+                                Get Quote
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-box service-card">
+                            <span class="price-badge">Starting ₹24,999</span>
+                            <div class="service-icon">🛒</div>
+                            <h3>E-Commerce Development</h3>
+                            <p>
+                                Secure, scalable online stores with payment gateway,
+                                inventory, and order management.
+                            </p>
+                            <a href="{{ url('/services/ecommerce-development') }}" class="service-link">
+                                View Details →
+                            </a>
+                            <a href="{{ url('/enquiry') }}" class="hover-cta">
+                                Build Store
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-box service-card">
+                            <span class="price-badge">Custom Pricing</span>
+                            <div class="service-icon">⚙️</div>
+                            <h3>Custom Web & App Development</h3>
+                            <p>
+                                SaaS platforms, dashboards, and custom applications
+                                tailored to your business workflows.
+                            </p>
+                            <a href="{{ url('/services/custom-web-app-development') }}" class="service-link">
+                                View Details →
+                            </a>
+                            <a href="{{ url('/enquiry') }}" class="hover-cta">
+                                Discuss Idea
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up">
+                        <div class="service-box service-card">
+                            <span class="price-badge">Enterprise Ready</span>
+                            <div class="service-icon">🌐</div>
+                            <h3>MLM Software Solutions</h3>
+                            <p>
+                                Secure and scalable MLM systems with
+                                commission logic, dashboards, and reports.
+                            </p>
+                            <a href="{{ url('/services/mlm-software-solutions') }}" class="service-link">
+                                View Details →
+                            </a>
+                            <a href="{{ url('/enquiry') }}" class="hover-cta">
+                                Request Demo
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 5 -->
+                    <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="service-box service-card">
+                            <span class="price-badge">Quick Upgrade</span>
+                            <div class="service-icon">🎨</div>
+                            <h3>Website Redesigning</h3>
+                            <p>
+                                Transform outdated websites into modern,
+                                fast, and conversion-focused experiences.
+                            </p>
+                            <a href="{{ url('/web-redesigning') }}" class="service-link">
+                                View Details →
+                            </a>
+                            <a href="{{ url('/enquiry') }}" class="hover-cta">
+                                Redesign Now
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Service 6 -->
+                    <div class="col-lg-4 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="service-box service-card">
+                            <span class="price-badge">Growth Focused</span>
+                            <div class="service-icon">📈</div>
+                            <h3>Digital Growth Solutions</h3>
+                            <p>
+                                SEO, performance optimization, automation,
+                                and digital strategies to grow your brand.
+                            </p>
+                            <a href="{{ url('/digital-marketing') }}" class="service-link">
+                                View Details →
+                            </a>
+                            <a href="{{ url('/enquiry') }}" class="hover-cta">
+                                Boost Growth
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
         <style>
             .bg-base-dark {
                 background-color: #0f141c !important;

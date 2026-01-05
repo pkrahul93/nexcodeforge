@@ -578,10 +578,10 @@
                                             <a href="https://www.instagram.com/nexcodeforge" target="_blank"
                                                 class="footer-social-icons-link">Instagram</a>
                                         </li>
-                                        <li class="footer-social-icons-item">
+                                        {{-- <li class="footer-social-icons-item">
                                             <a href="https://www.linkedin.com/" target="_blank"
                                                 class="footer-social-icons-link">LinkedIn</a>
-                                        </li>
+                                        </li> --}}
                                         <li class="footer-social-icons-item">
                                             <a href="https://nexcodeforge.blogspot.com/" target="_blank"
                                                 class="footer-social-icons-link">Blogger</a>

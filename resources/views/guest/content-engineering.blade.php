@@ -1,10 +1,37 @@
 @extends('layouts.guest')
 @section('title', 'Content Engineering Solutions | NexCodeForge')
-@section('meta_description', 'NexCodeForge delivers smart content engineering solutions that combine technology,
+@section('meta_description',
+    'NexCodeForge delivers smart content engineering solutions that combine technology,
     creativity, and automation. We help businesses organize, optimize, and deliver content that drives engagement and
     growth.')
 
+
 @section('content')
+    <style>
+        .service-detail-list-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 14px;
+        }
+
+        .service-icon {
+            color: #4f46e5;
+            font-size: 18px;
+            min-width: 20px;
+        }
+
+        .iconbox-heading-sd i {
+            margin-right: 8px;
+            color: #4f46e5;
+        }
+
+        @media (max-width: 767px) {
+            .service-detail-list-item {
+                align-items: flex-start;
+            }
+        }
+    </style>
 
     <!-- page-title -->
     <div class="prt-page-title-row style1">
@@ -56,16 +83,19 @@
                                 <h3>Our Services</h3>
                             </div>
                             <ul>
-                                <li class="active"><a href="{{ route('content-engineering') }}"> Content Engineering </a></li>
-                                {{-- <li><a href="experience-design.html"> Experience Design </a></li>
-                                <li><a href="content-engineering.html"> Data Structuring </a></li>
-                                <li><a href="experience-design.html"> Advisory Services </a></li>
-                                <li><a href="content-engineering.html"> Digital Services </a></li>
-                                <li><a href="experience-design.html"> IT Consultancy </a></li> --}}
+                                <li class="active"><a href="{{ route('content-engineering') }}"> Content Engineering </a>
+                                </li>
+                                {{-- <li><a href="{{ route('content-engineering') }}"> Content Engineering </a></li> --}}
                                 <li><a href="{{ route('creative-design') }}">UI/UX & Creative Design</a></li>
                                 <li><a href="{{ route('web-designing') }}">Website/App Development</a></li>
                                 <li><a href="{{ route('web-redesigning') }}">Website Re-Designing</a></li>
+                                <li><a href="{{ url('/services/ecommerce-development') }}"> E-Commerce Development </a></li>
                                 <li><a href="{{ route('digital-marketing') }}">Digital Marketing & SEO</a></li>
+                                <li><a href="{{ url('/services/mlm-software-solutions') }}"> MLM Software Solutions </a>
+                                </li>
+                                <li><a href="{{ url('/services/business-websites') }}"> Professional Business Websites </a>
+                                </li>
+                                <li><a href="{{ url('/services/custom-web-app-development') }}"> Custom Web & App Development </a></li>
                             </ul>
                         </aside>
                         <aside class="widget widget-download with-title">
@@ -82,7 +112,7 @@
                                         <i class="fas fa-file-pdf"></i>
                                     </div>
                                 </div>
-                                <div class="download-block01">
+                                {{-- <div class="download-block01">
                                     <div class="prt-file-title">
                                         <span>Our Brochures</span>
                                         <a href="{{ route('under-construction') }}">Download</a>
@@ -90,7 +120,7 @@
                                     <div class="download_icon">
                                         <i class="far fa-file"></i>
                                     </div>
-                                </div>
+                                </div> --}}
                             </div>
                         </aside>
                         <aside class="widget widget-banner with-title">
@@ -112,22 +142,33 @@
                     <div class="col-lg-8 content-area">
                         <div class="prt-service-single-content-area">
                             <div class="prt_fatured_image-wrapper mb-40 res-575-mb-20">
-                                <img width="859" height="440" class="img-fluid" src="{{ asset('guest/assets/images/single-img-10.jpg') }}"
-                                    alt="services-1">
+                                <img width="859" height="440" class="img-fluid"
+                                    src="{{ asset('guest/assets/images/single-img-10.jpg') }}" alt="services-1">
                             </div>
                             <div class="prt-service-description">
-                                <h3>The best digital agency around the world</h3>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-                                    ut labore et dolore magna aliqua. Quis ipsum suspendt dolore magna aliqua. Quis ipsum
-                                    suspendise ultrices gravida abore et dolore magna.</p>
+                                <h3>Building Scalable Content Systems for the Digital World</h3>
+                                <p>
+                                    Content Engineering bridges strategy, technology, and structure to help organizations
+                                    create, manage, and deliver content efficiently across platforms. We design robust
+                                    content architectures that ensure consistency, scalability, automation, and long-term
+                                    performance for modern digital ecosystems.
+                                </p>
                                 <div class="row">
                                     <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                                         <ul class="service-detail-list">
                                             <li class="service-detail-list-item">
-                                                <div class="service-detail-list-text">Seize opportunities and spark</div>
+
+                                                <div class="service-detail-list-text">
+                                                    <i class="fas fa-layer-group service-icon"></i>
+                                                    Structured and reusable content models
+                                                </div>
                                             </li>
                                             <li class="service-detail-list-item">
-                                                <div class="service-detail-list-text">Experience to share goals</div>
+                                                <div class="service-detail-list-text">
+                                                    <i class="fas fa-gauge-high service-icon"></i>
+                                                    Performance, scalability & SEO
+                                                    optimization
+                                                </div>
                                             </li>
                                         </ul>
                                     </div>
@@ -135,10 +176,18 @@
                                         <div>
                                             <ul class="service-detail-list">
                                                 <li class="service-detail-list-item">
-                                                    <div class="service-detail-list-text">Comprehensive testing</div>
+                                                    <div class="service-detail-list-text">
+                                                        <i class="fas fa-share-nodes service-icon"></i>
+                                                        API-driven & omnichannel content
+                                                        delivery
+                                                    </div>
                                                 </li>
                                                 <li class="service-detail-list-item">
-                                                    <div class="service-detail-list-text">Innovate &amp; create great</div>
+                                                    <div class="service-detail-list-text">
+                                                        <i class="fas fa-robot service-icon"></i>
+                                                        Automation-ready & future-proof
+                                                        systems
+                                                    </div>
                                                 </li>
                                             </ul>
                                         </div>
@@ -155,11 +204,17 @@
                                                     </div>
                                                     <div class="iconbox-content-sd">
                                                         <div class="iconbox-title-sd">
-                                                            <h3 class="iconbox-heading-sd">Project planning</h3>
+                                                            <h3 class="iconbox-heading-sd">
+                                                                <i class="fas fa-lightbulb text-primary"></i>
+                                                                Content Strategy & Planning
+                                                            </h3>
                                                         </div>
                                                         <div class="iconbox-desc-sd">
-                                                            <p class="iconbox-text-sd">Well aware of the existing mobile
-                                                                app market trends to keep tabs.</p>
+                                                            <p class="iconbox-text-sd">
+                                                                We define content structure, workflows, and governance
+                                                                aligned with business goals
+                                                                and audience needs.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -171,11 +226,17 @@
                                                     </div>
                                                     <div class="iconbox-content-sd">
                                                         <div class="iconbox-title-sd">
-                                                            <h3 class="iconbox-heading-sd">Research &amp; analysis</h3>
+                                                            <h3 class="iconbox-heading-sd">
+                                                                <i class="fas fa-diagram-project text-primary"></i>
+                                                                Architecture & System Design
+                                                            </h3>
                                                         </div>
                                                         <div class="iconbox-desc-sd">
-                                                            <p class="iconbox-text-sd">Well aware of the existing mobile
-                                                                app market trends to keep tabs.</p>
+                                                            <p class="iconbox-text-sd">
+                                                                Structured content models, APIs, and integrations are
+                                                                designed for scalability,
+                                                                reusability, and omnichannel delivery.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -187,11 +248,17 @@
                                                     </div>
                                                     <div class="iconbox-content-sd">
                                                         <div class="iconbox-title-sd">
-                                                            <h3 class="iconbox-heading-sd">Deployment</h3>
+                                                            <h3 class="iconbox-heading-sd">
+                                                                <i class="fas fa-rocket text-primary"></i>
+                                                                Implementation & Deployment
+                                                            </h3>
                                                         </div>
                                                         <div class="iconbox-desc-sd">
-                                                            <p class="iconbox-text-sd">Well aware of the existing mobile
-                                                                app market trends to keep tabs.</p>
+                                                            <p class="iconbox-text-sd">
+                                                                We build, test, and deploy secure, automated, and
+                                                                high-performance content systems
+                                                                ready for long-term growth.
+                                                            </p>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -214,35 +281,61 @@
                                     <div class="accordion style1">
                                         <!-- toggle -->
                                         <div class="toggle prt-toggle_style_classic prt-control-right-true">
-                                            <div class="toggle-title"><a href="#" class="active">How can i find my
-                                                    solutions?</a></div>
+                                            <div class="toggle-title"><a href="#" class="active"><i
+                                                        class="fas fa-cogs"></i>
+                                                    What is Content Engineering?</a></div>
                                             <div class="toggle-content show">
-                                                <p>Sustainable development is the creed that underpins Irecco’s bespoke
-                                                    initiatives to protect the environment, strengthen communities and
-                                                    propel responsible functions including supply chain scheduling,
-                                                    manufacturing, services and spares, technology.</p>
+                                                <p>Content Engineering focuses on structuring, managing, and delivering
+                                                    content
+                                                    using scalable architectures, APIs, automation, and data-driven systems
+                                                    to ensure
+                                                    consistency, reusability, and performance across platforms.</p>
                                             </div>
                                         </div><!-- toggle end -->
                                         <!-- toggle -->
                                         <div class="toggle prt-toggle_style_classic prt-control-right-true">
-                                            <div class="toggle-title"><a href="#">How much does solar cost?</a>
+                                            <div class="toggle-title"><a href="#"><i
+                                                        class="fas fa-layer-group"></i>
+                                                    How does Content Engineering help businesses?</a>
                                             </div>
                                             <div class="toggle-content">
-                                                <p>Sustainable development is the creed that underpins Irecco’s bespoke
-                                                    initiatives to protect the environment, strengthen communities and
-                                                    propel responsible functions including supply chain scheduling,
-                                                    manufacturing, services and spares, technology.</p>
+                                                <p>It enables faster content delivery, better personalization, seamless
+                                                    omnichannel
+                                                    publishing, improved SEO, and easier integration with CMS, CRM, and
+                                                    marketing tools.</p>
                                             </div>
                                         </div><!-- toggle end -->
                                         <!-- toggle -->
                                         <div class="toggle prt-toggle_style_classic prt-control-right-true">
-                                            <div class="toggle-title"><a href="#">What payment methods are
-                                                    available?</a></div>
+                                            <div class="toggle-title"><a href="#"><i class="fas fa-code"></i>
+                                                    What technologies are used in Content Engineering?</a></div>
                                             <div class="toggle-content">
-                                                <p>Sustainable development is the creed that underpins Irecco’s bespoke
-                                                    initiatives to protect the environment, strengthen communities and
-                                                    propel responsible functions including supply chain scheduling,
-                                                    manufacturing, services and spares, technology.</p>
+                                                <p>We use modern frameworks, APIs, headless CMS, structured databases,
+                                                    cloud platforms, automation pipelines, and scalable backend systems
+                                                    tailored to your business needs.
+                                                </p>
+                                            </div>
+                                        </div><!-- toggle end -->
+                                        <!-- toggle -->
+                                        <div class="toggle prt-toggle_style_classic prt-control-right-true">
+                                            <div class="toggle-title"><a href="#"><i class="fas fa-shield-alt"></i>
+                                                    Is my content secure and future-ready?</a></div>
+                                            <div class="toggle-content">
+                                                <p>Yes. We design secure, version-controlled, and scalable content
+                                                    architectures
+                                                    that ensure data protection, easy upgrades, and long-term flexibility.
+                                                </p>
+                                            </div>
+                                        </div><!-- toggle end -->
+                                        <!-- toggle -->
+                                        <div class="toggle prt-toggle_style_classic prt-control-right-true">
+                                            <div class="toggle-title"><a href="#"><i class="fas fa-sync-alt"></i>
+                                                    Can existing content systems be upgraded?</a></div>
+                                            <div class="toggle-content">
+                                                <p>Absolutely. We analyze your current systems and modernize them using
+                                                    structured content models, automation, and performance optimizations
+                                                    without disrupting existing workflows.
+                                                </p>
                                             </div>
                                         </div><!-- toggle end -->
                                     </div>
