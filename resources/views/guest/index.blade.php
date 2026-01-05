@@ -304,150 +304,6 @@
             }
         }
 
-        /* ================= WORK PROCESS FLOW ================= */
-
-        .process-flow {
-            position: relative;
-            align-items: flex-start;
-        }
-
-        .process-step {
-            padding: 20px;
-        }
-
-        .process-icon {
-            width: 80px;
-            height: 80px;
-            margin: 0 auto 15px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #05c8f9, #007bff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 32px;
-            color: #fff;
-            box-shadow: 0 8px 25px rgba(5, 200, 249, 0.4);
-        }
-
-        .process-step h4 {
-            font-size: 18px;
-            margin-bottom: 10px;
-            font-weight: 600;
-        }
-
-        .process-step p {
-            font-size: 14px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        /* Connecting line */
-        .process-line {
-            position: absolute;
-            top: 54px;
-            width: 76% !important;
-            height: 2px;
-            background: linear-gradient(to right, #05c8f9, #007bff);
-            z-index: -1;
-        }
-
-        /* Desktop alignment fix */
-        @media (min-width: 992px) {
-            .process-line {
-                left: 12.5%;
-                right: 12.5%;
-            }
-        }
-
-        /* Mobile adjustments */
-        @media (max-width: 991px) {
-            .process-line {
-                display: none;
-            }
-
-            .process-step {
-                margin-bottom: 30px;
-            }
-        }
-
-        /* ================= WHY CHOOSE US ================= */
-
-        .why-choose-section {
-            background: linear-gradient(to bottom,
-                    rgba(5, 200, 249, 0.04),
-                    rgba(0, 123, 255, 0.02));
-        }
-
-        .why-box {
-            text-align: center;
-            padding: 35px 25px;
-            border-radius: 16px;
-            background: #fff;
-            height: 100%;
-            transition: all 0.35s ease;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .why-box::before {
-            content: "";
-            position: absolute;
-            inset: 0;
-            background: linear-gradient(135deg, #05c8f9, #007bff);
-            opacity: 0;
-            transition: opacity 0.35s ease;
-            z-index: 0;
-        }
-
-        .why-box:hover::before {
-            opacity: 0.05;
-        }
-
-        .why-box:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.12);
-        }
-
-        .why-box h3,
-        .why-box p,
-        .why-icon {
-            position: relative;
-            z-index: 1;
-        }
-
-        .why-icon {
-            width: 70px;
-            height: 70px;
-            margin: 0 auto 18px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #05c8f9, #007bff);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 30px;
-            color: #fff;
-            box-shadow: 0 10px 25px rgba(5, 200, 249, 0.45);
-        }
-
-        .why-box h3 {
-            font-size: 18px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-
-        .why-box p {
-            font-size: 14px;
-            color: #555;
-            line-height: 1.6;
-        }
-
-        /* Mobile spacing */
-        @media (max-width: 767px) {
-            .why-box {
-                margin-bottom: 25px;
-            }
-        }
-
         /* ================= SERVICES ADVANCED ================= */
 
         .service-card {
@@ -582,34 +438,6 @@
 
         .feature-box:hover i {
             transform: rotate(-5deg) scale(1.15);
-        }
-
-        /* CTA Button */
-        .btn-brand {
-            background: var(--brand-color);
-            color: #fff;
-            padding: 14px 30px;
-            border-radius: 40px;
-            font-weight: 600;
-            transition: all 0.4s ease;
-        }
-
-        .btn-brand:hover {
-            background: var(--brand-dark);
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(79, 70, 229, 0.4);
-        }
-
-        /* Mobile Optimization */
-        @media (max-width: 768px) {
-            .section-title h2 {
-                font-size: 28px;
-            }
-
-            .btn-brand {
-                width: 100%;
-                text-align: center;
-            }
         }
     </style>
 
@@ -860,97 +688,7 @@
         </section>
 
         <!-- ================= WORK PROCESS (AOS ANIMATED) ================= -->
-        <section class="prt-row step-section clearfix">
-            <div class="container">
-
-                <!-- Section Heading -->
-                <div class="row justify-content-center text-center mb-40" data-aos="fade-up" data-aos-duration="900">
-                    <div class="col-lg-8">
-                        <h2 class="title">Our Simple & Transparent Work Process</h2>
-                        <p class="desc-text">
-                            From idea to launch — we follow a proven, step-by-step workflow
-                            to ensure quality, clarity, and on-time delivery.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Process Flow -->
-                <div class="row process-flow text-center">
-
-                    <!-- Step 1 -->
-                    <div class="col-lg-3 col-md-6 process-step" data-aos="fade-up" data-aos-delay="0"
-                        data-aos-duration="800">
-                        <div class="process-icon">
-                            <span>📌</span>
-                        </div>
-                        <h4>Requirement & Strategy</h4>
-                        <p>
-                            We understand your business goals, target audience,
-                            and project requirements to define the right strategy.
-                        </p>
-                    </div>
-
-                    <!-- Connector -->
-                    <div class="process-line d-none d-lg-block"></div>
-
-                    <!-- Step 2 -->
-                    <div class="col-lg-3 col-md-6 process-step" data-aos="fade-up" data-aos-delay="150"
-                        data-aos-duration="800">
-                        <div class="process-icon">
-                            <span>🎨</span>
-                        </div>
-                        <h4>Design & Development</h4>
-                        <p>
-                            Our team designs intuitive interfaces and builds
-                            secure, scalable solutions using modern technologies.
-                        </p>
-                    </div>
-
-                    <!-- Connector -->
-                    <div class="process-line d-none d-lg-block"></div>
-
-                    <!-- Step 3 -->
-                    <div class="col-lg-3 col-md-6 process-step" data-aos="fade-up" data-aos-delay="300"
-                        data-aos-duration="800">
-                        <div class="process-icon">
-                            <span>🧪</span>
-                        </div>
-                        <h4>Testing & Optimization</h4>
-                        <p>
-                            We rigorously test performance, security, and usability
-                            to ensure a smooth and reliable experience.
-                        </p>
-                    </div>
-
-                    <!-- Connector -->
-                    <div class="process-line d-none d-lg-block"></div>
-
-                    <!-- Step 4 -->
-                    <div class="col-lg-3 col-md-6 process-step" data-aos="fade-up" data-aos-delay="450"
-                        data-aos-duration="800">
-                        <div class="process-icon">
-                            <span>🚀</span>
-                        </div>
-                        <h4>Launch & Support</h4>
-                        <p>
-                            We deploy your project and provide continuous support,
-                            updates, and improvements as your business grows.
-                        </p>
-                    </div>
-
-                </div>
-
-                <!-- CTA -->
-                <div class="row mt-40 text-center" data-aos="fade-up" data-aos-delay="600" data-aos-duration="900">
-                    <div class="col-lg-12">
-                        <a href="{{ url('contactus') }}" class="prt-btn prt-btn-color-gradiant">
-                            Discuss Your Project
-                        </a>
-                    </div>
-                </div>
-
-            </div>
-        </section>
+        @include('guest.partials.workflow')
 
         <!-- projects -->
         <section class="prt-row bg-img1 prt-bgimage-yes prt-bg bg-base-dark project-section clearfix">
@@ -1034,75 +772,7 @@
         </section>
 
         <!-- ================= WHY US ================= -->
-        <section class="prt-row service-section why-choose-section clearfix">
-            <div class="container">
-
-                <!-- Heading -->
-                <div class="row text-center mb-40" data-aos="fade-up" data-aos-duration="900">
-                    <div class="col-lg-12">
-                        <h2 class="title">Why Businesses Choose NexCodeForge</h2>
-                        <p class="desc-text">
-                            We don’t just develop software — we create digital solutions
-                            that deliver real business results.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- Cards -->
-                <div class="row row-equal-height">
-
-                    <!-- Card 1 -->
-                    <div class="col-lg-3 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="0">
-                        <div class="featured-icon-box style1 why-box">
-                            <div class="why-icon">🎯</div>
-                            <h3 class="text-center">Conversion-Focused Design</h3>
-                            <p class="text-center">
-                                Strategically designed websites that guide users
-                                and turn visitors into paying customers.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 2 -->
-                    <div class="col-lg-3 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="150">
-                        <div class="featured-icon-box style1 why-box">
-                            <div class="why-icon">⚡</div>
-                            <h3 class="text-center">Fast & SEO Ready</h3>
-                            <p class="text-center">
-                                Optimized performance, clean code, and SEO-ready
-                                structure for better visibility and ranking.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 3 -->
-                    <div class="col-lg-3 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="300">
-                        <div class="featured-icon-box style1 why-box">
-                            <div class="why-icon">💰</div>
-                            <h3 class="text-center">Affordable & Transparent</h3>
-                            <p class="text-center">
-                                Cost-effective solutions with clear pricing —
-                                no hidden charges, no surprises.
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Card 4 -->
-                    <div class="col-lg-3 col-md-6 mb-3" data-aos="fade-up" data-aos-delay="450">
-                        <div class="featured-icon-box style1 why-box">
-                            <div class="why-icon">🤝</div>
-                            <h3 class="text-center">Ongoing Support</h3>
-                            <p class="text-center">
-                                We stay with you post-launch to provide updates,
-                                improvements, and reliable technical support.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
+        @include('guest.partials.why-choose-us')
 
         <!-- ================= SERVICES ================= -->
         <section class="prt-row bg-base-grey service-enhanced clearfix">
@@ -1126,7 +796,7 @@
                                 High-converting, mobile-first websites designed
                                 to build trust and generate leads.
                             </p>
-                            <a href="{{ url('/web-designing') }}" class="service-link">
+                            <a href="{{ url('/services/business-websites') }}" class="service-link">
                                 View Details →
                             </a>
                             <a href="{{ url('/enquiry') }}" class="hover-cta">
@@ -1145,7 +815,7 @@
                                 Secure, scalable online stores with payment gateway,
                                 inventory, and order management.
                             </p>
-                            <a href="{{ url('/services/ecommerce') }}" class="service-link">
+                            <a href="{{ url('/services/ecommerce-development') }}" class="service-link">
                                 View Details →
                             </a>
                             <a href="{{ url('/enquiry') }}" class="hover-cta">
@@ -1164,7 +834,7 @@
                                 SaaS platforms, dashboards, and custom applications
                                 tailored to your business workflows.
                             </p>
-                            <a href="{{ url('/services/custom-development') }}" class="service-link">
+                            <a href="{{ url('/services/custom-web-app-development') }}" class="service-link">
                                 View Details →
                             </a>
                             <a href="{{ url('/enquiry') }}" class="hover-cta">
@@ -1183,7 +853,7 @@
                                 Secure and scalable MLM systems with
                                 commission logic, dashboards, and reports.
                             </p>
-                            <a href="{{ url('/services/mlm-solutions') }}" class="service-link">
+                            <a href="{{ url('/services/mlm-software-solutions') }}" class="service-link">
                                 View Details →
                             </a>
                             <a href="{{ url('/enquiry') }}" class="hover-cta">
@@ -1237,18 +907,7 @@
 
 
         <!-- ================= CTA ================= -->
-        <section class="prt-row bg-base-dark clearfix text-center">
-            <div class="container">
-                <h2 class="text-white">Ready to Start Your Project?</h2>
-                <p class="text-light">
-                    Get expert guidance and a clear roadmap for your website or app.
-                </p>
-
-                <a href="{{ url('/contactus') }}" class="hero-btn">
-                    Book Free Consultation
-                </a>
-            </div>
-        </section>
+        @include('guest.partials.final-cta')
 
         <!-- ================= BLOG ================= -->
         <section class="prt-row blog-section clearfix">
