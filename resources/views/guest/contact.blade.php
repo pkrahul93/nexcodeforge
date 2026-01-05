@@ -207,10 +207,12 @@
                                     <ul class="social-icons map-links">
                                         <li><a href="https://www.facebook.com/profile.php?id=61581703355275"
                                                 target="_blank" rel="noopener" aria-label="facebook">Facebook</a></li>
-                                        <li><a href="https://x.com/ForgeNex3411" target="_blank" rel="noopener"
+                                        <li><a href="https://x.com/Nexcodeforge" target="_blank" rel="noopener"
                                                 aria-label="twitter">Twitter</a></li>
-                                        <li><a href="https://www.instagram.com/nex.codeforage?igsh=dHFidndiOHk3ZDRu"
+                                        <li><a href="https://www.instagram.com/nexcodeforge"
                                                 target="_blank" rel="noopener" aria-label="instagram">Instagram</a></li>
+                                        <li><a href="https://nexcodeforge.blogspot.com/"
+                                                target="_blank" rel="noopener" aria-label="instagram">Blogger</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -320,8 +322,8 @@
                                     <h3>Business hours</h3>
                                     <ul class="map-list">
                                         <li>Mon-Fri : <span>8am to 9pm</span></li>
-                                        <li>Sat : <span>9am to 3pm</span></li>
-                                        <li>Sun : <span>closed</span></li>
+                                        {{-- <li>Sat : <span>9am to 3pm</span></li> --}}
+                                        <li>Sat & Sun : <span>closed</span></li>
                                     </ul>
                                 </div>
                             </div>

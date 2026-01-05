@@ -490,7 +490,7 @@
                 <div class="hero-cta mb-3">
                     <a href="{{ url('/enquiry') }}" class="btn btn-lg btn-outline-primary mb-2">Get Free
                         Consultation</a>&nbsp;&nbsp;
-                    <a href="{{ url('/enquiry') }}" class="btn btn-lg btn-outline-primary">Free Website Audit</a> <br>
+                    <a href="{{ url('/contactus') }}" class="btn btn-lg btn-outline-primary">Free Website Audit</a> <br>
                 </div>
 
 
@@ -499,7 +499,7 @@
                 </small>
 
                 <div class="hero-cta mt-4">
-                    <a href="/about" class="hero-btn">Start Your Digital Journey</a>
+                    <a href="{{ route('about') }}" class="hero-btn">Start Your Digital Journey</a>
                 </div>
             </div>
         </section>

@@ -1,6 +1,6 @@
 <div class="row">
     @foreach ($posts as $blog)
-        <div class="col-lg-6 col-md-6 col-sm-12">
+        <div class="col-lg-4 col-md-4 col-sm-12">
             <div class="featured-imagebox-post-style1">
                 <div class="featured-post-overlay">
                     <div class="featured-post-thumbnail">
