@@ -130,9 +130,26 @@ Route::get('/error', function () {
     return view('guest.error');
 })->name('error');
 
-// Route::get('/free-tools', function () {
-//     return view('guest.free_tools');
-// })->name('free-tools');
+Route::prefix('services')->name('services.')->group(function () {
+
+    Route::get('/business-websites', fn () =>
+        view('guest.services.business-websites')
+    )->name('business-websites');
+
+    Route::get('/ecommerce-development', fn () =>
+        view('guest.services.ecommerce')
+    )->name('ecommerce');
+
+    Route::get('/custom-web-app-development', fn () =>
+        view('guest.services.custom-development')
+    )->name('custom-development');
+
+    Route::get('/mlm-software-solutions', fn () =>
+        view('guest.services.mlm-solutions')
+    )->name('mlm-solutions');
+
+});
+
 
 Route::get('/under-construction', function () {
     return view('guest.under-construction');

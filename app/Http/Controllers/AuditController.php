@@ -7,9 +7,12 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Str;
 use Symfony\Component\Process\Process;
 use Symfony\Component\Process\Exception\ProcessFailedException;
+use Symfony\Component\Process\ExecutableFinder;
+
 
 class AuditController extends Controller
 {
@@ -145,207 +148,265 @@ class AuditController extends Controller
         return str_pad($lastSeq + 1, 3, '0', STR_PAD_LEFT);
     }
 
+    private function auditLog($auditId, $message)
+    {
+        Log::info("[AUDIT {$auditId}] {$message}");
+    }
+
     public function run(Request $request)
     {
-        $request->validate([
-            'domain' => [
-                'required',
-                'string',
-                'max:255',
-                'regex:/^[^<>]*$/',                      // prevents < >
-                'not_regex:/<script.*?>.*?<\\/script>/i', // prevents script tags
-                'regex:/^[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/', // valid domain format
-            ],
-            'includeWhois' => 'sometimes|in:on',
-        ], [
-            'domain.regex' => 'Please enter a valid domain format.',
-            'domain.not_regex' => 'HTML tags or script content are not allowed.',
-        ]);
+        // quick probe so we can see the request hit the exact file executed
+        @file_put_contents('/tmp/audit_run_hit.txt', date('c') . ' - run() entry - ' . __FILE__ . ' - IP: ' . $request->ip() . PHP_EOL, FILE_APPEND);
 
-        // Normalize input domain (ensure scheme present for Python script)
-        $raw = trim($request->input('domain'));
+        Log::info("Audit run() called with domain=" . $request->input('domain'));
 
-        if (! preg_match('#^https?://#i', $raw)) {
-            $domain = 'http://' . $raw;
-        } else {
-            $domain = $raw;
+        // Log a few request details for debugging (do NOT log sensitive headers or bearer tokens)
+        Log::info('Audit request payload keys: ' . implode(',', array_keys($request->all())));
+        Log::info('Audit request IP: ' . $request->ip());
+        if ($request->headers->has('referer')) {
+            Log::info('Audit referer: ' . substr($request->headers->get('referer'), 0, 200));
         }
 
-        $domain = preg_replace('/\s+/', '', $domain);
-        $includeWhois = $request->has('includeWhois') ? true : false;
+        // ---------------- NORMALIZE domain first (so validation accepts http(s)://host and host)
+        $raw = trim((string) $request->input('domain', ''));
 
-        // ---------- Enforce limit: max 3 audits per domain per IP per day ----------
-        $MAX_PER_DAY_PER_DOMAIN_PER_IP = 3;
+        // remove surrounding quotes if any, and leading/trailing whitespace
+        $raw = trim($raw, " \t\n\r\0\x0B\"'");
+
+        // remove scheme (http:// or https://) if present
+        $noScheme = preg_replace('#^https?://#i', '', $raw);
+
+        // strip path, query and fragment (keep only host[:port])
+        $hostOnly = preg_replace('#[/:?].*$#', '', $noScheme);
+
+        // remove any leading "www." for storage/validation simplicity (keeps dns root)
+        $hostOnly = preg_replace('#^www\.#i', '', $hostOnly);
+
+        // final trim
+        $hostOnly = trim($hostOnly);
+
+        // If empty after normalization, return validation error early
+        if ($hostOnly === '') {
+            Log::warning('Audit validation failed: empty domain after normalization for raw=' . $raw);
+            @file_put_contents('/tmp/audit_validation_err.txt', date('c') . ' - validation failed - empty domain after normalization - raw=' . $raw . PHP_EOL, FILE_APPEND);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Please enter a valid domain (example: example.com).',
+            ], 422);
+        }
+
+        // ---------------- VALIDATION (validate host-only value)
+        $validator = Validator::make(
+            ['domain' => $hostOnly, 'includeWhois' => $request->input('includeWhois')],
+            [
+                'domain' => [
+                    'required',
+                    'string',
+                    'max:255',
+                    // basic hostname+TLD check (allows subdomains). Adjust if you need IDN support.
+                    'regex:/^[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?(?:\.[A-Za-z]{2,})+$/',
+                ],
+                'includeWhois' => 'sometimes|in:on,1,true',
+            ],
+            [
+                'domain.regex' => 'Please enter a valid domain format (example: example.com).',
+            ]
+        );
+
+        if ($validator->fails()) {
+            $errors = $validator->errors()->messages();
+            Log::warning('Audit validation failed: ' . json_encode($errors));
+            @file_put_contents('/tmp/audit_validation_err.txt', date('c') . ' - validation failed - ' . json_encode($errors) . PHP_EOL, FILE_APPEND);
+
+            return response()->json([
+                'success' => false,
+                'message' => 'Validation failed.',
+                'errors'  => $errors,
+            ], 422);
+        }
+
+        Log::info("Validation passed for hostOnly: " . $hostOnly);
+
+        // Rebuild a full URL to use for script (always include scheme for python script convenience)
+        $domain = (preg_match('#^https?://#i', $raw) ? $raw : ('http://' . $hostOnly));
+        $domain = preg_replace('/\s+/', '', $domain); // remove any whitespace
+
+        // ensure parse_url can extract host; fallback to hostOnly we validated
+        $parsedHost = parse_url($domain, PHP_URL_HOST) ?: $hostOnly;
+        if (! $parsedHost || $parsedHost === '') {
+            Log::error('Failed to parse host from domain: ' . $domain);
+            return response()->json([
+                'success' => false,
+                'message' => 'Unable to determine host from the provided domain.',
+            ], 422);
+        }
+
+        $includeWhois = $request->has('includeWhois') && in_array($request->input('includeWhois'), ['on', '1', 'true'], true);
+
+        Log::info("Normalized domain: {$domain}");
+
+        // ---------------- RATE LIMIT ----------------
         $clientIp = $request->ip();
+        $host = strtolower($parsedHost);
 
-        // normalize host (example: http://example.com/path -> example.com)
-        $host = parse_url($domain, PHP_URL_HOST) ?: $domain;
-        $host = strtolower($host);
-
-        $startOfDay = now()->startOfDay();
-        $endOfDay   = now()->endOfDay();
+        Log::info("Checking audit rate-limit for host={$host} IP={$clientIp}");
 
         $existingCount = Audit::where('domain', 'like', "%{$host}%")
             ->where('user_ip', $clientIp)
-            ->whereBetween('created_at', [$startOfDay, $endOfDay])
+            ->whereBetween('created_at', [now()->startOfDay(), now()->endOfDay()])
             ->count();
 
+        $MAX_PER_DAY_PER_DOMAIN_PER_IP = 3;
         if ($existingCount >= $MAX_PER_DAY_PER_DOMAIN_PER_IP) {
+            Log::warning("Rate limit hit for host={$host}, IP={$clientIp}");
             return response()->json([
                 'success' => false,
-                'message' => "Limit reached: You have already generated {$existingCount} audits for {$host} from your IP today. Please try again tomorrow."
+                'message' => "Limit reached for $host."
             ], 429);
         }
 
-        // ---------- Generate audit number ADT-<SHORT>-YYYYMMDD-### ----------
-        $shortCode = $this->makeShortCode($domain);   // e.g. NEX
-        $today = now()->format('Ymd');                // e.g. 20251123
-        $sequence = $this->getNextSequence($shortCode);
-        $auditNumber = "ADT-{$shortCode}-{$today}-{$sequence}";
+        // ---------------- CREATE AUDIT RECORD ----------------
+        $shortCode = $this->makeShortCode($host);
+        $auditNumber = "ADT-{$shortCode}-" . now()->format("Ymd") . "-" . $this->getNextSequence($shortCode);
 
-        // ---------- Prepare DB record (status: running) ----------
         $audit = Audit::create([
             'audit_number'  => $auditNumber,
             'domain'        => $domain,
             'status'        => 'running',
-            'include_whois' => $includeWhois,
-            'started_at'    => Carbon::now(),
+            'include_whois' => (int) $includeWhois,
+            'started_at'    => now(),
             'user_ip'       => $clientIp,
         ]);
 
-        // ---------- Prepare output file path ----------
-        $uniq = uniqid('audit_');
-        $outFilename = $uniq . '.docx';
-        $outPath = storage_path('app/public/audits/' . $outFilename);
+        $this->auditLog($audit->id, "Audit record created. Number: {$auditNumber}");
 
-        if (! file_exists(dirname($outPath))) {
-            @mkdir(dirname($outPath), 0755, true);
-        }
+        // ---------------- PREPARE OUTPUT PATH ----------------
+        $outFilename = uniqid("audit_") . ".docx";
+        $outPath     = storage_path("app/public/audits/{$outFilename}");
+        @mkdir(dirname($outPath), 0755, true);
 
-        // update audit with file info early
         $audit->update([
             'file_name' => $outFilename,
-            'file_path' => 'storage/app/public/audits/' . $outFilename,
+            'file_path' => "storage/app/public/audits/{$outFilename}",
         ]);
 
-        // ---------- Build Python command (safe fallback if .env wrong) ----------
-        // Prefer env PYTHON_PATH, but ensure it's a filesystem executable — fall back to 'python3'
-        $python = env('PYTHON_PATH', 'python3');
+        $this->auditLog($audit->id, "Output path prepared: {$outPath}");
 
-        // If user accidentally placed a URL in PYTHON_PATH, try to recover path component
-        if (filter_var($python, FILTER_VALIDATE_URL)) {
-            $parts = parse_url($python);
-            $python = $parts['path'] ?? 'python3';
-        }
-
-        // If it's a relative path under project (like base_path('rembg_env/bin/python3')) you can use that,
-        // but here we attempt to resolve common project venv path if the env value looks like a relative string.
-        if (! file_exists($python) || ! is_executable($python)) {
-            // try typical project venv location
-            $try = base_path('rembg_env/bin/python3');
-            if (file_exists($try) && is_executable($try)) {
-                $python = $try;
-            } else {
-                // fall back to system python3
-                $python = 'python3';
-            }
-        }
-
+        // ---------------- PYTHON & SCRIPT RESOLUTION ----------------
+        $python = env('PYTHON_PATH', '/home/u255773032/micromamba_env/bin/python');
         $script = base_path('scripts/audit.py');
+
+        $this->auditLog($audit->id, "Resolved python={$python}");
+        $this->auditLog($audit->id, "Resolved script={$script}");
+
+        if (!file_exists($python)) {
+            $this->auditLog($audit->id, "Python binary missing: {$python}");
+        }
+        if (!file_exists($script)) {
+            $this->auditLog($audit->id, "Audit script missing: {$script}");
+        }
+
+        // ---------------- RUN PYTHON PROCESS ----------------
+        $envVars = [
+            'OPENBLAS_NUM_THREADS' => '1',
+            'OMP_NUM_THREADS'      => '1',
+            'MKL_NUM_THREADS'      => '1',
+            'NUMBA_NUM_THREADS'    => '1',
+        ];
 
         $process = new Process([
             $python,
             $script,
-            '--url',
-            $domain,
-            '--output',
-            $outPath,
-            '--whois',
-            $includeWhois ? '1' : '0'
-        ]);
+            '--url', $domain,
+            '--output', $outPath,
+            '--whois', $includeWhois ? '1' : '0'
+        ], null, $envVars);
 
-        // adjust timeout if needed (WHOIS, HEAD checks may take longer)
-        $process->setTimeout(180);
+        // allow more time for slow sites; tune as needed
+        $process->setTimeout(300);
+
+        $this->auditLog($audit->id, "Process starting...");
 
         try {
-            // stream output to DB columns (stdout/stderr)
             $process->run(function ($type, $buffer) use ($audit) {
                 if ($type === Process::OUT) {
-                    $audit->stdout = trim(($audit->stdout ?? '') . "\n" . $buffer);
-                    $audit->saveQuietly();
+                    $this->auditLog($audit->id, "[PYTHON STDOUT] " . trim($buffer));
                 } else {
-                    $audit->stderr = trim(($audit->stderr ?? '') . "\n" . $buffer);
-                    $audit->saveQuietly();
+                    $this->auditLog($audit->id, "[PYTHON STDERR] " . trim($buffer));
                 }
             });
 
-            if (! $process->isSuccessful()) {
-                $audit->status = 'failed';
-                $audit->stderr = $process->getErrorOutput() ?: $audit->stderr;
-                $audit->finished_at = Carbon::now();
-                $audit->save();
+            $exitCode = $process->getExitCode();
+            $this->auditLog($audit->id, "Process finished with exit code={$exitCode}");
+
+            if (!$process->isSuccessful()) {
+                $err = $process->getErrorOutput();
+                $this->auditLog($audit->id, "Python error: " . $err);
+                $audit->update([
+                    'status' => 'failed',
+                    'stderr' => $err,
+                    'finished_at' => now(),
+                ]);
 
                 return response()->json([
                     'success' => false,
-                    'message' => 'Error running audit: ' . $process->getErrorOutput()
+                    'message' => 'Audit failed: Python error',
+                    'stderr'  => $err,
                 ], 500);
             }
 
-            // on success, capture outputs
-            $stdOut = $process->getOutput();
-            $stdErr = $process->getErrorOutput();
-
-            // attempt to parse JSON meta if script prints it
-            $meta = null;
-            $maybeJson = trim($stdOut);
-            if ($maybeJson && (Str::startsWith($maybeJson, '{') || Str::startsWith($maybeJson, '['))) {
-                try {
-                    $meta = json_decode($maybeJson, true);
-                } catch (\Throwable $e) {
-                    $meta = null;
-                }
-            }
-
-            // final DB update
-            $audit->status = 'completed';
-            $audit->stdout = $stdOut ?: $audit->stdout;
-            $audit->stderr = $stdErr ?: $audit->stderr;
-            $audit->meta = $meta;
-            $audit->finished_at = Carbon::now();
-            $audit->save();
-
-            // ensure report file exists
-            if (! file_exists($outPath)) {
-                $audit->status = 'failed';
-                $audit->save();
-
+            // ---------------- CHECK OUTPUT FILE ----------------
+            if (!file_exists($outPath)) {
+                $this->auditLog($audit->id, "ERROR: Output file not found at {$outPath}");
+                $audit->update([
+                    'status' => 'failed',
+                    'stderr' => 'Output file missing',
+                    'finished_at' => now(),
+                ]);
                 return response()->json([
                     'success' => false,
-                    'message' => 'Report generated but output file not found.'
+                    'message' => 'Report generated but output file missing.',
                 ], 500);
             }
+
+            // ---------------- SUCCESS ----------------
+            $audit->update([
+                'status'       => 'completed',
+                'finished_at'  => now(),
+                'stdout'       => $process->getOutput(),
+                'stderr'       => $process->getErrorOutput(),
+            ]);
+
+            $this->auditLog($audit->id, "Audit completed successfully.");
 
             return response()->json([
                 'success' => true,
-                'domain' => $domain,
+                'domain'  => $domain,
                 'download_url' => route('audit.download', ['filename' => $outFilename]),
-                'audit_id' => $audit->id,
+                'audit_id'     => $audit->id,
                 'audit_number' => $auditNumber,
             ]);
-        } catch (\Throwable $e) {
-            $audit->status = 'failed';
-            $audit->stderr = ($audit->stderr ?? '') . "\nException: " . $e->getMessage();
-            $audit->finished_at = Carbon::now();
-            $audit->save();
 
-            Log::error('AuditController::run error: ' . $e->getMessage());
+        } catch (\Throwable $e) {
+
+            $this->auditLog($audit->id, "Exception caught: {$e->getMessage()}");
+            Log::error('AuditController::run exception: ' . $e->getMessage());
+
+            $audit->update([
+                'status'       => 'failed',
+                'stderr'       => $e->getMessage(),
+                'finished_at'  => now(),
+            ]);
 
             return response()->json([
                 'success' => false,
-                'message' => 'Unexpected error running audit.'
+                'message' => 'Unexpected server error.',
             ], 500);
         }
     }
+
+
 
     public function download($filename)
     {
